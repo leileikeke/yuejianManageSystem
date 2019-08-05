@@ -229,9 +229,9 @@ layui.define(['laytpl', 'layer'], function (exports) {
                 ;
 
                 if (e.status === 404) {
-                    that.render('template/tips/404');
+                    that.render(layui.setter.ContextPath+'/views/template/tips/404');
                 } else {
-                    that.render('template/tips/error');
+                    that.render(layui.setter.ContextPath+'/views/template/tips/error');
                 }
 
                 that.render.isError = true;

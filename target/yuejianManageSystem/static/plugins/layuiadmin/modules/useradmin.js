@@ -87,16 +87,17 @@ layui.define(['table', 'form'], function(exports){
   //管理员管理
   table.render({
     elem: '#LAY-user-back-manage'
-    ,url: layui.setter.base + 'json/useradmin/mangadmin.js' //模拟接口
+    ,url: '/'+layui.setter.ContextPath+'/admin/adminList' //模拟接口
     ,cols: [[
       {type: 'checkbox', fixed: 'left'}
       ,{field: 'id', width: 80, title: 'ID', sort: true}
-      ,{field: 'loginname', title: '登录名'}
-      ,{field: 'telphone', title: '手机'}
-      ,{field: 'email', title: '邮箱'}
-      ,{field: 'role', title: '角色'}
+      ,{field: 'name', title: '登录名'}
+      ,{field: 'nickname', title: '昵称'}
+      ,{field: 'phone', title: '手机'}
+      ,{field: 'sex', title: '年龄'}
+      ,{field: 'role', title: '角色',toolbar:'#table-role'}
       ,{field: 'jointime', title: '加入时间', sort: true}
-      ,{field: 'check', title:'审核状态', templet: '#buttonTpl', minWidth: 80, align: 'center'}
+      ,{field: 'state', title:'审核状态', templet: '#buttonTpl', minWidth: 80, align: 'center'}
       ,{title: '操作', width: 150, align: 'center', fixed: 'right', toolbar: '#table-useradmin-admin'}
     ]]
     ,text: '对不起，加载出现异常！'

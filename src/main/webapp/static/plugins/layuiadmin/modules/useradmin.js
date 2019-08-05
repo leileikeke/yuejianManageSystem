@@ -83,18 +83,7 @@ layui.define(['table', 'form'], function(exports){
       });
     }
   });
-  // "code": 0
-  //     ,"msg": ""
-  //     ,"count": "100"
-  //     ,"data": [{
-  //   "id": "1001"
-  //   ,"loginname": "admin"
-  //   ,"telphone": "11111111111"
-  //   ,"email": "111@qq.com"
-  //   ,"role": "超级管理员"
-  //   ,"jointime": "20150217"
-  //   ,"check": true
-  // }
+
   //管理员管理
   table.render({
     elem: '#LAY-user-back-manage'
@@ -106,7 +95,7 @@ layui.define(['table', 'form'], function(exports){
       ,{field: 'nickname', title: '昵称'}
       ,{field: 'phone', title: '手机'}
       ,{field: 'sex', title: '年龄'}
-      ,{field: 'role', title: '角色'}
+      ,{field: 'role', title: '角色',toolbar:'#table-role'}
       ,{field: 'jointime', title: '加入时间', sort: true}
       ,{field: 'state', title:'审核状态', templet: '#buttonTpl', minWidth: 80, align: 'center'}
       ,{title: '操作', width: 150, align: 'center', fixed: 'right', toolbar: '#table-useradmin-admin'}
