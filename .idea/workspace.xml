@@ -7,966 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b3ad1b4-7668-45ec-bbac-4d15534a55d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4a7bf763-291a-427a-82f7-7eae67300d28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ssm_demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/constant/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/constant/WebPathInitServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/interceptors/MethodTimerInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/interceptors/SessionInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/AdminMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/pojo/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/AdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/tail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/form_add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index11111.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/imgs/head.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/imgs/login/login_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/imgs/login/login_line.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/imgs/login/yzm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/imgs/login_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/jQuery/jquery-1.12.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/jQuery/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/console/prograss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/console/top-card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/console/top-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/content/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/content/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/content/tags.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/forum/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/forum/replys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/layer/photos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/layim/getList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/layim/getMembers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/mall/order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/menu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/message/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/message/detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/message/direct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/message/new.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/message/notice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/table/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/table/demo2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/table/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/table/user30.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/upload/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/user/forget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/user/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/user/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/user/reg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/user/resetpass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/user/session.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/user/sms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/useradmin/mangadmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/useradmin/role.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/useradmin/webuser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/workorder/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/laydate/default/font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/html/chatlog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/html/find.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/html/getmsg.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/html/msgbox.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/layim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/mobile/layim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/skin/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/skin/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/skin/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/skin/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/skin/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/skin/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/css/modules/layim/voice/default.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/all-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/layim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/mobile/layer-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/mobile/layim-mobile-open.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/mobile/layim-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/mobile/upload-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/mobile/zepto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/extend/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/extend/echartsTheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/view.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/console.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/contlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/forum.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/im.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/sample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/senior.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/workorder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/res/bg-none.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/res/layui-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/res/logo-black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/res/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/res/template/character.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/res/template/huge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/res/template/portrait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/style/template.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/layim/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/get.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/more.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/theme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/content/comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/content/contform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/content/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/content/listform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/content/tags.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/content/tagsform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/forum/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/forum/listform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/forum/replys.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/forum/replysform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/mall/category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/mall/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/mall/specs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/message/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/message/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/workorder/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/workorder/listform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/app/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/anim/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/auxiliar/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/badge/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/button/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/carousel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/code/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/flow/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/form/element.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/form/group.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/grid/all.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/grid/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/grid/mobile-pc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/grid/mobile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/grid/speed-dial.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/grid/stack.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/special-demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/theme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/layer/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/layer/special-demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/layer/theme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laypage/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laypage/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laypage/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/laytpl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/nav/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/panel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/progress/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/rate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/auto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/cellEdit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/cellEvent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/checkbox.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/data.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/fixed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/height.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/initSort.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/operate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/reload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/resetPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/static.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/style.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/thead.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/table/tostatic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/tabs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/temp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/timeline/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/upload/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/upload/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/upload/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/util/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/component/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/home/console.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/home/homepage1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/home/homepage2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/iframe/layer/iframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/set/user/password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/set/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/addresslist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/goodslist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/msgboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/personalpage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/temp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/tips/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/tips/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/template/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/adminform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/role.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/roleform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/forget.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/reg.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/user/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/yuejianManageSystem.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/constant/ResponseCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/constant/WebPathInitServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/controller/AdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/controller/DispatcherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/interceptors/MethodTimerInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/interceptors/SessionInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/mapper/AdminMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/mapper/AdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/pojo/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/service/AdminService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/leike/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/spring-mybatis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring/spring-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/META-INF/yuejianManageSystem.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/constant/ResponseCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/constant/WebPathInitServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/controller/AdminController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/controller/DispatcherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/interceptors/MethodTimerInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/interceptors/SessionInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/mapper/AdminMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/mapper/AdminMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/pojo/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/service/AdminService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/spring/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/spring/spring-mybatis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/spring/spring-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/common/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/common/tail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/form_add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index11111.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index_system.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/aspectjrt-1.9.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/aspectjweaver-1.9.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/c3p0-0.9.5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/commons-beanutils-1.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/commons-codec-1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/commons-collections-3.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/commons-fileupload-1.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/commons-io-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/commons-lang-2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/ezmorph-1.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/jackson-annotations-2.10.0.pr1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/jackson-core-2.10.0.pr1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/jackson-databind-2.10.0.pr1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/joda-time-2.9.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/jsqlparser-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/mchange-commons-java-0.2.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/mybatis-3.4.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/mybatis-spring-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/pagehelper-5.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/slf4j-api-1.7.26.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/slf4j-log4j12-1.7.26.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-aop-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-aspects-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-beans-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-context-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-context-support-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-core-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-expression-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-jcl-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-jdbc-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-tx-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-web-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/lib/spring-webmvc-5.1.8.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/error/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/imgs/head.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/imgs/login/login_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/imgs/login/login_line.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/imgs/login/yzm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/imgs/login_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/jQuery/jquery-1.12.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/jQuery/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/console/prograss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/console/top-card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/console/top-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/content/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/content/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/content/tags.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/forum/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/forum/replys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/layer/photos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/layim/getList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/layim/getMembers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/mall/order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/menu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/message/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/message/detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/message/direct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/message/new.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/message/notice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/table/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/table/demo2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/table/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/table/user30.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/upload/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/user/forget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/user/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/user/logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/user/reg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/user/resetpass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/user/session.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/user/sms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/useradmin/mangadmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/useradmin/role.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/useradmin/webuser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/workorder/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/json/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/laydate/default/font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/html/chatlog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/html/find.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/html/getmsg.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/html/msgbox.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/layim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/mobile/layim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/skin/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/skin/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/skin/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/skin/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/skin/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/skin/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/css/modules/layim/voice/default.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/all-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/layim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/mobile/layer-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/mobile/layim-mobile-open.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/mobile/layim-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/mobile/upload-mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/mobile/zepto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/lib/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/lib/extend/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/lib/extend/echartsTheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/lib/view.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/console.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/contlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/forum.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/im.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/sample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/senior.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/set.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/useradmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/workorder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/res/bg-none.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/res/layui-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/res/logo-black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/res/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/res/template/character.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/res/template/huge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/res/template/portrait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/style/template.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/tpl/layim/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/tpl/system/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/tpl/system/get.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/tpl/system/more.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/tpl/system/theme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/tpl/system/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/tpl/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/contform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/listform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/tags.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/tagsform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/listform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/replys.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/replysform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/mall/category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/mall/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/mall/specs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/message/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/message/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/workorder/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/workorder/listform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/anim/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/auxiliar/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/badge/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/button/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/carousel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/code/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/flow/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/form/element.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/form/group.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/all.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/mobile-pc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/mobile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/speed-dial.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/stack.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/special-demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/theme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/layer/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/layer/special-demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/layer/theme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laypage/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laypage/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laypage/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laytpl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/nav/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/panel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/progress/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/rate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/auto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/cellEdit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/cellEvent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/checkbox.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/data.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/fixed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/height.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/initSort.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/operate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/reload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/resetPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/simple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/static.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/style.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/thead.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/tostatic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/tabs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/temp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/timeline/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/upload/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/upload/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/upload/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/util/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/home/console.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/home/homepage1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/home/homepage2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/iframe/layer/iframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/addresslist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/goodslist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/msgboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/personalpage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/temp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/tips/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/tips/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/adminform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/role.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/roleform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/forget.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/reg.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/userform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/说明.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/login.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1024,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
+            <state relative-caret-position="-1426">
               <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
             </state>
           </provider>
@@ -1082,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
-              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding>
                 <element signature="e#790#791#0" expanded="true" />
                 <element signature="e#820#821#0" expanded="true" />
@@ -1093,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+            <state relative-caret-position="1512">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#306#307#0" expanded="true" />
                 <element signature="e#331#332#0" expanded="true" />
@@ -1132,16 +176,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1647">
-              <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+            <state relative-caret-position="324">
+              <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -1289,12 +333,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/more.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/theme.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/pojo/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
       </list>
     </option>
   </component>
@@ -1404,6 +448,30 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="leike" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1646,7 +714,7 @@
       <workItem from="1564980965480" duration="2722000" />
       <workItem from="1564983710873" duration="1939000" />
       <workItem from="1564985654844" duration="261000" />
-      <workItem from="1564986146605" duration="21830000" />
+      <workItem from="1564986146605" duration="23975000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1564143073495</created>
@@ -1711,7 +779,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564981564714</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="first">
+      <created>1565013182403</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1565013182403</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1729,13 +804,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216435000" />
+    <option name="totallyTimeSpent" value="218580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49844238" visible="true" weight="0.17217484" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49844238" visible="true" weight="0.17217484" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -1743,7 +818,7 @@
       <window_info id="Favorites" order="5" sideWeight="0.50155765" side_tool="true" weight="0.2585288" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.4538784" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.45322245" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.46728972" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -2076,24 +1151,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1647">
-          <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
             <element signature="e#790#791#0" expanded="true" />
             <element signature="e#820#821#0" expanded="true" />
@@ -2106,7 +1167,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -2149,8 +1210,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+        <state relative-caret-position="1512">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#306#307#0" expanded="true" />
             <element signature="e#331#332#0" expanded="true" />
@@ -2177,6 +1238,20 @@
             <element signature="e#1036#1037#0" expanded="true" />
             <element signature="e#1070#1071#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1426">
+          <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="20" />
         </state>
       </provider>
     </entry>
