@@ -96,9 +96,9 @@ layui.define(['table', 'form'], function(exports){
       ,{field: 'phone', title: '手机'}
       ,{field: 'sex', title: '年龄'}
       ,{field: 'role', title: '角色',toolbar:'#table-role'}
-      ,{field: 'jointime', title: '加入时间', sort: true}
+      ,{field: 'jointime', title: '加入时间', sort: true ,width:200}
       ,{field: 'state', title:'审核状态', templet: '#buttonTpl', minWidth: 80, align: 'center'}
-      ,{title: '操作', width: 150, align: 'center', fixed: 'right', toolbar: '#table-useradmin-admin'}
+      ,{title: '操作', width: 200, align: 'center', fixed: 'right', toolbar: '#table-useradmin-admin'}
     ]]
     ,text: '对不起，加载出现异常！'
   });
