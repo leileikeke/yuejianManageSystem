@@ -6,6 +6,8 @@ import com.leike.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @description:
  * @author: leike
@@ -33,5 +35,17 @@ public class AdminServiceImpl implements AdminService {
     public boolean updateAdmin(Integer id, String password) {
         int i = adminMapper.updateAdmin(id, password);
         return i == 1 ? true : false;
+    }
+
+    @Override
+    public List<Admin> selectAdminList() {
+        List<Admin> admins = adminMapper.selectAdminList();
+        return admins;
+    }
+
+    @Override
+    public int selectAdminCount() {
+        int i = adminMapper.selectAdminCount();
+        return i;
     }
 }

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,6 +35,7 @@ public class AdminController {
 
         if (admin.getRole().equals("systemAdmin")) {
             Admin system = adminService.selectAdmin(admin);
+            System.out.println(system);
             if (system != null) {
                 code = ResponseCode.SUCCEED;
                 session.setAttribute("SESSION_ADMIN", system);
@@ -81,6 +83,28 @@ public class AdminController {
             }
         }
         map.put("code", code);
+        return map;
+    }
+
+    @RequestMapping("/adminList")
+    @ResponseBody
+    public Map<String,Object> getAdminList(){
+
+        Map<String,Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        List<Admin> admins = adminService.selectAdminList();
+
+        if (admins!=null){
+            code = ResponseCode.SUCCEED;
+        }
+
+        map.put("code", code);
+        map.put("msg","");
+        map.put("count",adminService.selectAdminCount());
+        map.put("data",admins);
+
         return map;
     }
 }

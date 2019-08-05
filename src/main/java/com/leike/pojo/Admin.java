@@ -1,5 +1,7 @@
 package com.leike.pojo;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 /**
  * @description:
  * @author: leike
@@ -21,11 +23,17 @@ public class Admin {
 
     private String role;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private String jointime;
+
+    private Boolean state;
+
+
 
     public Admin() {
     }
 
-    public Admin(Integer id, String name, String nickname, String password, String phone, String sex, String role) {
+    public Admin(Integer id, String name, String nickname, String password, String phone, String sex, String role, String jointime, Boolean state) {
         this.id = id;
         this.name = name;
         this.nickname = nickname;
@@ -33,6 +41,8 @@ public class Admin {
         this.phone = phone;
         this.sex = sex;
         this.role = role;
+        this.jointime = jointime;
+        this.state = state;
     }
 
     public Integer getId() {
@@ -91,6 +101,22 @@ public class Admin {
         this.role = role;
     }
 
+    public String getJointime() {
+        return jointime;
+    }
+
+    public void setJointime(String jointime) {
+        this.jointime = jointime;
+    }
+
+    public Boolean getState() {
+        return state;
+    }
+
+    public void setState(Boolean state) {
+        this.state = state;
+    }
+
     @Override
     public String toString() {
         return "Admin{" +
@@ -101,6 +127,8 @@ public class Admin {
                 ", phone='" + phone + '\'' +
                 ", sex='" + sex + '\'' +
                 ", role='" + role + '\'' +
+                ", jointime='" + jointime + '\'' +
+                ", state=" + state +
                 '}';
     }
 }

@@ -8,7 +8,9 @@ package com.leike.constant;
  */
 public class ResponseCode {
 
-    public static Integer SUCCEED= 200;//成功
+    public static Integer SUCCEED = 200;//成功
+
+    public static Integer FAILURE = 201;//失败
 
     public static Integer LOGIN_FAILURE = 203;//登录失败
 
