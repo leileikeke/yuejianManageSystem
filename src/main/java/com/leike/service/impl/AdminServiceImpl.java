@@ -48,4 +48,10 @@ public class AdminServiceImpl implements AdminService {
         int i = adminMapper.selectAdminCount();
         return i;
     }
+
+    @Override
+    public boolean deleteAdmin(Integer id) {
+        int i = adminMapper.deleteAdmin(id);
+        return i == 1 ? true : false;
+    }
 }

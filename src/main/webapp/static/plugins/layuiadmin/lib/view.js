@@ -131,7 +131,7 @@ layui.define(['laytpl', 'layer'], function (exports) {
             }
             , error: function (e, code) {
                 window.location.href = "error/404.html";
-                typeof error === 'function' && error(res);
+                // typeof error === 'function' && error(res);
             }
         }, options));
     };

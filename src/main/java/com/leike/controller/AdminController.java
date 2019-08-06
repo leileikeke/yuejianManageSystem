@@ -26,6 +26,13 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    /**
+     * 登录
+     *
+     * @param admin
+     * @param session
+     * @return
+     */
     @RequestMapping("/login")
     @ResponseBody
     public Map<String, Object> login(Admin admin, HttpSession session) {
@@ -52,6 +59,12 @@ public class AdminController {
         return map;
     }
 
+    /**
+     * 注销
+     *
+     * @param session
+     * @return
+     */
     @RequestMapping("/logout")
     @ResponseBody
     public Map<String, Object> logout(HttpSession session) {
@@ -59,10 +72,18 @@ public class AdminController {
         Map<String, Object> map = new HashMap<>();
         Integer code = ResponseCode.LOGOUT;
         session.removeAttribute("SESSION_ADMIN");
-        map.put("code",code);
+        map.put("code", code);
         return map;
     }
 
+    /**
+     * 修改密码
+     *
+     * @param oldPassword
+     * @param password
+     * @param session
+     * @return
+     */
     @RequestMapping("/setpass")
     @ResponseBody
     public Map<String, Object> setPass(String oldPassword, String password, HttpSession session) {
@@ -86,24 +107,47 @@ public class AdminController {
         return map;
     }
 
+
+    /**
+     * 获取admin列表(不包括密码)
+     */
     @RequestMapping("/adminList")
     @ResponseBody
-    public Map<String,Object> getAdminList(){
+    public Map<String, Object> getAdminList() {
 
-        Map<String,Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
 
         Integer code = ResponseCode.FAILURE;
 
         List<Admin> admins = adminService.selectAdminList();
 
-        if (admins!=null){
+        if (admins != null) {
+            code = ResponseCode.TABLESUCCEED;
+        }
+
+        map.put("code", code);
+        map.put("msg", "");
+        map.put("count", adminService.selectAdminCount());
+        map.put("data", admins);
+
+        return map;
+    }
+
+    @RequestMapping("/delete")
+    @ResponseBody
+    public Map<String, Object> deleteAdmin(Integer id) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        boolean b = adminService.deleteAdmin(id);
+        //如果成功则返回code=200
+        if (b) {
             code = ResponseCode.SUCCEED;
         }
 
         map.put("code", code);
-        map.put("msg","");
-        map.put("count",adminService.selectAdminCount());
-        map.put("data",admins);
 
         return map;
     }

@@ -21,4 +21,6 @@ public interface AdminService {
     List<Admin> selectAdminList();
 
     int selectAdminCount();
+
+    boolean deleteAdmin(Integer id);
 }
