@@ -11,7 +11,15 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<User> selectUserList();
+    List<User> selectUserList(Integer page,Integer limit);
 
     int selectUserCount();
+
+    boolean insertUser(User user);
+
+    boolean queryUser(String name);
+
+    boolean deleteUser(Integer uId);
+
+    boolean updateUser(User user);
 }

@@ -14,4 +14,8 @@
     <!--        where name = #{name} and password = #{password} and role=#{role}-->
     <!--    </select>-->
 
+    <insert id="insertUser">
+        INSERT INTO user (u_id,name,pic,sex,phone,password,email,jointime)
+        VALUE (#{uId},#{name},#{pic},#{sex},#{phone},#{password},#{email},#{jointime})
+    </insert>
 </mapper>

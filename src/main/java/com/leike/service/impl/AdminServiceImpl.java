@@ -48,6 +48,12 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
+    public boolean queryAdmin(String name) {
+        Admin admin = adminMapper.queryAdmin(name);
+        return admin==null?true:false;
+    }
+
+    @Override
     public List<Admin> selectAdminList() {
         List<Admin> admins = adminMapper.selectAdminList();
         return admins;

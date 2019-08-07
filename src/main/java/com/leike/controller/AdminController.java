@@ -150,6 +150,11 @@ public class AdminController {
         return map;
     }
 
+    /**
+     * 删除管理员
+     * @param id
+     * @return
+     */
     @RequestMapping("/delete")
     @ResponseBody
     public Map<String, Object> deleteAdmin(Integer id) {
@@ -221,12 +226,20 @@ public class AdminController {
 
         String msg = "管理员添加失败";
 
-        boolean b = adminService.addAdmin(admin);
+        boolean bool = adminService.queryAdmin(admin.getName());
 
-        if (b) {
-            code = ResponseCode.SUCCEED;
-            msg = "";
+        if (bool) {
+
+            boolean b = adminService.addAdmin(admin);
+            if (b) {
+                code = ResponseCode.SUCCEED;
+                msg = "";
+            }
+
+        } else {
+            msg = "此账号已存在!";
         }
+
 
         map.put("code", code);
         map.put("msg", msg);
@@ -236,11 +249,10 @@ public class AdminController {
 
     /**
      * 更新admin表数据
-     *
      * @param admin
      * @return
      */
-    @RequestMapping("/updateAdmin")
+    @RequestMapping("/update")
     @ResponseBody
     public Map<String, Object> updateAdmin(@RequestBody Admin admin) {
 

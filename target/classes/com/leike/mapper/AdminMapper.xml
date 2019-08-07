@@ -4,13 +4,13 @@
 
 <mapper namespace="com.leike.mapper.AdminMapper">
     <insert id="addAdmin">
-        insert into admin(name,nickname,password,phone,sex,role,jointime,state)
-        values (#{name},#{nickname},#{password},#{phone},#{sex},#{role},#{jointime},#{state})
+        INSERT INTO admin(name,nickname,password,phone,sex,role,jointime,state)
+        VALUES (#{name},#{nickname},#{password},#{phone},#{sex},#{role},#{jointime},#{state})
     </insert>
 
     <select id="selectAdmin" resultType="com.leike.pojo.Admin">
-        select *
-        from admin
-        where name = #{name} and password = #{password} and role=#{role}
+        SELECT *
+        FROM admin
+        WHERE name = #{name} and password = #{password} and role=#{role}
     </select>
 </mapper>

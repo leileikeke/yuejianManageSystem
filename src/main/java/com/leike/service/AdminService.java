@@ -25,4 +25,6 @@ public interface AdminService {
     boolean addAdmin(Admin admin);
 
     boolean updateAdmin(Admin admin);
+
+    boolean queryAdmin(String name);
 }

@@ -30,4 +30,7 @@ public interface AdminMapper {
 
     @Update("UPDATE admin SET name = #{name},nickname = #{nickname},password = #{password},phone = #{phone},sex = #{sex},role = #{role},state = #{state} where id = #{id}")
     int updateAdmin(Admin admin);
+
+    @Select("SELECT * FROM admin WHERE name = #{name}")
+    Admin queryAdmin(@Param("name") String name);
 }
