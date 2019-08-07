@@ -231,6 +231,11 @@ public class AdminController {
         return map;
     }
 
+    /**
+     * 更新admin表数据
+     * @param admin
+     * @return
+     */
     @RequestMapping("/updateAdmin")
     @ResponseBody
     public Map<String, Object> updateAdmin(@RequestBody Admin admin) {
