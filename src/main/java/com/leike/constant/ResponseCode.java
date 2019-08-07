@@ -14,10 +14,6 @@ public class ResponseCode {
 
     public static Integer TABLESUCCEED = 0;//表格数据获取成功
 
-    public static Integer LOGIN_FAILURE = 203;//登录失败
-
-    public static Integer SETPASS_FAILURE = 204;//密码修改失败
-
     public static Integer LOGOUT = 1001;//注销成功
 
     public static Integer NOTFOUND = 404;//404

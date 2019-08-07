@@ -6,6 +6,9 @@ import com.leike.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,8 +35,14 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public boolean updateAdmin(Integer id, String password) {
-        int i = adminMapper.updateAdmin(id, password);
+    public boolean updateAdminPass(Integer id, String password) {
+        int i = adminMapper.updateAdminPass(id, password);
+        return i == 1 ? true : false;
+    }
+
+    @Override
+    public boolean updateAdmin(Admin admin) {
+        int i = adminMapper.updateAdmin(admin);
         return i == 1 ? true : false;
     }
 
@@ -52,6 +61,20 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean deleteAdmin(Integer id) {
         int i = adminMapper.deleteAdmin(id);
+        return i == 1 ? true : false;
+    }
+
+    @Override
+    public boolean addAdmin(Admin admin) {
+        //获取系统时间
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String format = dateFormat.format(date);
+        Timestamp timestamp = Timestamp.valueOf(format);
+        admin.setJointime(timestamp);
+        System.out.println(admin);
+        int i = adminMapper.addAdmin(admin);
+
         return i == 1 ? true : false;
     }
 }

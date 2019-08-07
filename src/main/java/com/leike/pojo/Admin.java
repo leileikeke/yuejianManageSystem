@@ -1,6 +1,9 @@
 package com.leike.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 /**
  * @description:
@@ -24,7 +27,8 @@ public class Admin {
     private String role;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private String jointime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date jointime;
 
     private Boolean state;
 
@@ -33,7 +37,7 @@ public class Admin {
     public Admin() {
     }
 
-    public Admin(Integer id, String name, String nickname, String password, String phone, String sex, String role, String jointime, Boolean state) {
+    public Admin(Integer id, String name, String nickname, String password, String phone, String sex, String role, Date jointime, Boolean state) {
         this.id = id;
         this.name = name;
         this.nickname = nickname;
@@ -101,11 +105,11 @@ public class Admin {
         this.role = role;
     }
 
-    public String getJointime() {
+    public Date getJointime() {
         return jointime;
     }
 
-    public void setJointime(String jointime) {
+    public void setJointime(Date jointime) {
         this.jointime = jointime;
     }
 
@@ -127,7 +131,7 @@ public class Admin {
                 ", phone='" + phone + '\'' +
                 ", sex='" + sex + '\'' +
                 ", role='" + role + '\'' +
-                ", jointime='" + jointime + '\'' +
+                ", jointime=" + jointime +
                 ", state=" + state +
                 '}';
     }

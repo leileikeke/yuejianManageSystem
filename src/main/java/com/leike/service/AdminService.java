@@ -16,11 +16,15 @@ public interface AdminService {
 
     boolean verifyAdmin(String name, String oldPassword, String role);
 
-    boolean updateAdmin(Integer id, String password);
+    boolean updateAdminPass(Integer id, String password);
 
     List<Admin> selectAdminList();
 
     int selectAdminCount();
 
     boolean deleteAdmin(Integer id);
+
+    boolean addAdmin(Admin admin);
+
+    boolean updateAdmin(Admin admin);
 }

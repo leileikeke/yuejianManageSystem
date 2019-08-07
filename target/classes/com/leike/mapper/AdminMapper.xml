@@ -3,6 +3,10 @@
 
 
 <mapper namespace="com.leike.mapper.AdminMapper">
+    <insert id="addAdmin">
+        insert into admin(name,nickname,password,phone,sex,role,jointime,state)
+        values (#{name},#{nickname},#{password},#{phone},#{sex},#{role},#{jointime},#{state})
+    </insert>
 
     <select id="selectAdmin" resultType="com.leike.pojo.Admin">
         select *

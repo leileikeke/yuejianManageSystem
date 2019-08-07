@@ -14,6 +14,7 @@ layui.define(['laytpl', 'layer'], function (exports) {
         , setter = layui.setter
         , device = layui.device()
         , hint = layui.hint()
+        , ContextPath = layui.setter.ContextPath   //leike定义:主页地址
 
         //对外接口
         , view = function (id) {
@@ -96,22 +97,16 @@ layui.define(['laytpl', 'layer'], function (exports) {
                 //只有 response 的 code 一切正常才执行 done
                 if (res.code == 200) {
                     typeof options.done === 'function' && options.done(res);
-                } else if (res.code == 203) {
-                    layer.msg('用户名或者密码错误', {
-                        offset: '15px',
-                        icon: 2,
-                        time: 1000
-                    });
-                } else if (res.code == 204) {
-                    layer.msg('原密码错误', {
+                } else if (res.code == 201) {
+                    layer.msg(res.msg, {
                         offset: '15px',
                         icon: 2,
                         time: 1000
                     });
                 } else if (res.code == 404) {
-                    window.location.href = "error/404.html";
+                    window.location.href = ContextPath + "/error/404.html";
                 } else if (res.code == 405) {
-                    window.location.href = "error/error.html";
+                    window.location.href = ContextPath + "/error/error.html";
                 } else if (res.code == 1001) {
                     layer.msg('注销成功', {
                         offset: '15px',
@@ -123,15 +118,15 @@ layui.define(['laytpl', 'layer'], function (exports) {
                 }
                 //其它异常
                 else {
-                    window.location.href = "error/404.html";
+                    window.location.href = ContextPath + "/error/404.html";
                 }
 
                 //只要 http 状态码正常，无论 response 的 code 是否正常都执行 success
                 typeof success === 'function' && success(res);
             }
             , error: function (e, code) {
-                window.location.href = "error/404.html";
-                typeof error === 'function' && error(res);
+                window.location.href = ContextPath + "/error/404.html";
+                // typeof error === 'function' && error(res);
             }
         }, options));
     };
@@ -229,9 +224,9 @@ layui.define(['laytpl', 'layer'], function (exports) {
                 ;
 
                 if (e.status === 404) {
-                    that.render(layui.setter.ContextPath+'/views/template/tips/404');
+                    that.render(ContextPath + "/error/404.html");
                 } else {
-                    that.render(layui.setter.ContextPath+'/views/template/tips/error');
+                    that.render(ContextPath + "/error/404.html");
                 }
 
                 that.render.isError = true;
