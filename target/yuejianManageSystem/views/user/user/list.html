@@ -60,7 +60,7 @@
 
             <table id="LAY-user-manage" lay-filter="LAY-user-manage"></table>
             <script type="text/html" id="imgTpl">
-                <img style="display: inline-block; width: 50%; height: 100%;" src={{ d.avatar }}>
+                <img style="display: inline-block; width: 50%; height: 100%;" src={{ layui.setter.ContextPath+d.pic }}>
             </script>
             <script type="text/html" id="table-useradmin-webuser">
                 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
@@ -82,7 +82,8 @@
         var $ = layui.$
             , form = layui.form
             , table = layui.table
-            , admin = layui.admin;
+            , admin = layui.admin
+            , ContextPath = layui.setter.ContextPath;
 
         //监听搜索
         form.on('submit(LAY-user-front-search)', function (data) {

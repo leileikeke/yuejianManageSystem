@@ -3,6 +3,7 @@ package com.leike.service.impl;
 import com.leike.mapper.AdminMapper;
 import com.leike.pojo.Admin;
 import com.leike.service.AdminService;
+import com.leike.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,12 +61,9 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean addAdmin(Admin admin) {
-        //获取系统时间
-        Date date = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        String format = dateFormat.format(date);
-        Timestamp timestamp = Timestamp.valueOf(format);
-        admin.setJointime(timestamp);
+        //获取当前系统时间
+        Date date = DateUtil.getCurrentTime(new Date(),"yyyy-MM-dd hh:mm:ss");
+        admin.setJointime(date);
         System.out.println(admin);
         int i = adminMapper.addAdmin(admin);
 

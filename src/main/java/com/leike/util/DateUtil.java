@@ -1,5 +1,6 @@
 package com.leike.util;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -43,5 +44,18 @@ public class DateUtil {
         if(str!=null)
             return sdf.parse(str);
         return null;
+    }
+
+    /**
+     * 获取当前系统时间的sql格式
+     * @param date
+     * @param format
+     * @return
+     */
+    public static Timestamp getCurrentTime(Date date, String format){
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+        String format1 = dateFormat.format(date);
+        Timestamp timestamp = Timestamp.valueOf(format1);
+        return timestamp;
     }
 }
