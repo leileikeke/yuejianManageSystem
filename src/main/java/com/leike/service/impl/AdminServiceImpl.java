@@ -64,7 +64,6 @@ public class AdminServiceImpl implements AdminService {
         //获取当前系统时间
         Date date = DateUtil.getCurrentTime(new Date(),"yyyy-MM-dd hh:mm:ss");
         admin.setJointime(date);
-        System.out.println(admin);
         int i = adminMapper.addAdmin(admin);
 
         return i == 1 ? true : false;
