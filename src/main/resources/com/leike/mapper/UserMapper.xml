@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.leike.mapper.UserMapper">
+    <!--    <insert id="addAdmin">-->
+    <!--        insert into admin(name,nickname,password,phone,sex,role,jointime,state)-->
+    <!--        values (#{name},#{nickname},#{password},#{phone},#{sex},#{role},#{jointime},#{state})-->
+    <!--    </insert>-->
+
+    <!--    <select id="selectAdmin" resultType="com.leike.pojo.Admin">-->
+    <!--        select *-->
+    <!--        from admin-->
+    <!--        where name = #{name} and password = #{password} and role=#{role}-->
+    <!--    </select>-->
+
+</mapper>

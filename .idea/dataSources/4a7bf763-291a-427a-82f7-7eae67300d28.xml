@@ -1076,7 +1076,7 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="259" parent="238" name="uId">
+    <column id="259" parent="238" name="u_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1084,7 +1084,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="238" name="uName">
+    <column id="260" parent="238" name="name">
       <Position>2</Position>
       <Comment>用户名</Comment>
       <DataType>varchar(20)|0s</DataType>
@@ -1123,9 +1123,24 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="265" parent="238" name="PRIMARY">
+    <column id="265" parent="238" name="email">
+      <Position>7</Position>
+      <Comment>用户邮箱</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;xxx@qq.com&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="238" name="jointime">
+      <Position>8</Position>
+      <Comment>用户创建时间</Comment>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="267" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>uId</ColNames>
+      <ColNames>u_id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

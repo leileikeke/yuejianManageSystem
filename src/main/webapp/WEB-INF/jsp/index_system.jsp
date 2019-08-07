@@ -367,9 +367,6 @@
                             <dd>
                                 <a lay-href="views/user/administrators/list.html">后台管理员</a>
                             </dd>
-                            <dd>
-                                <a lay-href="views/user/administrators/role.html">角色管理</a>
-                            </dd>
                         </dl>
                     </li>
                     <li data-name="set" class="layui-nav-item">
