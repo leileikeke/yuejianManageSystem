@@ -23,9 +23,6 @@ public interface AdminMapper {
     @Update("UPDATE admin SET password = #{password} where id = #{id}")
     int updateAdminPass(Integer id, String password);
 
-    @Select("select count(*) from admin")
-    int selectAdminCount();
-
     @Delete("DELETE FROM admin WHERE id = #{id}")
     int deleteAdmin(Integer id);
 

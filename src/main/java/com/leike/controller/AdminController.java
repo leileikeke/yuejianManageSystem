@@ -133,15 +133,18 @@ public class AdminController {
 
         Integer code = ResponseCode.FAILURE;
 
+        Integer count = 0;
+
         List<Admin> admins = adminService.selectAdminList();
 
         if (admins != null) {
             code = ResponseCode.TABLESUCCEED;
+            count = admins.size();
         }
 
         map.put("code", code);
         map.put("msg", "");
-        map.put("count", adminService.selectAdminCount());
+        map.put("count", count);
         map.put("data", admins);
 
         return map;
@@ -233,6 +236,7 @@ public class AdminController {
 
     /**
      * 更新admin表数据
+     *
      * @param admin
      * @return
      */
