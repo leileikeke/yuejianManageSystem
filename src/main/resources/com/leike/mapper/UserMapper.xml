@@ -18,4 +18,33 @@
         INSERT INTO user (u_id,name,pic,sex,phone,password,email,jointime)
         VALUE (#{uId},#{name},#{pic},#{sex},#{phone},#{password},#{email},#{jointime})
     </insert>
+
+    <select id="selectUserListForTerm" resultType="com.leike.pojo.User">
+        <bind name="_uId" value="'%'+uId+'%'"/>
+        <bind name="_name" value="'%'+name+'%'"/>
+        <bind name="_phone" value="'%'+phone+'%'"/>
+        <bind name="_sex" value="'%'+sex+'%'"/>
+        SELECT *
+        FROM user
+        <where>
+            u_id IN
+            (SELECT a.u_id
+            FROM (SELECT u_id
+            FROM user
+            LIMIT #{page},#{limit}) as a)
+            <if test="uId != null and uId != ''">
+                AND u_id LIKE #{_uId}
+            </if>
+            <if test="name != null and name != ''">
+                AND name LIKE #{_name}
+            </if>
+            <if test="phone != null and phone != ''">
+                AND phone LIKE #{_phone}
+            </if>
+            <if test="sex != null and sex != ''">
+                AND sex LIKE #{_sex}
+            </if>
+        </where>
+    </select>
+
 </mapper>

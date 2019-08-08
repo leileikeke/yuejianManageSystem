@@ -28,7 +28,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int selectUserCount() {
+    public List<User> selectUserListForTerm(Integer page, Integer limit, String uId, String name, String phone, String sex) {
+        List<User> users = userMapper.selectUserListForTerm(page, limit, uId, name, phone, sex);
+        return users;
+    }
+
+    @Override
+    public Integer selectUserCount() {
         int i = userMapper.selectUserCount();
         return i;
     }
@@ -36,7 +42,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean insertUser(User user) {
 
-        Date date = DateUtil.getCurrentTime(new Date(),"yyyy-MM-dd hh:mm:ss");
+        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
         user.setJointime(date);
         int i = userMapper.insertUser(user);
         return i == 1 ? true : false;
@@ -45,18 +51,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean queryUser(String name) {
         User user = userMapper.queryUser(name);
-        return user==null?true:false;
+        return user == null ? true : false;
     }
 
     @Override
     public boolean deleteUser(Integer uId) {
         int i = userMapper.deleteUser(uId);
-        return i==1?true:false;
+        return i == 1 ? true : false;
     }
 
     @Override
     public boolean updateUser(User user) {
         int i = userMapper.updateUser(user);
-        return i==1?true:false;
+        return i == 1 ? true : false;
     }
+
 }

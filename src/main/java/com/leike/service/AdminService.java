@@ -1,7 +1,6 @@
 package com.leike.service;
 
 import com.leike.pojo.Admin;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -18,7 +17,7 @@ public interface AdminService {
 
     boolean updateAdminPass(Integer id, String password);
 
-    List<Admin> selectAdminList();
+    List<Admin> selectAdminList(String name, String phone, String sex, String role);
 
     boolean deleteAdmin(Integer id);
 
@@ -27,4 +26,6 @@ public interface AdminService {
     boolean updateAdmin(Admin admin);
 
     boolean queryAdmin(String name);
+
+    boolean updateState(Integer id, Boolean state);
 }

@@ -7,8 +7,6 @@ import com.leike.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -50,11 +48,21 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean queryAdmin(String name) {
         Admin admin = adminMapper.queryAdmin(name);
-        return admin==null?true:false;
+        return admin == null ? true : false;
     }
 
     @Override
-    public List<Admin> selectAdminList() {
+    public boolean updateState(Integer id, Boolean state) {
+        int i = adminMapper.updateState(id, state);
+        return i == 1 ? true : false;
+    }
+
+    @Override
+    public List<Admin> selectAdminList(String name, String phone, String sex, String role) {
+        if ((name != null && !name.equals("")) || (phone != null && !phone.equals("")) || (sex != null && !sex.equals("")) || (role != null && !role.equals(""))) {
+            List<Admin> admins = adminMapper.selectAdminListForTerm(name, phone, sex, role);
+            return admins;
+        }
         List<Admin> admins = adminMapper.selectAdminList();
         return admins;
     }
@@ -68,7 +76,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean addAdmin(Admin admin) {
         //获取当前系统时间
-        Date date = DateUtil.getCurrentTime(new Date(),"yyyy-MM-dd hh:mm:ss");
+        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
         admin.setJointime(date);
         int i = adminMapper.addAdmin(admin);
 

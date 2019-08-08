@@ -39,6 +39,7 @@
                     <label class="layui-form-label">角色</label>
                     <div class="layui-input-block">
                         <select name="role">
+                            <option value="">不限</option>
                             <option value="systemAdmin">系统管理员</option>
                             <option value="clubAdmin">俱乐部管理员</option>
                         </select>
@@ -61,9 +62,9 @@
             <table id="LAY-user-back-manage" lay-filter="LAY-user-back-manage"></table>
             <script type="text/html" id="buttonTpl">
                 {{#  if(d.state == true){ }}
-                <button class="layui-btn layui-btn-xs">已审核</button>
+                <button class="layui-btn layui-btn-xs state" lay-event="audit">已审核</button>
                 {{#  } else { }}
-                <button class="layui-btn layui-btn-primary layui-btn-xs">未审核</button>
+                <button class="layui-btn layui-btn-primary layui-btn-xs state" lay-event="audit">未审核</button>
                 {{#  } }}
             </script>
             <script type="text/html" id="table-useradmin-admin">

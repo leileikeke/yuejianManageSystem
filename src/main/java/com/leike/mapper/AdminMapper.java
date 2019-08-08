@@ -33,4 +33,9 @@ public interface AdminMapper {
 
     @Select("SELECT * FROM admin WHERE name = #{name}")
     Admin queryAdmin(@Param("name") String name);
+
+    List<Admin> selectAdminListForTerm(@Param("name") String name,@Param("phone") String phone,@Param("sex") String sex,@Param("role") String role);
+
+    @Update("UPDATE admin SET state=#{state} WHERE id = #{id}")
+    int updateState(@Param("id") Integer id,@Param("state") Boolean state);
 }

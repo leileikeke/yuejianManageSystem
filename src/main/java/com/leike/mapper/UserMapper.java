@@ -29,4 +29,7 @@ public interface UserMapper {
 
     @Update("UPDATE user SET name = #{name},pic = #{pic},sex = #{sex},phone = #{phone},password = #{password},email = #{email} where uId = #{uId}")
     int updateUser(User user);
+
+    List<User> selectUserListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("uId") String uId, @Param("name") String name, @Param("phone") String phone, @Param("sex") String sex);
+
 }

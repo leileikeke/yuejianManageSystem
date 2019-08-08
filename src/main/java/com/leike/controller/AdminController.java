@@ -3,6 +3,7 @@ package com.leike.controller;
 import com.leike.constant.ResponseCode;
 import com.leike.pojo.Admin;
 import com.leike.service.AdminService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -123,11 +124,16 @@ public class AdminController {
 
 
     /**
-     * 获取admin列表(不包括密码)
+     * 获取admin列表(带搜索功能)
+     * @param name
+     * @param phone
+     * @param sex
+     * @param role
+     * @return
      */
     @RequestMapping("/adminList")
     @ResponseBody
-    public Map<String, Object> getAdminList() {
+    public Map<String, Object> getAdminList(@Param("name") String name,@Param("phone") String phone,@Param("sex") String sex,@Param("role") String role) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -135,7 +141,7 @@ public class AdminController {
 
         Integer count = 0;
 
-        List<Admin> admins = adminService.selectAdminList();
+        List<Admin> admins = adminService.selectAdminList(name,phone,sex,role);
 
         if (admins != null) {
             code = ResponseCode.TABLESUCCEED;
@@ -276,5 +282,38 @@ public class AdminController {
         return map;
     }
 
+    /**
+     * 更新审核状态
+     * @param id
+     * @param state
+     * @return
+     */
+    @RequestMapping("/updateState")
+    @ResponseBody
+    public Map<String , Object> updateState(Integer id,Boolean state){
+
+        if (state){
+            state = false;
+        }else {
+            state = true;
+        }
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "修改失败";
+
+        boolean b = adminService.updateState(id, state);
+        if (b){
+            code = ResponseCode.SUCCEED;
+            msg = "修改成功";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
 
 }

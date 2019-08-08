@@ -11,9 +11,11 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<User> selectUserList(Integer page,Integer limit);
+    List<User> selectUserList(Integer page, Integer limit);
+    
+    List<User> selectUserListForTerm(Integer page, Integer limit, String uId, String name, String phone, String sex);
 
-    int selectUserCount();
+    Integer selectUserCount();
 
     boolean insertUser(User user);
 
@@ -22,4 +24,5 @@ public interface UserService {
     boolean deleteUser(Integer uId);
 
     boolean updateUser(User user);
+
 }

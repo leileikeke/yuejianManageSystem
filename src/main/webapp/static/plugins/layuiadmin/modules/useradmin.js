@@ -34,7 +34,8 @@ layui.define(['table', 'form'], function (exports) {
         , page: true
         , limit: 13
         , height: 'full-220'
-        , text: '对不起，加载出现异常！'
+        , text: {none: '一条数据也没有^_^'}
+        // , text: '对不起，加载出现异常！'
     });
 
     //监听工具条
@@ -119,7 +120,7 @@ layui.define(['table', 'form'], function (exports) {
                     body.find("input[name='pic']").val(data.pic);
                     // body.find("input[name='role']").val(data.role);
                     // body.find("input[name='state']").val(data.state);
-                    body.find("input[value=" + data.sex + "]").prop("checked", true);  //，单选按钮
+                    body.find("input[value=" + data.sex + "]").prop("checked", "checked");  //，单选按钮
                     setTimeout(function () {
                         layui.layer.tips('点击此处返回用户列表', '.layui-layer-close1', {
                             tips: 1
@@ -225,16 +226,6 @@ layui.define(['table', 'form'], function (exports) {
                 }
                 , success: function (layero, index) {
                     var body = layer.getChildFrame('body', index);
-                    //表单初始赋值
-                    // body.form.val('layuiadmin-form-admin', {
-                    //     "name": "贤心" // "name": "value"
-                    //     ,"password": "123456"
-                    //     // ,"interest": 1
-                    //     // ,"like[write]": true //复选框选中状态
-                    //     // ,"close": true //开关状态
-                    //     // ,"sex": "女"
-                    //     // ,"desc": "我爱 layui"
-                    // })
                     body.find("input[name='id']").val(data.id);
                     body.find("input[name='name']").val(data.name);
                     body.find("input[name='password']").val(data.password);
@@ -244,6 +235,9 @@ layui.define(['table', 'form'], function (exports) {
                     // body.find("input[name='role']").val(data.role);
                     // body.find("input[name='state']").val(data.state);
                     body.find("option[value=" + data.role + "]").prop("selected", true);  //，单选按钮
+                    if (data.state == 1) {
+                        body.find(".layui-input-inline input[name='state']").prop("checked", "checked");
+                    }
                     setTimeout(function () {
                         layui.layer.tips('点击此处返回用户列表', '.layui-layer-close1', {
                             tips: 1
@@ -251,6 +245,33 @@ layui.define(['table', 'form'], function (exports) {
                     }, 300)
                 }
             })
+        } else if (obj.event === 'audit') {
+            var d = {
+                id: data.id,
+                state: data.state
+            };
+            var url = layui.setter.ContextPath + '/admin/updateState';
+            admin.req({
+                type: 'get'
+                , url: url
+                , data: d
+                , done: function (res) {
+                    setTimeout(function () {
+                        layer.tips(res.msg, obj.tr.selector + ' .state', {
+                            tips: [4, '#1aa094']
+                        });
+                    }, 300)
+                    if (d.state == false) {
+                        obj.update({
+                            state:true
+                        });
+                    } else {
+                        obj.update({
+                            state:false
+                        });
+                    }
+                }
+            });
         }
     });
 

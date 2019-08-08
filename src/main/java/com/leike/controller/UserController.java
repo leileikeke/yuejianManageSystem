@@ -26,15 +26,19 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 获取user列表(不包括密码)
+     * 获取user列表(带搜索功能)
      *
      * @param page
      * @param limit
+     * @param uId
+     * @param name
+     * @param phone
+     * @param sex
      * @return
      */
     @RequestMapping("/userList")
     @ResponseBody
-    public Map<String, Object> selectAdminList(Integer page, Integer limit) {
+    public Map<String, Object> selectAdminList(Integer page, Integer limit, String uId, String name, String phone, String sex) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -42,12 +46,21 @@ public class UserController {
 
         Integer count = 0;
 
-        List<User> users = userService.selectUserList((page - 1) * limit, limit);
+        List<User> users;
 
-        if (users != null) {
-            code = ResponseCode.TABLESUCCEED;
-            count = userService.selectUserCount();
+        if ((uId != null && !uId.equals("")) || (name != null && !name.equals("")) || (phone != null && !phone.equals("")) || (sex != null && !sex.equals(""))) {
+            users = userService.selectUserListForTerm((page - 1) * limit, limit, uId, name, phone, sex);
+            if (users!=null){
+                code = ResponseCode.TABLESUCCEED;
+//                count = userService.selectUserCountForTerm(uId,name,phone,sex);
+            }
+        } else {
+            users = userService.selectUserList((page - 1) * limit, limit);
+            if (users != null) {
+                code = ResponseCode.TABLESUCCEED;
+            }
         }
+        count = userService.selectUserCount();
 
         map.put("code", code);
         map.put("msg", "");
@@ -157,6 +170,7 @@ public class UserController {
 
     /**
      * 更新User数据
+     *
      * @param user
      * @return
      */
@@ -164,7 +178,6 @@ public class UserController {
     @ResponseBody
     public Map<String, Object> updateAdmin(@RequestBody User user) {
 
-        System.out.println(user);
         Map<String, Object> map = new HashMap<>();
 
         Integer code = ResponseCode.FAILURE;
@@ -183,5 +196,7 @@ public class UserController {
 
         return map;
     }
+
+
 
 }
