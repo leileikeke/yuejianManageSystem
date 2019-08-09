@@ -6,7 +6,6 @@ import com.leike.service.AdminService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 管理员控制器
  * @description:
  * @author: leike
  * @date: 2019-08-03 16:54

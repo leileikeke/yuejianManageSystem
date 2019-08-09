@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.leike.mapper.ClubMapper">
+
+
+    <select id="selectClubListForTerm" resultType="com.leike.pojo.Club">
+        <bind name="_cId" value="'%'+cId+'%'"/>
+        <bind name="_name" value="'%'+name+'%'"/>
+        <bind name="_phone" value="'%'+phone+'%'"/>
+        SELECT *
+        FROM club
+        <where>
+            c_id IN
+            (SELECT c.c_id
+            FROM (SELECT c_id
+            FROM club
+            LIMIT #{page},#{limit}) as c)
+            <if test="cId != null and cId != ''">
+                AND c_id LIKE #{_cId}
+            </if>
+            <if test="name != null and name != ''">
+                AND name LIKE #{_name}
+            </if>
+            <if test="phone != null and phone != ''">
+                AND phone LIKE #{_phone}
+            </if>
+        </where>
+    </select>
+</mapper>
