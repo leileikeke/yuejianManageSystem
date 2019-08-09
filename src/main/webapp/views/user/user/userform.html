@@ -13,7 +13,7 @@
 
 <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin"
      style="padding: 20px 0 0 0;">
-    <input type="hidden" name="uId">
+    <input type="hidden" name="uId" id="uId">
     <div class="layui-form-item">
         <label class="layui-form-label">用户名</label>
         <div class="layui-input-inline">
@@ -44,9 +44,10 @@
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">头像</label>
-        <div class="layui-input-inline">
-            <input type="text" name="pic" lay-verify="required" placeholder="请上传图片" autocomplete="off"
-                   class="layui-input">
+        <div class="layui-input-inline" style="width: 80px">
+            <img class="layui-upload-img" style="width: 80px;height: 80px" id="demo1">
+            <input type="hidden" name="pic" id="pic" class="layui-input">
+            <p id="demoText"></p>
         </div>
         <button style="float: left;" type="button" class="layui-btn" id="layuiadmin-upload-useradmin">上传图片</button>
     </div>
@@ -71,40 +72,48 @@
     }).use(['index', 'form', 'upload'], function () {
         var $ = layui.$
             , form = layui.form
-            , upload = layui.upload;
-
-        upload.render({
-            elem: '#layuiadmin-upload-useradmin'
-            , url: layui.setter.base + 'json/upload/demo.js'
-            , accept: 'images'
-            , method: 'get'
-            , acceptMime: 'image/*'
-            , done: function (res) {
-                $(this.item).prev("div").children("input").val(res.data.src)
-            }
-        });
+            , upload = layui.upload
+            , ContextPath = layui.setter.ContextPath;
+        // {
+        //     "code": 0,
+        //     "msg": "",
+        //     "data": {
+        //     "src": "https://wx2.sinaimg.cn/mw690/5db11ff4gy1fmx4kec5bvj20eb0h3mxh.jpg"
+        // }
+        // }
+        // upload.render({
+        //     elem: '#layuiadmin-upload-useradmin'
+        //     , url: layui.setter.base + 'json/upload/demo.js'
+        //     , accept: 'images'
+        //     , method: 'get'
+        //     , acceptMime: 'image/*'
+        //     , done: function (res) {
+        //         $(this.item).prev("div").children("input").val(res.data.src)
+        //     }
+        // });
         //普通图片上传
         var uploadInst = upload.render({
-            elem: '#test1'
-            ,url: '/upload/'
-            ,before: function(obj){
+            elem: '#layuiadmin-upload-useradmin'
+            , url: ContextPath + '/user/uploadPic'
+            , accept: 'images'
+            , acceptMime: 'image/*'
+            , before: function (obj) {
                 //预读本地文件示例，不支持ie8
-                obj.preview(function(index, file, result){
+                obj.preview(function (index, file, result) {
+                    console.log(result);
                     $('#demo1').attr('src', result); //图片链接（base64）
                 });
             }
-            ,done: function(res){
-                //如果上传失败
-                if(res.code > 0){
-                    return layer.msg('上传失败');
-                }
+            , done: function (res) {
                 //上传成功
+                layer.msg(res.msg);
+                $("#pic").val(res.picName);
             }
-            ,error: function(){
+            , error: function () {
                 //演示失败状态，并实现重传
                 var demoText = $('#demoText');
                 demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
-                demoText.find('.demo-reload').on('click', function(){
+                demoText.find('.demo-reload').on('click', function () {
                     uploadInst.upload();
                 });
             }

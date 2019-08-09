@@ -4,8 +4,10 @@ import com.leike.mapper.UserMapper;
 import com.leike.pojo.User;
 import com.leike.service.UserService;
 import com.leike.util.DateUtil;
+import com.leike.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 import java.util.List;
@@ -55,15 +57,36 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean deleteUser(Integer uId) {
+    public boolean deleteUser(Integer uId, String pic, String uploadPath) {
+
+        //删除服务器上的用户头像
+        FileUtil.deleteFile(uploadPath,pic);
+
         int i = userMapper.deleteUser(uId);
         return i == 1 ? true : false;
     }
 
     @Override
-    public boolean updateUser(User user) {
+    public boolean updateUser(User user, String uploadPath) {
+
+        //获取用户原头像
+        User user1 = userMapper.selectUser(user.getuId());
+        //如果修改了用户头像则删除原头像
+        if (!user.getPic().equals(user1.getPic())){
+            FileUtil.deleteFile(uploadPath,user1.getPic());
+
+        }
+
         int i = userMapper.updateUser(user);
         return i == 1 ? true : false;
     }
+
+    //    private static String uploadPath = "D:"+ File.separator;
+    @Override
+    public String uploadPic(MultipartFile multipartFile, String uploadPath) {
+        String fileName = FileUtil.uploadUserPic(multipartFile, uploadPath, "/static/imgs/user/");
+        return fileName;
+    }
+
 
 }

@@ -7,8 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,7 +53,7 @@ public class UserController {
 
         if ((uId != null && !uId.equals("")) || (name != null && !name.equals("")) || (phone != null && !phone.equals("")) || (sex != null && !sex.equals(""))) {
             users = userService.selectUserListForTerm((page - 1) * limit, limit, uId, name, phone, sex);
-            if (users!=null){
+            if (users != null) {
                 code = ResponseCode.TABLESUCCEED;
 //                count = userService.selectUserCountForTerm(uId,name,phone,sex);
             }
@@ -115,7 +118,7 @@ public class UserController {
      */
     @RequestMapping("/delete")
     @ResponseBody
-    public Map<String, Object> deleteUser(Integer uId) {
+    public Map<String, Object> deleteUser(Integer uId, String pic, HttpServletRequest request) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -123,7 +126,9 @@ public class UserController {
 
         String msg = "删除失败";
 
-        boolean b = userService.deleteUser(uId);
+        String uploadPath = request.getSession().getServletContext().getRealPath("/");
+
+        boolean b = userService.deleteUser(uId, pic, uploadPath);
         //如果成功则返回code=200
         if (b) {
             code = ResponseCode.SUCCEED;
@@ -143,7 +148,7 @@ public class UserController {
      */
     @RequestMapping("/deleteAll")
     @ResponseBody
-    public Map<String, Object> deleteUser(@RequestBody List<User> list) {
+    public Map<String, Object> deleteUserList(@RequestBody List<User> list, HttpServletRequest request) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -152,9 +157,11 @@ public class UserController {
         //统计删除成功的条数
         Integer count = 0;
 
+        String uploadPath = request.getSession().getServletContext().getRealPath("/");
+
         for (int i = 0; i < list.size(); i++) {
 
-            boolean b = userService.deleteUser(list.get(i).getuId());
+            boolean b = userService.deleteUser(list.get(i).getuId(), list.get(i).getPic(), uploadPath);
 
             if (b) {
                 count++;
@@ -176,15 +183,16 @@ public class UserController {
      */
     @RequestMapping("/update")
     @ResponseBody
-    public Map<String, Object> updateAdmin(@RequestBody User user) {
+    public Map<String, Object> updateUser(@RequestBody User user, HttpServletRequest request) {
 
         Map<String, Object> map = new HashMap<>();
 
         Integer code = ResponseCode.FAILURE;
 
-        String msg = "管理员添加失败";
+        String msg = "用户添加失败";
 
-        boolean b = userService.updateUser(user);
+        String uploadPath = request.getSession().getServletContext().getRealPath("/");
+        boolean b = userService.updateUser(user, uploadPath);
 
         if (b) {
             code = ResponseCode.SUCCEED;
@@ -197,6 +205,42 @@ public class UserController {
         return map;
     }
 
+    /**
+     * 用户上传头像
+     *
+     * @param multipartFile
+     * @param request
+     * @return
+     */
+    @RequestMapping("/uploadPic")
+    @ResponseBody
+    public Map<String, Object> uploadPic(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "上传失败";
+
+
+        // 1.不为空才上传
+        if (multipartFile != null && !multipartFile.isEmpty()) {
+
+            String uploadPath = request.getSession().getServletContext().getRealPath("/");
+            String picName = userService.uploadPic(multipartFile, uploadPath);
+
+            if (picName != null) {
+                code = ResponseCode.SUCCEED;
+                msg = "上传成功";
+                map.put("picName", picName);
+            }
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
 
 
 }

@@ -13,4 +13,27 @@
         FROM admin
         WHERE name = #{name} and password = #{password} and role=#{role}
     </select>
+
+    <select id="selectAdminListForTerm" resultType="com.leike.pojo.Admin">
+        <bind name="_name" value="'%'+name+'%'"/>
+        <bind name="_phone" value="'%'+phone+'%'"/>
+        <bind name="_sex" value="'%'+sex+'%'"/>
+        <bind name="_role" value="'%'+role+'%'"/>
+        SELECT *
+        FROM admin
+        <where>
+            <if test="name != null and name != ''">
+                AND name  LIKE #{_name}
+            </if>
+            <if test="phone != null and phone != ''">
+                AND phone  LIKE #{_phone}
+            </if>
+            <if test="sex != null and sex != ''">
+                AND sex  LIKE #{_sex}
+            </if>
+            <if test="role != null and role != ''">
+                AND role  LIKE #{_role}
+            </if>
+        </where>
+    </select>
 </mapper>

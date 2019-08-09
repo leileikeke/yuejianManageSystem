@@ -1,6 +1,7 @@
 package com.leike.service;
 
 import com.leike.pojo.User;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
 public interface UserService {
 
     List<User> selectUserList(Integer page, Integer limit);
-    
+
     List<User> selectUserListForTerm(Integer page, Integer limit, String uId, String name, String phone, String sex);
 
     Integer selectUserCount();
@@ -21,8 +22,9 @@ public interface UserService {
 
     boolean queryUser(String name);
 
-    boolean deleteUser(Integer uId);
+    boolean deleteUser(Integer uId, String pic, String uploadPath);
 
-    boolean updateUser(User user);
+    boolean updateUser(User user, String uploadPath);
 
+    String uploadPic(MultipartFile multipartFile, String uploadPath);
 }

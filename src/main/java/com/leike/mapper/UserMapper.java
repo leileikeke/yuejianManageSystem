@@ -27,9 +27,11 @@ public interface UserMapper {
     @Delete("delete from user where u_id = #{uId}")
     int deleteUser(@Param("uId") Integer uId);
 
-    @Update("UPDATE user SET name = #{name},pic = #{pic},sex = #{sex},phone = #{phone},password = #{password},email = #{email} where uId = #{uId}")
+    @Update("UPDATE user SET name = #{name},pic = #{pic},sex = #{sex},phone = #{phone},password = #{password},email = #{email} where u_id = #{uId}")
     int updateUser(User user);
 
     List<User> selectUserListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("uId") String uId, @Param("name") String name, @Param("phone") String phone, @Param("sex") String sex);
 
+    @Select("select * from User where u_id = #{uId}")
+    User selectUser(@Param("uId") Integer uId);
 }

@@ -19,13 +19,13 @@
                 <div class="layui-inline">
                     <label class="layui-form-label">ID</label>
                     <div class="layui-input-block">
-                        <input type="text" name="id" placeholder="请输入" autocomplete="off" class="layui-input">
+                        <input type="text" name="uId" placeholder="请输入" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-inline">
                     <label class="layui-form-label">用户名</label>
                     <div class="layui-input-block">
-                        <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
+                        <input type="text" name="name" placeholder="请输入" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-inline">
@@ -38,7 +38,7 @@
                     <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
                         <select name="sex">
-                            <option value="0">不限</option>
+                            <option value="">不限</option>
                             <option value="男">男</option>
                             <option value="女">女</option>
                         </select>
@@ -88,7 +88,7 @@
         //监听搜索
         form.on('submit(LAY-user-front-search)', function (data) {
             var field = data.field;
-
+            console.log(field);
             //执行重载
             table.reload('LAY-user-manage', {
                 where: field
@@ -131,7 +131,7 @@
                             });
                         });
                     } else {
-                        layur.msg("验证口令错误,操作失败");
+                        layer.msg("验证口令错误,操作失败");
                     }
                 });
             }
