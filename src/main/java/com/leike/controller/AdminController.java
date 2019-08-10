@@ -47,16 +47,28 @@ public class AdminController {
         if (admin.getRole().equals("systemAdmin")) {
             Admin system = adminService.selectAdmin(admin);
             if (system != null) {
-                code = ResponseCode.SUCCEED;
-                session.setAttribute("SESSION_ADMIN", system);
+                //判断此用户是否审核
+                if (system.getState()) {
+                    code = ResponseCode.SUCCEED;
+                    session.setAttribute("SESSION_ADMIN", system);
+                } else {
+                    msg = "审核未通过,请联系管理员";
+                }
+
             }
         }
         if (admin.getRole().equals("clubAdmin")) {
             Admin club = adminService.selectAdmin(admin);
             if (club != null) {
-                code = ResponseCode.SUCCEED;
-                msg = "";
-                session.setAttribute("SESSION_ADMIN", club);
+                //判断此用户是否审核
+                if (club.getState()) {
+                    code = ResponseCode.SUCCEED;
+                    msg = "";
+                    session.setAttribute("SESSION_ADMIN", club);
+                } else {
+                    msg = "审核未通过,请联系管理员";
+                }
+
             }
         }
         map.put("code", code);

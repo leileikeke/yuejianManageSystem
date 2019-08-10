@@ -51,7 +51,6 @@ layui.define(['form', 'upload'], function (exports) {
 
     //设置我的资料
     form.on('submit(setmyinfo)', function (obj) {
-        layer.msg(JSON.stringify(obj.field));
         //提交修改
         admin.req({
             type: 'post'

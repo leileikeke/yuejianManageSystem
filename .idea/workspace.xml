@@ -9,30 +9,15 @@
     <list default="true" id="1b3ad1b4-7668-45ec-bbac-4d15534a55d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/ClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/ClubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/mapper/ClubMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/ClubMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/ClubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/ClubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ClubMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ClubMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/set/user/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/set/user/password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leike/controller/DispatcherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leike/controller/DispatcherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/controller/DispatcherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/controller/DispatcherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index_system.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leike/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leike/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leike/mapper/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leike/mapper/AdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leike/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leike/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/leike/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leike/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/mapper/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/mapper/AdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/service/impl/AdminServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/set.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/userform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/userform.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,8 +75,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="57" column="48" lean-forward="true" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+            <state relative-caret-position="342">
+              <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="397" column="51" lean-forward="true" selection-start-line="397" selection-start-column="51" selection-end-line="397" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -99,17 +93,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/set/user/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="100" column="61" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
+            <state relative-caret-position="648">
+              <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="360" column="30" lean-forward="true" selection-start-line="360" selection-start-column="30" selection-end-line="360" selection-end-column="30" />
+            <state relative-caret-position="294">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="52" column="51" lean-forward="true" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+            <state relative-caret-position="612">
+              <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,7 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ContextPath</find>
       <find>Integer</find>
       <find>int</find>
       <find>v</find>
@@ -208,6 +201,7 @@
       <find>name</find>
       <find>select</find>
       <find>System.out</find>
+      <find>login</find>
     </findStrings>
     <replaceStrings>
       <replace>../static/plugins</replace>
@@ -317,11 +311,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/mapper/AdminMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" />
       </list>
     </option>
@@ -891,7 +885,7 @@
       <workItem from="1565331596248" duration="11973000" />
       <workItem from="1565345102737" duration="1916000" />
       <workItem from="1565347023453" duration="15390000" />
-      <workItem from="1565424145832" duration="11856000" />
+      <workItem from="1565424145832" duration="12593000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1564143073495</created>
@@ -1075,7 +1069,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565360290188</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="...">
+      <created>1565436267763</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1565436267763</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1093,7 +1094,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380662000" />
+    <option name="totallyTimeSpent" value="381399000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1108,7 +1109,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49844238" visible="true" weight="0.20682302" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49844238" visible="true" weight="0.20682302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -1117,7 +1118,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.6216216" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.46049896" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.46049896" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952183" />
@@ -1347,13 +1348,6 @@
         <state relative-caret-position="-1539" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2673">
@@ -1375,13 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="380" column="53" selection-start-line="380" selection-start-column="53" selection-end-line="380" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1524,20 +1511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="57" column="48" lean-forward="true" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/set/user/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="100" column="61" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/service/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="771">
@@ -1567,21 +1540,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="52" column="51" lean-forward="true" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        <state relative-caret-position="612">
+          <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/set/user/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+          <folding>
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2218#2219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="360" column="30" lean-forward="true" selection-start-line="360" selection-start-column="30" selection-end-line="360" selection-end-column="30" />
+        <state relative-caret-position="294">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="397" column="51" lean-forward="true" selection-start-line="397" selection-start-column="51" selection-end-line="397" selection-end-column="51" />
         </state>
       </provider>
     </entry>
