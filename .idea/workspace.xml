@@ -7,163 +7,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b3ad1b4-7668-45ec-bbac-4d15534a55d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/club/club/adminform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/club/club/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/content/comment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/content/contform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/content/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/content/listform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/content/tags.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/content/tagsform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/forum/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/forum/listform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/forum/replys.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/forum/replysform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/mall/category.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/mall/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/mall/specs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/message/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/message/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/workorder/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/workorder/listform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/app/说明.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/anim/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/auxiliar/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/badge/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/button/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/carousel/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/code/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/flow/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/form/element.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/form/group.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/grid/all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/grid/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/grid/mobile-pc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/grid/mobile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/grid/speed-dial.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/grid/stack.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/special-demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laydate/theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/layer/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/layer/special-demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/layer/theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laypage/demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laypage/demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laypage/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/laytpl/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/nav/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/panel/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/progress/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/rate/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/auto.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/cellEdit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/cellEvent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/checkbox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/fixed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/height.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/initSort.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/operate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/reload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/resetPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/simple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/static.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/style.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/thead.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/table/tostatic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/tabs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/temp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/timeline/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/upload/demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/upload/demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/upload/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/util/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/component/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/home/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/home/console.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/addresslist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/goodslist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/msgboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/personalpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/temp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/tips/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/tips/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/template/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/adminform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/adminform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/role.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/roleform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/reg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/user/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index_system.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/comment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/contform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/listform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/tags.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/content/tagsform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/listform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/replys.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/forum/replysform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/mall/category.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/mall/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/mall/specs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/message/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/message/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/workorder/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/workorder/listform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/app/说明.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/anim/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/auxiliar/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/badge/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/button/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/carousel/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/code/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/flow/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/form/element.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/form/group.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/mobile-pc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/mobile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/speed-dial.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/grid/stack.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/special-demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laydate/theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/layer/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/layer/special-demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/layer/theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laypage/demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laypage/demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laypage/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/laytpl/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/nav/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/panel/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/progress/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/rate/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/auto.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/cellEdit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/cellEvent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/checkbox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/fixed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/height.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/initSort.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/operate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/reload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/resetPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/simple.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/static.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/style.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/thead.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/table/tostatic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/tabs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/temp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/timeline/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/upload/demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/upload/demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/upload/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/util/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/component/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/useradmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/static/plugins/layuiadmin/modules/useradmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/home/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/home/console.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/iframe/layer/iframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/set/user/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/addresslist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/goodslist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/msgboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/personalpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/temp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/tips/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/tips/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/template/说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/adminform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/adminform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/role.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/roleform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/reg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/userform.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/user/userform.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -217,114 +107,137 @@
     <favorites_list name="ssm_demo" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/home/console.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2157">
-              <caret line="186" column="24" selection-start-line="186" selection-start-column="24" selection-end-line="186" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/iframe/layer/iframe.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="44" column="44" lean-forward="true" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/form_add.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/interceptors/MethodTimerInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/interceptors/SessionInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index11111.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.6497868">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3879">
+                  <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/admin.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1995">
+                  <caret line="563" column="29" selection-start-line="563" selection-start-column="25" selection-end-line="563" selection-end-column="29" />
+                  <folding>
+                    <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/view.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-9068" />
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="567">
+                  <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+                  <folding>
+                    <marker date="1565445427268" expanded="true" signature="10932:11639" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="429">
+                  <caret line="99" selection-start-line="99" selection-end-line="99" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/views/club/club/adminform.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3729">
+                  <caret line="198" column="42" selection-start-line="198" selection-start-column="22" selection-end-line="198" selection-end-column="42" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/views/club/club/list.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/user/list.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="80" column="31" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="31" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>v</find>
-      <find>layui-layer-iframe</find>
-      <find>LAY-user-manage</find>
-      <find>update</find>
-      <find>switch</find>
-      <find>state</find>
       <find>&amp;&amp;</find>
       <find>LAY-user-front-search</find>
       <find>undefined</find>
@@ -336,7 +249,6 @@
       <find>layuiadmin-upload-useradmin</find>
       <find>render</find>
       <find>LAY-user-back-submit</find>
-      <find>LAY-user-back-manage</find>
       <find>LAY-user-front-submit</find>
       <find>User</find>
       <find>user</find>
@@ -349,6 +261,13 @@
       <find>login</find>
       <find>数据概括</find>
       <find>控制台</find>
+      <find>layuiAdmin</find>
+      <find>LAY-user-back-search</find>
+      <find>LAY-user-back-manage</find>
+      <find>table-useradmin-admin</find>
+      <find>console</find>
+      <find>layuiadmin-btn-admin</find>
+      <find>LAY-</find>
     </findStrings>
     <replaceStrings>
       <replace>../static/plugins</replace>
@@ -413,12 +332,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/tpl/system/theme.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/form.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/contlist.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/useradmin/webuser.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/json/useradmin/mangadmin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/table.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/config.js" />
@@ -431,16 +344,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/lay/modules/upload.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/user/administrators/wqeef.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/view.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/user/administrators/adminform.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/user/administrators/role.html" />
         <option value="$PROJECT_DIR$/src/main/resources/com/leike/mapper/AdminMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/user/user/list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/layui/layui.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/util/DateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/pojo/Club.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ClubMapper.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/UserController.java" />
@@ -453,17 +362,27 @@
         <option value="$PROJECT_DIR$/src/main/java/com/leike/mapper/ClubMapper.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/set/user/password.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/DispatcherController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/mapper/AdminMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/leike/service/impl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/home/console.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/set/user/info.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/user/administrators/role.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/user/administrators/adminform.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/user/user/list.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/user/reg.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/club/club.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/club/club/adminform.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/club/club/list.html" />
       </list>
     </option>
   </component>
@@ -525,6 +444,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -628,15 +548,7 @@
               <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -644,6 +556,48 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="layuiadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -660,7 +614,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="iframe" type="462c0819:PsiDirectoryNode" />
+              <item name="club" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -669,8 +623,37 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="iframe" type="462c0819:PsiDirectoryNode" />
-              <item name="layer" type="462c0819:PsiDirectoryNode" />
+              <item name="club" type="462c0819:PsiDirectoryNode" />
+              <item name="club" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="administrators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -693,7 +676,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -703,7 +685,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springMVC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/views/club/club" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -719,26 +701,26 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\error" />
-      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\views" />
-      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\WEB-INF\jsp" />
-      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\static\plugins\layuiadmin\lib" />
-      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\WEB-INF" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.leike.mapper" />
+      <recent name="com.leike.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\views\club\club" />
       <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\target\yuejianManageSystem\static\imgs" />
       <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\static\imgs\user" />
       <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\target\yuejianManageSystem\static\imgs\user" />
       <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\static\plugins\layuiadmin" />
-      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\views\errors" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.leike.constant" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.leike.mapper" />
-      <recent name="com.leike.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\views\club\club" />
+      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\error" />
+      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\views" />
+      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\WEB-INF\jsp" />
+      <recent name="C:\Users\leike\IdeaProjects\yuejianManageSystem\src\main\webapp\static\plugins\layuiadmin\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -945,7 +927,8 @@
       <workItem from="1565331596248" duration="11973000" />
       <workItem from="1565345102737" duration="1916000" />
       <workItem from="1565347023453" duration="15390000" />
-      <workItem from="1565424145832" duration="14195000" />
+      <workItem from="1565424145832" duration="14241000" />
+      <workItem from="1565443885633" duration="4030000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1564143073495</created>
@@ -1143,7 +1126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565436846665</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="...">
+      <created>1565438380049</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1565438380049</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1161,7 +1151,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383001000" />
+    <option name="totallyTimeSpent" value="387077000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1176,7 +1166,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49844238" visible="true" weight="0.20682302" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49844238" weight="0.20895523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -1185,7 +1175,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.6216216" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.46049896" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.46049896" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952183" />
@@ -1263,132 +1253,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="30" column="4" selection-start-line="28" selection-start-column="3" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/leike/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/leike/mapper/ClubMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/service/ClubService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/Club.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/ClubController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2115">
-          <caret line="104" column="12" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/mapper/ClubMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/说明.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2673">
-          <caret line="99" column="40" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/senior.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.8.RELEASE/spring-webmvc-5.1.8.RELEASE-sources.jar!/org/springframework/web/servlet/ModelAndView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="307" column="26" lean-forward="true" selection-start-line="304" selection-start-column="7" selection-end-line="307" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/set/user/password.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -1396,50 +1260,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/role.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/roleform.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-900">
           <caret line="19" column="21" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/adminform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="77" column="23" lean-forward="true" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/forget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3317" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-549">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1475,42 +1299,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="252" selection-start-line="252" selection-end-line="272" selection-end-column="15" />
-          <folding>
-            <marker date="1565351815572" expanded="true" signature="10932:11639" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/leike/mapper/AdminMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/user/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="120" column="64" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="75" column="53" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1551,13 +1343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/set/user/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/set.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1576,26 +1361,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index11111.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/component/说明.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/app/说明.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/iframe/layer/iframe.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/form_add.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1606,44 +1374,217 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/interceptors/SessionInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/interceptors/MethodTimerInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="378">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/component/说明.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/interceptors/SessionInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/app/说明.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index11111.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/home/console.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2157">
-          <caret line="186" column="24" selection-start-line="186" selection-start-column="24" selection-end-line="186" selection-end-column="24" />
+        <state relative-caret-position="371">
+          <caret line="105" column="45" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/set/user/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/tips/404.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/tips/error.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/temp.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/search.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/personalpage.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/msgboard.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/goodslist.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/template/addresslist.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/roleform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/role.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1890">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/forget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/reg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/user/userform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/adminform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="450">
+          <caret line="137" column="65" selection-start-line="137" selection-start-column="65" selection-end-line="137" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/iframe/layer/iframe.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/Club.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="44" column="44" lean-forward="true" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+        <state relative-caret-position="243">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/useradmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding>
+            <marker date="1565445427268" expanded="true" signature="10932:11639" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/club/club/adminform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3729">
+          <caret line="198" column="42" selection-start-line="198" selection-start-column="22" selection-end-line="198" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="563" column="29" selection-start-line="563" selection-start-column="25" selection-end-line="563" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/lib/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9068" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3879">
+          <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/user/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="80" column="31" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/club/club/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

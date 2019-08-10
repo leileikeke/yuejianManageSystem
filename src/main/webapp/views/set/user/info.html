@@ -120,7 +120,13 @@
         forminit();
         //重置
         form.on('submit(reset)', function (obj) {
-            forminit();//初始化
+            //加载层-默认风格
+            layer.load();
+            //此处演示关闭
+            setTimeout(function () {
+                forminit();//初始化
+                layer.closeAll('loading');
+            }, 300);
             return null;
         });
 

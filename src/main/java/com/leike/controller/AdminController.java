@@ -51,6 +51,7 @@ public class AdminController {
                 if (system.getState()) {
                     code = ResponseCode.SUCCEED;
                     session.setAttribute("SESSION_ADMIN", system);
+                    msg = "";
                 } else {
                     msg = "审核未通过,请联系管理员";
                 }

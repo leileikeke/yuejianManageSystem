@@ -55,7 +55,6 @@
                 <li class="layui-nav-item" lay-unselect>
                     <a lay-href="views/app/message/index.html" layadmin-event="message" lay-text="消息中心">
                         <i class="layui-icon layui-icon-notice"></i>
-
                         <!-- 如果有新消息，则显示小圆点 -->
                         <span class="layui-badge-dot"></span>
                     </a>
@@ -124,20 +123,46 @@
                             </dd>
                         </dl>
                     </li>
+
+
+
+
+
                     <li data-name="user" class="layui-nav-item">
-                        <a href="javascript:;" lay-tips="用户" lay-direction="2">
+                        <a href="javascript:;" lay-tips="俱乐部" lay-direction="2">
                             <i class="layui-icon layui-icon-user"></i>
-                            <cite>用户</cite>
+                            <cite>俱乐部</cite>
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a lay-href="views/user/user/list.html">网站用户</a>
+                                <a lay-href="views/club/club/list.html">俱乐部</a>
                             </dd>
-                            <dd>
-                                <a lay-href="views/user/administrators/list.html">后台管理员</a>
-                            </dd>
+<%--                            <dd>--%>
+<%--                                <a lay-href="views/user/administrators/list.html">后台管理员</a>--%>
+<%--                            </dd>--%>
                         </dl>
                     </li>
+
+
+
+
+
+
+
+                    <li data-name="user" class="layui-nav-item">
+                    <a href="javascript:;" lay-tips="用户" lay-direction="2">
+                        <i class="layui-icon layui-icon-user"></i>
+                        <cite>用户</cite>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a lay-href="views/user/user/list.html">网站用户</a>
+                        </dd>
+                        <dd>
+                            <a lay-href="views/user/administrators/list.html">后台管理员</a>
+                        </dd>
+                    </dl>
+                </li>
                     <li data-name="set" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="设置" lay-direction="2">
                             <i class="layui-icon layui-icon-set"></i>

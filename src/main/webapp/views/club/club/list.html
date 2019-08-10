@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>yeujian 后台管理员</title>
+    <title>yuejian 后台俱乐部</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -17,7 +17,7 @@
         <div class="layui-form layui-card-header layuiadmin-card-header-auto">
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <label class="layui-form-label">登录名</label>
+                    <label class="layui-form-label">俱乐部名称</label>
                     <div class="layui-input-block">
                         <input type="text" name="name" placeholder="请输入" autocomplete="off" class="layui-input">
                     </div>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-user-back-search">
+                    <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-club-back-search">
                         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
                     </button>
                 </div>
@@ -55,34 +55,28 @@
 
         <div class="layui-card-body">
             <div style="padding-bottom: 10px;">
-                <button class="layui-btn layuiadmin-btn-admin" data-type="batchdel">删除</button>
-                <button class="layui-btn layuiadmin-btn-admin" data-type="add">添加</button>
+                <button class="layui-btn layuiadmin-btn-club" data-type="batchdel">删除</button>
+                <button class="layui-btn layuiadmin-btn-club" data-type="add">添加</button>
             </div>
 
-            <table id="LAY-user-back-manage" lay-filter="LAY-user-back-manage"></table>
-            <script type="text/html" id="buttonTpl">
-                {{#  if(d.state == true){ }}
-                <button class="layui-btn layui-btn-xs state" lay-event="audit">已审核</button>
-                {{#  } else { }}
-                <button class="layui-btn layui-btn-primary layui-btn-xs state" lay-event="audit">未审核</button>
-                {{#  } }}
+            <table id="LAY-club-back-manage" lay-filter="LAY-club-back-manage"></table>
+            <script type="text/html" id="hotIcon">
+<!--                {{#  if(d.state == true){ }}-->
+<!--                <button class="layui-btn layui-btn-xs state" lay-event="audit">已审核</button>-->
+<!--                {{#  } else { }}-->
+<!--                <button class="layui-btn layui-btn-primary layui-btn-xs state" lay-event="audit">未审核</button>-->
+<!--                {{#  } }}-->
+                <span>d.hot</span>
             </script>
-            <script type="text/html" id="table-useradmin-admin">
+            <script type="text/html" id="table-club-admin">
                 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
                         class="layui-icon layui-icon-edit"></i>编辑</a>
-                {{#  if(d.role == 'systemAdmin'){ }}
-                <a class="layui-btn layui-btn-disabled layui-btn-xs"><i class="layui-icon layui-icon-delete"></i>删除</a>
-                {{#  } else { }}
                 <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i
                         class="layui-icon layui-icon-delete"></i>删除</a>
-                {{#  } }}
             </script>
-            <script type="text/html" id="table-role">
-                {{#if (d.role == 'systemAdmin') { }}
-                系统管理员
-                {{# }else if(d.role == 'clubAdmin'){ }}
-                俱乐部管理员
-                {{# } }}
+            <script type="text/html" id="table-intro">
+                <!-- 富文本编写 -->
+                <span>{{ d.intro }}</span>
             </script>
         </div>
     </div>
@@ -94,7 +88,7 @@
         base: '../../../static/plugins/layuiadmin/' //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
-    }).use(['index', 'useradmin', 'table'], function () {
+    }).use(['index', 'club', 'table'], function () {
         var $ = layui.$
             , form = layui.form
             , table = layui.table
@@ -102,11 +96,11 @@
             , layer = layui.layer;
 
         //监听搜索
-        form.on('submit(LAY-user-back-search)', function (data) {
+        form.on('submit(LAY-club-back-search)', function (data) {
             var field = data.field;
 
             //执行重载
-            table.reload('LAY-user-back-manage', {
+            table.reload('LAY-club-back-manage', {
                 where: field
             });
         });
@@ -114,7 +108,7 @@
         //事件
         var active = {
             batchdel: function () {
-                var checkStatus = table.checkStatus('LAY-user-back-manage')
+                var checkStatus = table.checkStatus('LAY-club-back-manage')
                     , checkData = checkStatus.data; //得到选中的数据
 
                 if (checkData.length === 0) {
@@ -142,7 +136,7 @@
                                         time: 1000
                                     });
                                     //执行 Ajax 后重载
-                                    table.reload('LAY-user-back-manage');
+                                    table.reload('LAY-club-back-manage');
                                 }
                             });
                         });
@@ -184,7 +178,7 @@
                                 , done: function (res) {
                                     layer.msg("添加成功", {icon: 6});
                                     //提交 Ajax 成功后，静态更新表格中的数据
-                                    table.reload('LAY-user-back-manage'); //数据刷新
+                                    table.reload('LAY-club-back-manage'); //数据刷新
                                     layer.close(index); //关闭弹层
                                 }
                             });
@@ -196,7 +190,7 @@
             }
         }
 
-        $('.layui-btn.layuiadmin-btn-admin').on('click', function () {
+        $('.layui-btn.layuiadmin-btn-club').on('click', function () {
             var type = $(this).data('type');
             active[type] ? active[type].call(this) : '';
         });
