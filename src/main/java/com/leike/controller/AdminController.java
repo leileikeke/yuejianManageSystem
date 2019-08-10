@@ -17,6 +17,7 @@ import java.util.Map;
 
 /**
  * 管理员控制器
+ *
  * @description:
  * @author: leike
  * @date: 2019-08-03 16:54
@@ -125,6 +126,7 @@ public class AdminController {
 
     /**
      * 获取admin列表(带搜索功能)
+     *
      * @param name
      * @param phone
      * @param sex
@@ -133,7 +135,7 @@ public class AdminController {
      */
     @RequestMapping("/adminList")
     @ResponseBody
-    public Map<String, Object> getAdminList(@Param("name") String name,@Param("phone") String phone,@Param("sex") String sex,@Param("role") String role) {
+    public Map<String, Object> getAdminList(@Param("name") String name, @Param("phone") String phone, @Param("sex") String sex, @Param("role") String role) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -141,7 +143,7 @@ public class AdminController {
 
         Integer count = 0;
 
-        List<Admin> admins = adminService.selectAdminList(name,phone,sex,role);
+        List<Admin> admins = adminService.selectAdminList(name, phone, sex, role);
 
         if (admins != null) {
             code = ResponseCode.TABLESUCCEED;
@@ -158,6 +160,7 @@ public class AdminController {
 
     /**
      * 删除管理员
+     *
      * @param id
      * @return
      */
@@ -255,6 +258,7 @@ public class AdminController {
 
     /**
      * 更新admin表数据
+     *
      * @param admin
      * @return
      */
@@ -262,7 +266,6 @@ public class AdminController {
     @ResponseBody
     public Map<String, Object> updateAdmin(@RequestBody Admin admin) {
 
-        System.out.println(admin);
         Map<String, Object> map = new HashMap<>();
 
         Integer code = ResponseCode.FAILURE;
@@ -284,17 +287,18 @@ public class AdminController {
 
     /**
      * 更新审核状态
+     *
      * @param id
      * @param state
      * @return
      */
     @RequestMapping("/updateState")
     @ResponseBody
-    public Map<String , Object> updateState(Integer id,Boolean state){
+    public Map<String, Object> updateState(Integer id, Boolean state) {
 
-        if (state){
+        if (state) {
             state = false;
-        }else {
+        } else {
             state = true;
         }
 
@@ -305,9 +309,53 @@ public class AdminController {
         String msg = "修改失败";
 
         boolean b = adminService.updateState(id, state);
-        if (b){
+        if (b) {
             code = ResponseCode.SUCCEED;
             msg = "修改成功";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
+
+    @RequestMapping("/query")
+    @ResponseBody
+    public Map<String, Object> queryAdminforid(Integer id) {
+
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        Admin admin = adminService.queryAdminforid(id);
+        if (admin != null) {
+            map.put("data", admin);
+            code = ResponseCode.SUCCEED;
+        }
+
+        map.put("code", code);
+
+        return map;
+
+    }
+
+    @RequestMapping("/set")
+    @ResponseBody
+    public Map<String, Object> setAdmin(@RequestBody Admin admin) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "修改失败";
+
+        boolean b = adminService.setAdmin(admin);
+
+        if (b) {
+            code = ResponseCode.SUCCEED;
+            msg = "";
         }
 
         map.put("code", code);

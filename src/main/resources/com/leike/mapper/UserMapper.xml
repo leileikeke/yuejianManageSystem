@@ -15,8 +15,8 @@
     <!--    </select>-->
 
     <insert id="insertUser">
-        INSERT INTO user (u_id,name,pic,sex,phone,password,email,jointime)
-        VALUE (#{uId},#{name},#{pic},#{sex},#{phone},#{password},#{email},#{jointime})
+        INSERT INTO user (name,pic,sex,phone,password,email,jointime)
+        VALUE (#{name},#{pic},#{sex},#{phone},#{password},#{email},#{jointime})
     </insert>
 
     <select id="selectUserListForTerm" resultType="com.leike.pojo.User">

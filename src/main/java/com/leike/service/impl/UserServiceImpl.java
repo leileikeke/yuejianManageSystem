@@ -74,7 +74,6 @@ public class UserServiceImpl implements UserService {
         //如果修改了用户头像则删除原头像
         if (!user.getPic().equals(user1.getPic())){
             FileUtil.deleteFile(uploadPath,user1.getPic());
-
         }
 
         int i = userMapper.updateUser(user);

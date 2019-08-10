@@ -74,23 +74,6 @@
             , form = layui.form
             , upload = layui.upload
             , ContextPath = layui.setter.ContextPath;
-        // {
-        //     "code": 0,
-        //     "msg": "",
-        //     "data": {
-        //     "src": "https://wx2.sinaimg.cn/mw690/5db11ff4gy1fmx4kec5bvj20eb0h3mxh.jpg"
-        // }
-        // }
-        // upload.render({
-        //     elem: '#layuiadmin-upload-useradmin'
-        //     , url: layui.setter.base + 'json/upload/demo.js'
-        //     , accept: 'images'
-        //     , method: 'get'
-        //     , acceptMime: 'image/*'
-        //     , done: function (res) {
-        //         $(this.item).prev("div").children("input").val(res.data.src)
-        //     }
-        // });
         //普通图片上传
         var uploadInst = upload.render({
             elem: '#layuiadmin-upload-useradmin'

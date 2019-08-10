@@ -58,6 +58,19 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
+    public Admin queryAdminforid(Integer id) {
+        Admin admin = adminMapper.queryAdminforid(id);
+        admin.setPassword(null);
+        return admin;
+    }
+
+    @Override
+    public boolean setAdmin(Admin admin) {
+        int i = adminMapper.setAdmin(admin);
+        return i == 1 ? true : false;
+    }
+
+    @Override
     public List<Admin> selectAdminList(String name, String phone, String sex, String role) {
         if ((name != null && !name.equals("")) || (phone != null && !phone.equals("")) || (sex != null && !sex.equals("")) || (role != null && !role.equals(""))) {
             List<Admin> admins = adminMapper.selectAdminListForTerm(name, phone, sex, role);

@@ -378,7 +378,7 @@
                             <dd class="layui-nav-itemed">
                                 <a href="javascript:;">我的设置</a>
                                 <dl class="layui-nav-child">
-                                    <dd><a lay-href="views/set/user/info.html">基本资料</a></dd>
+                                    <dd><a lay-href="info">基本资料</a></dd>
                                     <dd><a lay-href="views/set/user/password.html">修改密码</a></dd>
                                 </dl>
                             </dd>

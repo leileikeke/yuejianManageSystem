@@ -16,4 +16,13 @@ public interface ClubService {
     List<Club> selectClubList(Integer page, Integer limit);
 
     List<Club> selectClubListForTerm(Integer page, Integer limit, String cId, String name, String phone);
+
+    boolean deleteClub(Integer cId, String pic, String uploadPath);
+
+    boolean updateClub(Club club, String uploadPath);
+
+    boolean queryClub(String name);
+
+    boolean insertClub(Club club);
+
 }

@@ -38,4 +38,10 @@ public interface AdminMapper {
 
     @Update("UPDATE admin SET state=#{state} WHERE id = #{id}")
     int updateState(@Param("id") Integer id,@Param("state") Boolean state);
+
+    @Select("select * from admin where id = #{id}")
+    Admin queryAdminforid(@Param("id") Integer id);
+
+    @Update("UPDATE admin SET nickname = #{nickname},phone = #{phone},sex = #{sex} WHERE id = #{id} ")
+    int setAdmin(Admin admin);
 }

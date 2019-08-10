@@ -28,4 +28,8 @@ public interface AdminService {
     boolean queryAdmin(String name);
 
     boolean updateState(Integer id, Boolean state);
+
+    Admin queryAdminforid(Integer id);
+
+    boolean setAdmin(Admin admin);
 }

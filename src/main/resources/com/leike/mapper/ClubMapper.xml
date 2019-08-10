@@ -28,4 +28,11 @@
             </if>
         </where>
     </select>
+
+    <insert id="insertClub">
+        INSERT INTO club (name,phone,pic,intro,address,jointime)
+        VALUE (#{name},#{phone},#{pic},#{intro},#{address},#{jointime})
+    </insert>
+
+
 </mapper>
