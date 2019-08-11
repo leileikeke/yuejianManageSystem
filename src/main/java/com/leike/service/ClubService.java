@@ -1,6 +1,7 @@
 package com.leike.service;
 
 import com.leike.pojo.Club;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -25,4 +26,5 @@ public interface ClubService {
 
     boolean insertClub(Club club);
 
+    String uploadPic(MultipartFile multipartFile, String uploadPath);
 }

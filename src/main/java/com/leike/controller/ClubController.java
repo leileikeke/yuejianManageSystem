@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -36,7 +38,7 @@ public class ClubController {
      * @param phone
      * @return
      */
-    @RequestMapping("/userList")
+    @RequestMapping("/clubList")
     @ResponseBody
     public Map<String, Object> selectClubList(Integer page, Integer limit, String cId, String name, String phone) {
 
@@ -56,7 +58,7 @@ public class ClubController {
         } else {
             clubs = clubService.selectClubList((page - 1) * limit, limit);
             if (clubs != null) {
-                code = ResponseCode.SUCCEED;
+                code = ResponseCode.TABLESUCCEED;
             }
         }
 
@@ -204,7 +206,65 @@ public class ClubController {
         return map;
     }
 
+    @RequestMapping("/uploadPic")
+    @ResponseBody
+    public Map<String, Object> uploadPic(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "上传失败";
 
 
+        // 1.不为空才上传
+        if (multipartFile != null && !multipartFile.isEmpty()) {
+
+            String uploadPath = request.getSession().getServletContext().getRealPath("/");
+            String picName = clubService.uploadPic(multipartFile, uploadPath);
+
+            if (picName != null) {
+                code = ResponseCode.SUCCEED;
+                msg = "上传成功";
+                map.put("picName", picName);
+            }
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
+
+    @RequestMapping("/addClub")
+    @ResponseBody
+    public Map<String, Object> addClub(@RequestBody Club club) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "添加失败";
+
+        boolean bool = clubService.queryClub(club.getName());
+        if (bool) {
+            if (club != null) {
+
+                boolean b = clubService.insertClub(club);
+                if (b) {
+                    code = ResponseCode.SUCCEED;
+                    msg = "";
+                }
+
+            }
+        } else {
+            msg = "此俱乐部已存在!";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
 
 }

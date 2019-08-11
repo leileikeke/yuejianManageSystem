@@ -15,13 +15,13 @@ import java.util.List;
  */
 public interface ClubMapper {
 
-    @Select("SELETE count(*) FROM club")
+    @Select("SELECT count(*) FROM club")
     int selectClubCount();
 
     @Select("SELECT * FROM club limit #{page},#{limit}")
     List<Club> selectClubList(@Param("page") Integer page,@Param("limit") Integer limit);
 
-    List<Club> selectClubListForTerm(Integer page, Integer limit, String cId, String name, String phone);
+    List<Club> selectClubListForTerm(@Param("page") Integer page,@Param("limit") Integer limit,@Param("cId") String cId,@Param("name") String name,@Param("phone") String phone);
 
     @Delete("delete from club where c_id = #{cId}")
     int deleteClub(@Param("cId") Integer cId);
@@ -33,7 +33,7 @@ public interface ClubMapper {
     int updateClub(Club club);
 
     @Select("SELECT * FROM club WHERE name = #{name}")
-    Club queryClub(String name);
+    Club queryClub(@Param("name") String name);
 
     int insertClub(Club club);
 }

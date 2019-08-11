@@ -22,16 +22,19 @@ layui.define(['table', 'form'], function (exports) {
         , cols: [[
             {type: 'checkbox', fixed: 'left'}
             , {field: 'cId', width: 80, title: 'ID', sort: true, align: 'center'}
-            , {field: 'name', title: '俱乐部名', align: 'center'}
+            , {field: 'name', width: 120, title: '俱乐部名', align: 'center'}
             , {field: 'pic', title: '宣传图', width: 100, templet: '#imgTpl', align: 'center'}
-            , {field: 'phone', title: '电话', align: 'center'}
-            , {field: 'jointime', title: '加入时间', sort: true, width: 170, align: 'center'}
-            , {field: 'intro', title: '简介', toolbar: '#table-intro', align: 'center'}
-            , {field: 'address', title: '地址', align: 'center'}
-            , {field: 'hot', title: '热度', templet: '#hotIcon', minWidth: 80, align: 'center'}
+            , {field: 'phone', title: '电话', width:140, align: 'center'}
+            , {field: 'jointime', title: '加入时间', sort: true, width: 140, align: 'center'}
+            , {field: 'address', width:180, title: '地址', align: 'center'}
+            , {field: 'intro', width:351, id:'intro',title: '简介', toolbar: '#table-intro', align: 'center'}
+            , {field: 'hot', title: '热度', sort: true, width: 80, align: 'center'}
             , {title: '操作', width: 200, align: 'center', fixed: 'right', toolbar: '#table-club-admin'}
         ]]
-        , text: '对不起，加载出现异常！'
+        , page: true
+        , limit: 10
+        , height: 'full-220'
+        , text: {none: '一条数据也没有^_^'}
     });
 
     //监听工具条
@@ -44,11 +47,11 @@ layui.define(['table', 'form'], function (exports) {
             }, function (value, index) {
                 layer.close(index);//如果设定了yes回调，需进行手工关闭
                 if (value == layui.setter.Command) {
-                    layer.confirm('确定删除此管理员？', function (index) {
+                    layer.confirm('确定删除此俱乐部吗？', function (index) {
                         $.ajax({
-                            url: ContextPath + '/admin/delete',
+                            url: ContextPath + '/club/delete',
                             type: 'get',
-                            data: {'id': data.id},//向服务端发送删除的sid
+                            data: {'cId': data.cId},//向服务端发送删除的sid
                             success: function (suc) {
                                 if (suc.code == 200) {
                                     obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
@@ -70,9 +73,9 @@ layui.define(['table', 'form'], function (exports) {
 
             layer.open({
                 type: 2
-                , title: '编辑管理员'
-                , content: '../../../views/user/administrators/adminform.html'
-                , area: ['500px', '550px']
+                , title: '编辑俱乐部'
+                , content: 'clubform.html'
+                , area: ['455px', '500px']
                 , anim: 4//弹出动画
                 , maxmin: true//显示最大化最小化按钮
                 , shadeClose: true//点击遮罩层关闭模态框
@@ -80,18 +83,13 @@ layui.define(['table', 'form'], function (exports) {
                 , btn: ['确定', '取消']
                 , yes: function (index, layero) {
                     var iframeWindow = window['layui-layer-iframe' + index]
-                        , submitID = 'LAY-user-back-submit'
+                        , submitID = 'LAY-club-back-submit'
                         , submit = layero.find('iframe').contents().find('#' + submitID);
 
                     //监听提交
                     iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
                         var field = data.field; //获取提交的字段
-                        if (field.state == "on") {
-                            field.state = 1;
-                        } else {
-                            field.state = 0;
-                        }
-                        var url = layui.setter.ContextPath + '/admin/update';
+                        var url = layui.setter.ContextPath + '/club/update';
                         admin.req({
                             type: 'post'
                             , url: url
@@ -109,18 +107,12 @@ layui.define(['table', 'form'], function (exports) {
                 }
                 , success: function (layero, index) {
                     var body = layer.getChildFrame('body', index);
-                    body.find("input[name='id']").val(data.id);
+                    body.find("input[name='cId']").val(data.cId);
                     body.find("input[name='name']").val(data.name);
-                    body.find("input[name='password']").val(data.password);
-                    body.find("input[name='nickname']").val(data.nickname);
                     body.find("input[name='phone']").val(data.phone);
-                    body.find("input[name='sex']").val(data.sex);
-                    // body.find("input[name='role']").val(data.role);
-                    // body.find("input[name='state']").val(data.state);
-                    body.find("option[value=" + data.role + "]").prop("selected", true);  //，单选按钮
-                    if (data.state == 1) {
-                        body.find(".layui-input-inline input[name='state']").prop("checked", "checked");
-                    }
+                    body.find("input[name='address']").val(data.address);
+                    body.find('#demo1').attr('src', ContextPath+data.pic);
+                    body.find("textarea[name='intro']").val(data.intro);
                     setTimeout(function () {
                         layui.layer.tips('点击此处返回用户列表', '.layui-layer-close1', {
                             tips: 1

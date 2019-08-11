@@ -7,6 +7,7 @@ import com.leike.util.DateUtil;
 import com.leike.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 import java.util.List;
@@ -70,9 +71,16 @@ public class ClubServiceImpl implements ClubService {
 
     @Override
     public boolean insertClub(Club club) {
-        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd");
+        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
         club.setJointime(date);
+        club.setHot(0);
         int i = clubMapper.insertClub(club);
         return i == 1 ? true : false;
+    }
+
+    @Override
+    public String uploadPic(MultipartFile multipartFile, String uploadPath) {
+        String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/club/");
+        return fileName;
     }
 }

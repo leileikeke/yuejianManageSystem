@@ -83,7 +83,7 @@ public class UserServiceImpl implements UserService {
     //    private static String uploadPath = "D:"+ File.separator;
     @Override
     public String uploadPic(MultipartFile multipartFile, String uploadPath) {
-        String fileName = FileUtil.uploadUserPic(multipartFile, uploadPath, "/static/imgs/user/");
+        String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/user/");
         return fileName;
     }
 

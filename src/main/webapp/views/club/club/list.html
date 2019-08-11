@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="../../../static/plugins/layuiadmin/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="../../../static/plugins/layuiadmin/style/admin.css" media="all">
 </head>
+<style>
+    .layui-table-cell {
+        height: 60px;
+        line-height: 60px;
+    }
+</style>
 <body>
 
 <div class="layui-fluid">
@@ -17,32 +23,21 @@
         <div class="layui-form layui-card-header layuiadmin-card-header-auto">
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <label class="layui-form-label">俱乐部名称</label>
+                    <label class="layui-form-label">ID</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="cId" placeholder="请输入" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">俱乐部名</label>
                     <div class="layui-input-block">
                         <input type="text" name="name" placeholder="请输入" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <label class="layui-form-label">手机</label>
+                    <label class="layui-form-label">电话</label>
                     <div class="layui-input-block">
-                        <input type="text" name="phone" placeholder="请输入号码" autocomplete="off"
-                               class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <label class="layui-form-label">年龄</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="sex" placeholder="请输入" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-inline">
-                    <label class="layui-form-label">角色</label>
-                    <div class="layui-input-block">
-                        <select name="role">
-                            <option value="">不限</option>
-                            <option value="systemAdmin">系统管理员</option>
-                            <option value="clubAdmin">俱乐部管理员</option>
-                        </select>
+                        <input type="text" name="phone" placeholder="请输入号码" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-inline">
@@ -61,12 +56,15 @@
 
             <table id="LAY-club-back-manage" lay-filter="LAY-club-back-manage"></table>
             <script type="text/html" id="hotIcon">
-<!--                {{#  if(d.state == true){ }}-->
-<!--                <button class="layui-btn layui-btn-xs state" lay-event="audit">已审核</button>-->
-<!--                {{#  } else { }}-->
-<!--                <button class="layui-btn layui-btn-primary layui-btn-xs state" lay-event="audit">未审核</button>-->
-<!--                {{#  } }}-->
-                <span>d.hot</span>
+                <!--                {{#  if(d.state == true){ }} -->
+                <!--                <button class="layui-btn layui-btn-xs state" lay-event="audit">已审核</button>-->
+                <!--                {{#  } else { }}-->
+                <!--                <button class="layui-btn layui-btn-primary layui-btn-xs state" lay-event="audit">未审核</button>-->
+                <!--                {{#  } }}-->
+                <span>{{ d.hot }}</span>
+            </script>
+            <script type="text/html" id="imgTpl">
+                <img style="display: inline-block; width: 100%; height: 80%;" src={{ layui.setter.ContextPath+d.pic }}>
             </script>
             <script type="text/html" id="table-club-admin">
                 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
@@ -76,7 +74,7 @@
             </script>
             <script type="text/html" id="table-intro">
                 <!-- 富文本编写 -->
-                <span>{{ d.intro }}</span>
+                {{ d.intro }}
             </script>
         </div>
     </div>
@@ -117,12 +115,12 @@
 
                 layer.prompt({
                     formType: 1
-                    , title: '敏感操作，请验证口令( leike:口令为admin,config.js文件下定义)'
+                    , title: '敏感操作，请验证口令'
                 }, function (value, index) {
                     layer.close(index);
                     if (value == layui.setter.Command) {
                         layer.confirm('确定删除吗？', function (index) {
-                            var url = layui.setter.ContextPath + "/admin/deleteAll";
+                            var url = layui.setter.ContextPath + "/club/deleteAll";
                             admin.req({
                                 type: 'post'
                                 , url: url
@@ -149,9 +147,9 @@
             , add: function () {
                 layer.open({
                     type: 2
-                    , title: '添加管理员'
-                    , content: 'adminform.html'
-                    , area: ['420px', '500px']
+                    , title: '添加俱乐部'
+                    , content: 'clubform.html'
+                    , area: ['455px', '500px']
                     , anim: 4//弹出动画
                     , maxmin: true//显示最大化最小化按钮
                     , shadeClose: true//点击遮罩层关闭模态框
@@ -159,17 +157,13 @@
                     , btn: ['确定', '取消']
                     , yes: function (index, layero) {
                         var iframeWindow = window['layui-layer-iframe' + index]
-                            , submitID = 'LAY-user-back-submit'
+                            , submitID = 'LAY-club-back-submit'
                             , submit = layero.find('iframe').contents().find('#' + submitID);
                         //监听提交
                         iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
                             var field = data.field; //获取提交的字段
-                            if (field.state == "on"){
-                                field.state = 1;
-                            } else {
-                                field.state = 0;
-                            }
-                            var url = layui.setter.ContextPath + '/admin/addAdmin';
+                            console.log(field);
+                            var url = layui.setter.ContextPath + '/club/addClub';
                             admin.req({
                                 type: 'post'
                                 , url: url

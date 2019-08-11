@@ -22,7 +22,7 @@ public class FileUtil {
      * @param uploadPath
      * @return
      */
-    public static String uploadUserPic(MultipartFile multipartFile, String uploadPath,String type) {
+    public static String uploadPic(MultipartFile multipartFile, String uploadPath,String type) {
         //1.获取原始的文件名
         String originalFilename1 = multipartFile.getOriginalFilename();
         //2. 先截取源文件的文件名前缀 , 不带后缀
