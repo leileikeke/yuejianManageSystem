@@ -39,4 +39,23 @@
 
 
     </select>
+    <select id="selectActivityList" resultType="com.leike.pojo.Activity">
+        SELECT
+        a.a_id,
+        a.name,
+        a.start_time,
+        a.end_time,
+        a.address,
+        a.pic,
+        a.price,
+        a.type,
+        a.detail,
+        a.c_id,
+        c.name as cName
+        FROM
+        activity a
+        LEFT JOIN club c ON a.c_id = c.c_id
+        limit #{page},#{limit}
+
+    </select>
 </mapper>

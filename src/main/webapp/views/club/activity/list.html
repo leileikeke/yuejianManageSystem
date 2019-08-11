@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-club-back-search">
+                    <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-club-activity-search">
                         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
                     </button>
                 </div>
@@ -50,23 +50,14 @@
 
         <div class="layui-card-body">
             <div style="padding-bottom: 10px;">
-                <button class="layui-btn layuiadmin-btn-club" data-type="batchdel">删除</button>
-                <button class="layui-btn layuiadmin-btn-club" data-type="add">添加</button>
+                <button class="layui-btn layuiadmin-btn-activity" data-type="batchdel">删除</button>
             </div>
 
-            <table id="LAY-club-back-manage" lay-filter="LAY-club-back-manage"></table>
-            <script type="text/html" id="hotIcon">
-                <!--                {{#  if(d.state == true){ }} -->
-                <!--                <button class="layui-btn layui-btn-xs state" lay-event="audit">已审核</button>-->
-                <!--                {{#  } else { }}-->
-                <!--                <button class="layui-btn layui-btn-primary layui-btn-xs state" lay-event="audit">未审核</button>-->
-                <!--                {{#  } }}-->
-                <span>{{ d.hot }}</span>
-            </script>
+            <table id="LAY-club-activity-manage" lay-filter="LAY-club-activity-manage"></table>
             <script type="text/html" id="imgTpl">
                 <img style="display: inline-block; width: 100%; height: 80%;" src={{ layui.setter.ContextPath+d.pic }}>
             </script>
-            <script type="text/html" id="table-club-admin">
+            <script type="text/html" id="table-activity-admin">
                 <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
                         class="layui-icon layui-icon-edit"></i>编辑</a>
                 <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i
@@ -90,11 +81,11 @@
             , layer = layui.layer;
 
         //监听搜索
-        form.on('submit(LAY-club-back-search)', function (data) {
+        form.on('submit(LAY-club-activity-search)', function (data) {
             var field = data.field;
 
             //执行重载
-            table.reload('LAY-club-back-manage', {
+            table.reload('LAY-club-activity-manage', {
                 where: field
             });
         });
@@ -102,7 +93,7 @@
         //事件
         var active = {
             batchdel: function () {
-                var checkStatus = table.checkStatus('LAY-club-back-manage')
+                var checkStatus = table.checkStatus('LAY-club-activity-manage')
                     , checkData = checkStatus.data; //得到选中的数据
 
                 if (checkData.length === 0) {
@@ -116,7 +107,7 @@
                     layer.close(index);
                     if (value == layui.setter.Command) {
                         layer.confirm('确定删除吗？', function (index) {
-                            var url = layui.setter.ContextPath + "/club/deleteAll";
+                            var url = layui.setter.ContextPath + "/activity/deleteAll";
                             admin.req({
                                 type: 'post'
                                 , url: url
@@ -130,7 +121,7 @@
                                         time: 1000
                                     });
                                     //执行 Ajax 后重载
-                                    table.reload('LAY-club-back-manage');
+                                    table.reload('LAY-club-activity-manage');
                                 }
                             });
                         });
@@ -140,47 +131,9 @@
 
                 });
             }
-            , add: function () {
-                layer.open({
-                    type: 2
-                    , title: '添加俱乐部'
-                    , content: 'clubform.html'
-                    , area: ['455px', '500px']
-                    , anim: 4//弹出动画
-                    , maxmin: true//显示最大化最小化按钮
-                    , shadeClose: true//点击遮罩层关闭模态框
-                    , shade: 0.5//阴影
-                    , btn: ['确定', '取消']
-                    , yes: function (index, layero) {
-                        var iframeWindow = window['layui-layer-iframe' + index]
-                            , submitID = 'LAY-club-back-submit'
-                            , submit = layero.find('iframe').contents().find('#' + submitID);
-                        //监听提交
-                        iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
-                            var field = data.field; //获取提交的字段
-                            console.log(field);
-                            var url = layui.setter.ContextPath + '/club/add';
-                            admin.req({
-                                type: 'post'
-                                , url: url
-                                , contentType: "application/json;charset=utf-8"
-                                , data: JSON.stringify(field)
-                                , done: function (res) {
-                                    layer.msg("添加成功", {icon: 6});
-                                    //提交 Ajax 成功后，静态更新表格中的数据
-                                    table.reload('LAY-club-back-manage'); //数据刷新
-                                    layer.close(index); //关闭弹层
-                                }
-                            });
-                        });
-
-                        submit.trigger('click');
-                    }
-                });
-            }
         }
 
-        $('.layui-btn.layuiadmin-btn-club').on('click', function () {
+        $('.layui-btn.layuiadmin-btn-activity').on('click', function () {
             var type = $(this).data('type');
             active[type] ? active[type].call(this) : '';
         });

@@ -146,7 +146,7 @@ public class AdminController {
      * @param role
      * @return
      */
-    @RequestMapping("/adminList")
+    @RequestMapping("/getList")
     @ResponseBody
     public Map<String, Object> getAdminList(@Param("name") String name, @Param("phone") String phone, @Param("sex") String sex, @Param("role") String role) {
 
@@ -238,7 +238,7 @@ public class AdminController {
      * @param admin
      * @return
      */
-    @RequestMapping("/addAdmin")
+    @RequestMapping("/add")
     @ResponseBody
     public Map<String, Object> addAdmin(@RequestBody Admin admin) {
 

@@ -38,7 +38,7 @@ public class ClubController {
      * @param phone
      * @return
      */
-    @RequestMapping("/clubList")
+    @RequestMapping("/getList")
     @ResponseBody
     public Map<String, Object> selectClubList(Integer page, Integer limit, String cId, String name, String phone) {
 
@@ -87,7 +87,7 @@ public class ClubController {
 
         Integer code = ResponseCode.FAILURE;
 
-        String msg = "添加俱乐部失败";
+        String msg = "更新俱乐部信息失败";
 
         String uploadPath = request.getSession().getServletContext().getRealPath("/");
         boolean b = clubService.updateClub(club, uploadPath);
@@ -108,7 +108,7 @@ public class ClubController {
      * @param club
      * @return
      */
-    @RequestMapping("addUser")
+    @RequestMapping("/add")
     @ResponseBody
     public Map<String, Object> addUser(@RequestBody Club club) {
 
@@ -206,41 +206,6 @@ public class ClubController {
         return map;
     }
 
-    /**
-     * 上传图片
-     * @param multipartFile
-     * @param request
-     * @return
-     */
-    @RequestMapping("/uploadPic")
-    @ResponseBody
-    public Map<String, Object> uploadPic(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {
-
-        Map<String, Object> map = new HashMap<>();
-
-        Integer code = ResponseCode.FAILURE;
-
-        String msg = "上传失败";
-
-
-        // 1.不为空才上传
-        if (multipartFile != null && !multipartFile.isEmpty()) {
-
-            String uploadPath = request.getSession().getServletContext().getRealPath("/");
-            String picName = clubService.uploadPic(multipartFile, uploadPath);
-
-            if (picName != null) {
-                code = ResponseCode.SUCCEED;
-                msg = "上传成功";
-                map.put("picName", picName);
-            }
-        }
-
-        map.put("code", code);
-        map.put("msg", msg);
-
-        return map;
-    }
 
     @RequestMapping("/addClub")
     @ResponseBody

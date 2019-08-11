@@ -39,7 +39,7 @@ public class ActicityController {
      * @param name
      * @return
      */
-    @RequestMapping("/clubList")
+    @RequestMapping("/getList")
     @ResponseBody
     public Map<String, Object> selectActivityList(Integer page, Integer limit, String cId, String aId, String name) {
 
@@ -62,7 +62,6 @@ public class ActicityController {
                 code = ResponseCode.TABLESUCCEED;
             }
         }
-
 
         count = activityService.selectActivityCount();
 
@@ -89,7 +88,7 @@ public class ActicityController {
 
         Integer code = ResponseCode.FAILURE;
 
-        String msg = "添加俱乐部失败";
+        String msg = "更新活动信息失败";
 
         String uploadPath = request.getSession().getServletContext().getRealPath("/");
 
@@ -106,37 +105,37 @@ public class ActicityController {
         return map;
     }
 
-    /**
-     * 添加activity
-     *
-     * @param activity
-     * @return
-     */
-    @RequestMapping("/addActivity")
-    @ResponseBody
-    public Map<String, Object> addActivity(@RequestBody Activity activity) {
-
-        Map<String, Object> map = new HashMap<>();
-
-        Integer code = ResponseCode.FAILURE;
-
-        String msg = "添加失败";
-
-        if (activity != null) {
-
-            boolean b = activityService.insertActivity(activity);
-            if (b) {
-                code = ResponseCode.SUCCEED;
-                msg = "";
-            }
-
-        }
-
-        map.put("code", code);
-        map.put("msg", msg);
-
-        return map;
-    }
+//    /**
+//     * 添加activity
+//     *
+//     * @param activity
+//     * @return
+//     */
+//    @RequestMapping("/add")
+//    @ResponseBody
+//    public Map<String, Object> addActivity(@RequestBody Activity activity) {
+//
+//        Map<String, Object> map = new HashMap<>();
+//
+//        Integer code = ResponseCode.FAILURE;
+//
+//        String msg = "添加失败";
+//
+//        if (activity != null) {
+//
+//            boolean b = activityService.insertActivity(activity);
+//            if (b) {
+//                code = ResponseCode.SUCCEED;
+//                msg = "";
+//            }
+//
+//        }
+//
+//        map.put("code", code);
+//        map.put("msg", msg);
+//
+//        return map;
+//    }
 
 
     /**

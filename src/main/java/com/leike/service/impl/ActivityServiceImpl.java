@@ -47,7 +47,7 @@ public class ActivityServiceImpl implements ActivityService {
         if (!activity.getPic().equals(pic)){
             FileUtil.deleteFile(uploadPath,pic);
         }
-
+        System.out.println(activity);
         int i = activityMapper.updateActivity(activity);
         return i == 1 ? true : false;
     }

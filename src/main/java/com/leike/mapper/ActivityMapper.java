@@ -17,7 +17,6 @@ public interface ActivityMapper {
 
     List<Activity> selectActivityListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("cId") String cId, @Param("name") String name, @Param("aId") String aId);
 
-    @Select("SELECT * FROM activity limit #{page},#{limit}")
     List<Activity> selectActivityList(@Param("page") Integer page, @Param("limit") Integer limit);
 
     @Select("select count(*) from activity")
@@ -31,6 +30,6 @@ public interface ActivityMapper {
 
     int insertMapper(Activity activity);
 
-    @Delete("DELETE FROM club WHERE a_id = #{aId}")
+    @Delete("DELETE FROM activity WHERE a_id = #{aId}")
     int deleteActivity(@Param("aId") Integer aId);
 }

@@ -35,10 +35,12 @@ public class Activity {
 
     private String detail;
 
+    private String cName;
+
     public Activity() {
     }
 
-    public Activity(Integer aId, String name, Date startTime, Date endTime, String address, String pic, Double price, String type, String detail) {
+    public Activity(Integer aId, String name, Date startTime, Date endTime, String address, String pic, Double price, String type, String detail, String cName) {
         this.aId = aId;
         this.name = name;
         this.startTime = startTime;
@@ -48,6 +50,7 @@ public class Activity {
         this.price = price;
         this.type = type;
         this.detail = detail;
+        this.cName = cName;
     }
 
     public Integer getaId() {
@@ -122,6 +125,14 @@ public class Activity {
         this.detail = detail;
     }
 
+    public String getcName() {
+        return cName;
+    }
+
+    public void setcName(String cName) {
+        this.cName = cName;
+    }
+
     @Override
     public String toString() {
         return "Activity{" +
@@ -134,6 +145,7 @@ public class Activity {
                 ", price=" + price +
                 ", type='" + type + '\'' +
                 ", detail='" + detail + '\'' +
+                ", cName='" + cName + '\'' +
                 '}';
     }
 }

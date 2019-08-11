@@ -33,8 +33,6 @@ public class Admin {
 
     private Boolean state;
 
-
-
     public Admin() {
     }
 

@@ -40,7 +40,7 @@ public class UserController {
      * @param sex
      * @return
      */
-    @RequestMapping("/userList")
+    @RequestMapping("/getList")
     @ResponseBody
     public Map<String, Object> selectAdminList(Integer page, Integer limit, String uId, String name, String phone, String sex) {
 
@@ -80,7 +80,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @RequestMapping("/addUser")
+    @RequestMapping("/add")
     @ResponseBody
     public Map<String, Object> addUser(@RequestBody User user) {
 
@@ -205,43 +205,5 @@ public class UserController {
 
         return map;
     }
-
-    /**
-     * 用户上传头像
-     *
-     * @param multipartFile
-     * @param request
-     * @return
-     */
-    @RequestMapping("/uploadPic")
-    @ResponseBody
-    public Map<String, Object> uploadPic(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {
-
-        Map<String, Object> map = new HashMap<>();
-
-        Integer code = ResponseCode.FAILURE;
-
-        String msg = "上传失败";
-
-
-        // 1.不为空才上传
-        if (multipartFile != null && !multipartFile.isEmpty()) {
-
-            String uploadPath = request.getSession().getServletContext().getRealPath("/");
-            String picName = userService.uploadPic(multipartFile, uploadPath);
-
-            if (picName != null) {
-                code = ResponseCode.SUCCEED;
-                msg = "上传成功";
-                map.put("picName", picName);
-            }
-        }
-
-        map.put("code", code);
-        map.put("msg", msg);
-
-        return map;
-    }
-
 
 }

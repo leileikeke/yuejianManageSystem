@@ -137,9 +137,9 @@
                             <dd>
                                 <a lay-href="views/club/club/list.html">俱乐部</a>
                             </dd>
-<%--                            <dd>--%>
-<%--                                <a lay-href="views/user/administrators/list.html">后台管理员</a>--%>
-<%--                            </dd>--%>
+                            <dd>
+                                <a lay-href="views/club/activity/list.html">俱乐部活动</a>
+                            </dd>
                         </dl>
                     </li>
 
