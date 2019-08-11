@@ -35,7 +35,6 @@ layui.define(['table', 'form'], function (exports) {
         , limit: 13
         , height: 'full-220'
         , text: {none: '一条数据也没有^_^'}
-        // , text: '对不起，加载出现异常！'
     });
 
     //监听工具条
@@ -76,7 +75,7 @@ layui.define(['table', 'form'], function (exports) {
             layer.open({
                 type: 2
                 , title: '编辑用户'
-                , content: '../../../views/user/user/userform.html'
+                , content: 'userform.html'
                 , area: ['455px', '500px']
                 , anim: 4//弹出动画
                 , maxmin: true//显示最大化最小化按钮
@@ -187,7 +186,7 @@ layui.define(['table', 'form'], function (exports) {
             layer.open({
                 type: 2
                 , title: '编辑管理员'
-                , content: '../../../views/user/administrators/adminform.html'
+                , content: 'adminform.html'
                 , area: ['500px', '550px']
                 , anim: 4//弹出动画
                 , maxmin: true//显示最大化最小化按钮
@@ -231,8 +230,6 @@ layui.define(['table', 'form'], function (exports) {
                     body.find("input[name='nickname']").val(data.nickname);
                     body.find("input[name='phone']").val(data.phone);
                     body.find("input[name='sex']").val(data.sex);
-                    // body.find("input[name='role']").val(data.role);
-                    // body.find("input[name='state']").val(data.state);
                     body.find("option[value=" + data.role + "]").prop("selected", true);  //，单选按钮
                     if (data.state == 1) {
                         body.find(".layui-input-inline input[name='state']").prop("checked", "checked");

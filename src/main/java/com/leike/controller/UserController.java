@@ -80,7 +80,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @RequestMapping("addUser")
+    @RequestMapping("/addUser")
     @ResponseBody
     public Map<String, Object> addUser(@RequestBody User user) {
 

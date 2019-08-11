@@ -70,10 +70,10 @@ public class UserServiceImpl implements UserService {
     public boolean updateUser(User user, String uploadPath) {
 
         //获取用户原头像
-        User user1 = userMapper.selectUser(user.getuId());
+        String pic = userMapper.selectUser(user.getuId());
         //如果修改了用户头像则删除原头像
-        if (!user.getPic().equals(user1.getPic())){
-            FileUtil.deleteFile(uploadPath,user1.getPic());
+        if (!user.getPic().equals(pic)){
+            FileUtil.deleteFile(uploadPath,pic);
         }
 
         int i = userMapper.updateUser(user);

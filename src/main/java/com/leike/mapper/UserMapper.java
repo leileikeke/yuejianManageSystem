@@ -33,5 +33,5 @@ public interface UserMapper {
     List<User> selectUserListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("uId") String uId, @Param("name") String name, @Param("phone") String phone, @Param("sex") String sex);
 
     @Select("select * from User where u_id = #{uId}")
-    User selectUser(@Param("uId") Integer uId);
+    String selectUser(@Param("uId") Integer uId);
 }

@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 /**
+ * 用户实体类
  * @description:
  * @author: leike
  * @date: 2019-08-05 21:12

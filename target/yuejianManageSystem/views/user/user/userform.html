@@ -77,13 +77,12 @@
         //普通图片上传
         var uploadInst = upload.render({
             elem: '#layuiadmin-upload-useradmin'
-            , url: ContextPath + '/user/uploadPic'
+            , url: ContextPath + '/upload/pic?addr=user'
             , accept: 'images'
             , acceptMime: 'image/*'
             , before: function (obj) {
                 //预读本地文件示例，不支持ie8
                 obj.preview(function (index, file, result) {
-                    console.log(result);
                     $('#demo1').attr('src', result); //图片链接（base64）
                 });
             }

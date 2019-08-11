@@ -4,8 +4,11 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 /**
+ * 俱乐部实体类
+ *
  * @description:
  * @author: leike
  * @date: 2019-08-09 21:48
@@ -30,10 +33,12 @@ public class Club {
 
     private Integer hot;
 
+    private List<Activity> activities;
+
     public Club() {
     }
 
-    public Club(Integer cId, String name, String phone, String pic, String intro, String address, Date jointime, Integer hot) {
+    public Club(Integer cId, String name, String phone, String pic, String intro, String address, Date jointime, Integer hot, List<Activity> activities) {
         this.cId = cId;
         this.name = name;
         this.phone = phone;
@@ -42,6 +47,7 @@ public class Club {
         this.address = address;
         this.jointime = jointime;
         this.hot = hot;
+        this.activities = activities;
     }
 
     public Integer getcId() {
@@ -108,6 +114,14 @@ public class Club {
         this.hot = hot;
     }
 
+    public List<Activity> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(List<Activity> activities) {
+        this.activities = activities;
+    }
+
     @Override
     public String toString() {
         return "Club{" +
@@ -119,6 +133,7 @@ public class Club {
                 ", address='" + address + '\'' +
                 ", jointime=" + jointime +
                 ", hot=" + hot +
+                ", activities=" + activities +
                 '}';
     }
 }

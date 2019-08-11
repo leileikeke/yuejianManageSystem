@@ -18,11 +18,12 @@ public class FileUtil {
 
     /**
      * 上传文件
+     *
      * @param multipartFile
      * @param uploadPath
      * @return
      */
-    public static String uploadPic(MultipartFile multipartFile, String uploadPath,String type) {
+    public static String uploadPic(MultipartFile multipartFile, String uploadPath, String addr) {
         //1.获取原始的文件名
         String originalFilename1 = multipartFile.getOriginalFilename();
         //2. 先截取源文件的文件名前缀 , 不带后缀
@@ -33,7 +34,7 @@ public class FileUtil {
         //4. 得到新文件名
         String newFilename = newfileNamePrefix + originalFilename1.substring(originalFilename1.lastIndexOf('.'));
         //5. 构建文件对象
-        String fileName = type + newFilename;
+        String fileName = addr + newFilename;
         File file = new File(uploadPath + fileName);
         System.out.println(file.getPath());
         //6.上传
@@ -48,12 +49,13 @@ public class FileUtil {
 
     /**
      * 删除文件
+     *
      * @param uploadPath
      * @param pic
      */
     public static void deleteFile(String uploadPath, String pic) {
 
-        File file = new File(uploadPath+pic);
+        File file = new File(uploadPath + pic);
         System.out.println(file.getPath());
         if (file.isFile() && file.exists()) {
             file.delete();

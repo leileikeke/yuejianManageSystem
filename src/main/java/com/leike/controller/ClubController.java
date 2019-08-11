@@ -206,6 +206,12 @@ public class ClubController {
         return map;
     }
 
+    /**
+     * 上传图片
+     * @param multipartFile
+     * @param request
+     * @return
+     */
     @RequestMapping("/uploadPic")
     @ResponseBody
     public Map<String, Object> uploadPic(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {

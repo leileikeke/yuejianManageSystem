@@ -23,11 +23,11 @@ public interface ClubMapper {
 
     List<Club> selectClubListForTerm(@Param("page") Integer page,@Param("limit") Integer limit,@Param("cId") String cId,@Param("name") String name,@Param("phone") String phone);
 
-    @Delete("delete from club where c_id = #{cId}")
+    @Delete("DELETE FROM club WHERE c_id = #{cId}")
     int deleteClub(@Param("cId") Integer cId);
 
-    @Select("select * from club where c_id = #{cId}")
-    Club selectClub(@Param("cId") Integer cId);
+    @Select("SELECT * FROM club WHERE c_id = #{cId}")
+    String selectClub(@Param("cId") Integer cId);
 
     @Update("UPDATE club SET name = #{name},phone = #{phone},pic = #{pic},intro = #{intro},address = #{address} where c_id = #{cId}")
     int updateClub(Club club);
