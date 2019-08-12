@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>layuiAdmin std - 通用后台管理模板系统（iframe标准版）</title>
+    <title>yuejie 后台管理(system)</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -82,7 +82,7 @@
                         <cite>${systemAdmin.nickname}</cite>
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a lay-href="info">基本资料</a></dd>
+                        <dd><a lay-href="views/set/user/info.html?id=${systemAdmin.id}">基本资料</a></dd>
                         <dd><a lay-href="views/set/user/password.html">修改密码</a></dd>
                         <hr>
                         <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>

@@ -6,8 +6,6 @@
  @License：LPPL
 
  */
-
-
 layui.define(['table', 'form'], function (exports) {
     var $ = layui.$
         , table = layui.table
@@ -27,8 +25,9 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'phone', title: '电话', width:140, align: 'center'}
             , {field: 'jointime', title: '加入时间', sort: true, width: 140, align: 'center'}
             , {field: 'address', width:180, title: '地址', align: 'center'}
-            , {field: 'intro', width:351, id:'intro',title: '简介', align: 'center'}
+            , {field: 'intro', width:230, id:'intro',title: '简介', align: 'center'}
             , {field: 'hot', title: '热度', sort: true, width: 80, align: 'center'}
+            , {field: 'aName', width: 120, title: '管理员名', align: 'center'}
             , {title: '操作', width: 200, align: 'center', fixed: 'right', toolbar: '#table-club-admin'}
         ]]
         , page: true
@@ -38,7 +37,7 @@ layui.define(['table', 'form'], function (exports) {
     });
 
     //监听工具条
-    table.on('tool(LAY-club-activity-manage)', function (obj) {
+    table.on('tool(LAY-club-back-manage)', function (obj) {
         var data = obj.data;
         if (obj.event === 'del') {
             layer.prompt({
@@ -49,7 +48,7 @@ layui.define(['table', 'form'], function (exports) {
                 if (value == layui.setter.Command) {
                     layer.confirm('确定删除此俱乐部吗？', function (index) {
                         $.ajax({
-                            url: ContextPath + '/activity/delete',
+                            url: ContextPath + '/club/delete',
                             type: 'get',
                             data: {'cId': data.cId},//向服务端发送删除的sid
                             success: function (suc) {
@@ -75,7 +74,7 @@ layui.define(['table', 'form'], function (exports) {
                 type: 2
                 , title: '编辑俱乐部'
                 , content: 'clubform.html'
-                , area: ['455px', '500px']
+                , area: ['455px', '545px']
                 , anim: 4//弹出动画
                 , maxmin: true//显示最大化最小化按钮
                 , shadeClose: true//点击遮罩层关闭模态框
@@ -109,6 +108,7 @@ layui.define(['table', 'form'], function (exports) {
                     var body = layer.getChildFrame('body', index);
                     body.find("input[name='cId']").val(data.cId);
                     body.find("input[name='name']").val(data.name);
+                    body.find("input[name='aName']").val(data.aName);
                     body.find("input[name='phone']").val(data.phone);
                     body.find("input[name='address']").val(data.address);
                     body.find("input[name='pic']").val(data.pic);
@@ -161,7 +161,7 @@ layui.define(['table', 'form'], function (exports) {
         , cols: [[
             {type: 'checkbox', fixed: 'left'}
             , {field: 'aId', width: 80, title: 'ID', sort: true, align: 'center'}
-            , {field: 'name', width: 80, title: '俱乐部名', align: 'center'}
+            , {field: 'name', width: 120, title: '活动名', align: 'center'}
             , {field: 'startTime', title: '开始时间', sort: true, width: 140, align: 'center'}
             , {field: 'endTime', title: '结束时间', sort: true, width: 140, align: 'center'}
             , {field: 'address', title: '活动地点', align: 'center'}
@@ -170,7 +170,7 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'type', width: 80, title: '类型', align: 'center'}
             , {field: 'detail', id:'detail',title: '活动详情', align: 'center'}
             , {field: 'cName', id:'cName', width: 120,title: '所属俱乐部', align: 'center'}
-            , {title: '操作', width: 200, align: 'center', fixed: 'right', toolbar: '#table-activity-admin'}
+            , {title: '操作', width: 160, align: 'center', fixed: 'right', toolbar: '#table-activity-admin'}
         ]]
         , page: true
         , limit: 10
@@ -267,5 +267,7 @@ layui.define(['table', 'form'], function (exports) {
             })
         }
     });
+
+
     exports('club', {})
 });

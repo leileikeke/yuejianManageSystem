@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface ActivityMapper {
 
-    List<Activity> selectActivityListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("cId") String cId, @Param("name") String name, @Param("aId") String aId);
+    List<Activity> selectActivityListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("name") String name, @Param("type") String type, @Param("cName") String cName);
 
     List<Activity> selectActivityList(@Param("page") Integer page, @Param("limit") Integer limit);
 
@@ -32,4 +32,8 @@ public interface ActivityMapper {
 
     @Delete("DELETE FROM activity WHERE a_id = #{aId}")
     int deleteActivity(@Param("aId") Integer aId);
+
+    List<Activity> selectActivityListForclubAdmin(@Param("page") Integer page,@Param("limit") Integer limit,@Param("id") Integer id);
+
+    Integer selectActivityCountForClubAdmin(Integer id);
 }

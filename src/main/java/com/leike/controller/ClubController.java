@@ -110,7 +110,7 @@ public class ClubController {
      */
     @RequestMapping("/add")
     @ResponseBody
-    public Map<String, Object> addUser(@RequestBody Club club) {
+    public Map<String, Object> addClub(@RequestBody Club club) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -206,36 +206,30 @@ public class ClubController {
         return map;
     }
 
-
-    @RequestMapping("/addClub")
+    /**
+     * 通过管理员id查club
+     * @param id
+     * @return
+     */
+    @RequestMapping("/query")
     @ResponseBody
-    public Map<String, Object> addClub(@RequestBody Club club) {
+    public Map<String, Object> queryClubforid(Integer id) {
+
 
         Map<String, Object> map = new HashMap<>();
 
         Integer code = ResponseCode.FAILURE;
 
-        String msg = "添加失败";
-
-        boolean bool = clubService.queryClub(club.getName());
-        if (bool) {
-            if (club != null) {
-
-                boolean b = clubService.insertClub(club);
-                if (b) {
-                    code = ResponseCode.SUCCEED;
-                    msg = "";
-                }
-
-            }
-        } else {
-            msg = "此俱乐部已存在!";
+        Club club = clubService.queryClubforid(id);
+        if (club != null) {
+            code = ResponseCode.SUCCEED;
         }
 
         map.put("code", code);
-        map.put("msg", msg);
+        map.put("data", club);
 
         return map;
+
     }
 
 }

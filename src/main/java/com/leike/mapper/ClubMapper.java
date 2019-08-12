@@ -18,7 +18,7 @@ public interface ClubMapper {
     @Select("SELECT count(*) FROM club")
     int selectClubCount();
 
-    @Select("SELECT * FROM club limit #{page},#{limit}")
+
     List<Club> selectClubList(@Param("page") Integer page,@Param("limit") Integer limit);
 
     List<Club> selectClubListForTerm(@Param("page") Integer page,@Param("limit") Integer limit,@Param("cId") String cId,@Param("name") String name,@Param("phone") String phone);
@@ -26,7 +26,7 @@ public interface ClubMapper {
     @Delete("DELETE FROM club WHERE c_id = #{cId}")
     int deleteClub(@Param("cId") Integer cId);
 
-    @Select("SELECT * FROM club WHERE c_id = #{cId}")
+    @Select("SELECT pic FROM club WHERE c_id = #{cId}")
     String selectClub(@Param("cId") Integer cId);
 
     @Update("UPDATE club SET name = #{name},phone = #{phone},pic = #{pic},intro = #{intro},address = #{address} where c_id = #{cId}")
@@ -36,4 +36,13 @@ public interface ClubMapper {
     Club queryClub(@Param("name") String name);
 
     int insertClub(Club club);
+
+    @Select("SELECT * FROM club WHERE id = #{id}")
+    Club queryClubforid(@Param("id") Integer id);
+
+    @Select("select id from admin where name = #{aName}")
+    Integer selectAdminId(String aName);
+
+    @Select("SELECT name FROM admin WHERE id = #{id}")
+    String queryAdminName(@Param("id") Integer id);
 }

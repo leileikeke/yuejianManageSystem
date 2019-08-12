@@ -22,8 +22,8 @@ public class ActivityServiceImpl implements ActivityService {
     private ActivityMapper activityMapper;
 
     @Override
-    public List<Activity> selectActivityListForTerm(Integer page, Integer limit, String cId, String name, String aId) {
-        List<Activity> activities = activityMapper.selectActivityListForTerm(page, limit, cId, name, aId);
+    public List<Activity> selectActivityListForTerm(Integer page, Integer limit, String name, String type, String cName) {
+        List<Activity> activities = activityMapper.selectActivityListForTerm(page, limit, name, type, cName);
         return activities;
     }
 
@@ -44,8 +44,8 @@ public class ActivityServiceImpl implements ActivityService {
         //获取用户原头像
         String pic = activityMapper.selectActivity(activity.getaId());
         //如果修改了用户头像则删除原头像
-        if (!activity.getPic().equals(pic)){
-            FileUtil.deleteFile(uploadPath,pic);
+        if (!activity.getPic().equals(pic)) {
+            FileUtil.deleteFile(uploadPath, pic);
         }
         System.out.println(activity);
         int i = activityMapper.updateActivity(activity);
@@ -64,7 +64,7 @@ public class ActivityServiceImpl implements ActivityService {
     @Override
     public boolean deleteActivity(Integer aId, String pic, String uploadPath) {
         //删除服务器上的用户头像
-        FileUtil.deleteFile(uploadPath,pic);
+        FileUtil.deleteFile(uploadPath, pic);
         int i = activityMapper.deleteActivity(aId);
         return i == 1 ? true : false;
     }
@@ -73,5 +73,17 @@ public class ActivityServiceImpl implements ActivityService {
     public String uploadPic(MultipartFile multipartFile, String uploadPath) {
         String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/club/");
         return fileName;
+    }
+
+    @Override
+    public List<Activity> selectActivityListForclubAdmin(Integer page, Integer limit, Integer id) {
+        List<Activity> activities = activityMapper.selectActivityListForclubAdmin(page, limit, id);
+        return activities;
+    }
+
+    @Override
+    public Integer selectActivityCountForClubAdmin(Integer id) {
+        Integer i = activityMapper.selectActivityCountForClubAdmin(id);
+        return i;
     }
 }

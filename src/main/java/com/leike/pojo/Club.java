@@ -35,10 +35,14 @@ public class Club {
 
     private List<Activity> activities;
 
+    private Integer id;//管理员id
+
+    private String aName;//管理员名
+
     public Club() {
     }
 
-    public Club(Integer cId, String name, String phone, String pic, String intro, String address, Date jointime, Integer hot, List<Activity> activities) {
+    public Club(Integer cId, String name, String phone, String pic, String intro, String address, Date jointime, Integer hot, List<Activity> activities, Integer id, String aName) {
         this.cId = cId;
         this.name = name;
         this.phone = phone;
@@ -48,6 +52,8 @@ public class Club {
         this.jointime = jointime;
         this.hot = hot;
         this.activities = activities;
+        this.id = id;
+        this.aName = aName;
     }
 
     public Integer getcId() {
@@ -122,6 +128,22 @@ public class Club {
         this.activities = activities;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getaName() {
+        return aName;
+    }
+
+    public void setaName(String aName) {
+        this.aName = aName;
+    }
+
     @Override
     public String toString() {
         return "Club{" +
@@ -134,6 +156,8 @@ public class Club {
                 ", jointime=" + jointime +
                 ", hot=" + hot +
                 ", activities=" + activities +
+                ", id=" + id +
+                ", aName='" + aName + '\'' +
                 '}';
     }
 }

@@ -8,29 +8,61 @@
         <bind name="_cId" value="'%'+cId+'%'"/>
         <bind name="_name" value="'%'+name+'%'"/>
         <bind name="_phone" value="'%'+phone+'%'"/>
-        SELECT *
-        FROM club
+        SELECT
+        c.c_id,
+        c.name,
+        c.phone,
+        c.pic,
+        c.intro,
+        c.address,
+        c.jointime,
+        c.hot,
+        c.id,
+        a.name as aName
+        FROM
+        club c
+        LEFT JOIN admin a ON c.id = a.id
         <where>
-            c_id IN
-            (SELECT c.c_id
+            c.c_id IN
+            (SELECT cl.c_id
             FROM (SELECT c_id
             FROM club
-            LIMIT #{page},#{limit}) as c)
+            LIMIT #{page},#{limit}) as cl)
             <if test="cId != null and cId != ''">
-                AND c_id LIKE #{_cId}
+                AND c.c_id LIKE #{_cId}
             </if>
             <if test="name != null and name != ''">
-                AND name LIKE #{_name}
+                AND c.name LIKE #{_name}
             </if>
             <if test="phone != null and phone != ''">
-                AND phone LIKE #{_phone}
+                AND c.phone LIKE #{_phone}
             </if>
         </where>
     </select>
 
+    <select id="selectClubList" resultType="com.leike.pojo.Club">
+        SELECT
+        c.c_id,
+        c.name,
+        c.phone,
+        c.pic,
+        c.intro,
+        c.address,
+        c.jointime,
+        c.hot,
+        c.id,
+        a.name as aName
+        FROM
+        club c
+        LEFT JOIN admin a ON c.id = a.id
+        LIMIT #{page},#{limit}
+    </select>
+
     <insert id="insertClub">
-        INSERT INTO club (name,phone,pic,intro,address,jointime,hot)
-        VALUE (#{name},#{phone},#{pic},#{intro},#{address},#{jointime},#{hot})
+        INSERT INTO club (name,phone,pic,intro,address,jointime,hot,id)
+        VALUE (#{name},#{phone},#{pic},#{intro},#{address},#{jointime},#{hot},#{id})
+
+
     </insert>
 
 </mapper>

@@ -9,36 +9,46 @@
     </insert>
 
     <!--    <insert id="insertClub">-->
-<!--        INSERT INTO club (name,phone,pic,intro,address,jointime,hot)-->
-<!--        VALUE (#{name},#{phone},#{pic},#{intro},#{address},#{jointime},#{hot})-->
-<!--    </insert>-->
+    <!--        INSERT INTO club (name,phone,pic,intro,address,jointime,hot)-->
+    <!--        VALUE (#{name},#{phone},#{pic},#{intro},#{address},#{jointime},#{hot})-->
+    <!--    </insert>-->
 
     <select id="selectActivityListForTerm" resultType="com.leike.pojo.Activity">
-        <bind name="_aId" value="'%'+aId+'%'"/>
         <bind name="_name" value="'%'+name+'%'"/>
-        <bind name="_cId" value="'%'+cId+'%'"/>
-        SELECT *
-        FROM activity
+        <bind name="_type" value="'%'+type+'%'"/>
+        <bind name="_cName" value="'%'+cName+'%'"/>
+        SELECT
+        a.a_id,
+        a.name,
+        a.start_time,
+        a.end_time,
+        a.address,
+        a.pic,
+        a.price,
+        a.type,
+        a.detail,
+        a.c_id,
+        c.name as cName
+        FROM activity a
+        LEFT JOIN club c ON a.c_id = c.c_id
         <where>
-            a_id IN
-            (SELECT a.a_id
+            a.a_id IN
+            (SELECT ac.a_id
             FROM (SELECT a_id
             FROM activity
-            LIMIT #{page},#{limit}) as a)
-            <if test="aId != null and aId != ''">
-                AND a_id LIKE #{_aId}
-            </if>
+            LIMIT #{page},#{limit}) as ac)
             <if test="name != null and name != ''">
-                AND name LIKE #{_name}
+                AND a.name LIKE #{_name}
             </if>
-            <if test="cId != null and cId != ''">
-                AND c_id LIKE #{_cId}
+            <if test="type != null and type != ''">
+                AND a.type LIKE #{_type}
+            </if>
+            <if test="cName != null and cName != ''">
+                AND c.name LIKE #{_cName}
             </if>
         </where>
-
-
-
     </select>
+
     <select id="selectActivityList" resultType="com.leike.pojo.Activity">
         SELECT
         a.a_id,
@@ -56,6 +66,33 @@
         activity a
         LEFT JOIN club c ON a.c_id = c.c_id
         limit #{page},#{limit}
+    </select>
 
+    <select id="selectActivityListForclubAdmin" resultType="com.leike.pojo.Activity">
+        SELECT
+        a.a_id,
+        a.name,
+        a.start_time,
+        a.end_time,
+        a.address,
+        a.pic,
+        a.price,
+        a.type,
+        a.detail,
+        a.c_id,
+        c.name as cName
+        FROM
+        activity a
+        LEFT JOIN club c ON a.c_id = c.c_id
+        WHERE c.id = #{id}
+        limit #{page},#{limit}
+    </select>
+    <select id="selectActivityCountForClubAdmin" resultType="java.lang.Integer">
+        select
+        COUNT(*)
+        from
+        activity a
+        LEFT JOIN club c ON a.c_id = c.c_id
+        WHERE c.id = #{id}
     </select>
 </mapper>

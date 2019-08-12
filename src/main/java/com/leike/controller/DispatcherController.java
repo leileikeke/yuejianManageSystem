@@ -45,14 +45,14 @@ public class DispatcherController {
         return "redirect:/index.jsp";
     }
 
-    @RequestMapping(path = "/info" ,produces = "text/plain;charset=UTF-8")
-    public ModelAndView info(HttpSession session) {
-
-        ModelAndView modelAndView = new ModelAndView("redirect:/views/set/user/info.html");
-        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
-        modelAndView.addObject("id",admin.getId());
-        return modelAndView;
-    }
+//    @RequestMapping(path = "/info" ,produces = "text/plain;charset=UTF-8")
+//    public ModelAndView info(HttpSession session) {
+//
+//        ModelAndView modelAndView = new ModelAndView("redirect:/views/set/user/info.html");
+//        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+//        modelAndView.addObject("id",admin.getId());
+//        return modelAndView;
+//    }
 
 
 }

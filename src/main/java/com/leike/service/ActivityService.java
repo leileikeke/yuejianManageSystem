@@ -12,10 +12,7 @@ import java.util.List;
  */
 public interface ActivityService {
 
-
-
-
-    List<Activity> selectActivityListForTerm(Integer page, Integer limit, String cId, String name, String aId);
+    List<Activity> selectActivityListForTerm(Integer page, Integer limit, String name, String type, String cName);
 
     List<Activity> selectActivityList(Integer page, Integer limit);
 
@@ -28,4 +25,8 @@ public interface ActivityService {
     boolean deleteActivity(Integer aId, String pic, String uploadPath);
 
     String uploadPic(MultipartFile multipartFile, String uploadPath);
+
+    List<Activity> selectActivityListForclubAdmin(Integer page, Integer limit, Integer id);
+
+    Integer selectActivityCountForClubAdmin(Integer id);
 }

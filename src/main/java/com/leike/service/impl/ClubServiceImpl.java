@@ -1,5 +1,6 @@
 package com.leike.service.impl;
 
+import com.leike.mapper.AdminMapper;
 import com.leike.mapper.ClubMapper;
 import com.leike.pojo.Club;
 import com.leike.service.ClubService;
@@ -59,6 +60,9 @@ public class ClubServiceImpl implements ClubService {
             FileUtil.deleteFile(uploadPath,pic);
         }
 
+        Integer id = clubMapper.selectAdminId(club.getaName());
+        club.setId(id);
+
         int i = clubMapper.updateClub(club);
         return i == 1 ? true : false;
     }
@@ -74,6 +78,10 @@ public class ClubServiceImpl implements ClubService {
         Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
         club.setJointime(date);
         club.setHot(0);
+
+        Integer id = clubMapper.selectAdminId(club.getaName());
+        club.setId(id);
+
         int i = clubMapper.insertClub(club);
         return i == 1 ? true : false;
     }
@@ -82,5 +90,13 @@ public class ClubServiceImpl implements ClubService {
     public String uploadPic(MultipartFile multipartFile, String uploadPath) {
         String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/club/");
         return fileName;
+    }
+
+    @Override
+    public Club queryClubforid(Integer id) {
+        Club club = clubMapper.queryClubforid(id);
+        String aName = clubMapper.queryAdminName(id);
+        club.setaName(aName);
+        return club;
     }
 }

@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -18,6 +16,7 @@ import java.util.Map;
 
 /**
  * activity控制器
+ *
  * @description:
  * @author: leike
  * @date: 2019-08-11 16:43
@@ -34,14 +33,14 @@ public class ActicityController {
      *
      * @param page
      * @param limit
-     * @param cId
-     * @param aId
      * @param name
+     * @param type
+     * @param cName
      * @return
      */
     @RequestMapping("/getList")
     @ResponseBody
-    public Map<String, Object> selectActivityList(Integer page, Integer limit, String cId, String aId, String name) {
+    public Map<String, Object> selectActivityList(Integer page, Integer limit, String name, String type, String cName) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -51,8 +50,8 @@ public class ActicityController {
 
         List<Activity> activities;
 
-        if ((cId != null && !cId.equals("")) || (name != null && !name.equals("")) || (aId != null && !aId.equals(""))) {
-            activities = activityService.selectActivityListForTerm((page - 1) * limit, limit, cId, name, aId);
+        if ((name != null && !name.equals("")) || (type != null && !type.equals("")) || (cName != null && !cName.equals(""))) {
+            activities = activityService.selectActivityListForTerm((page - 1) * limit, limit, name, type, cName);
             if (activities != null) {
                 code = ResponseCode.TABLESUCCEED;
             }
@@ -140,6 +139,7 @@ public class ActicityController {
 
     /**
      * 删除activity
+     *
      * @param aId
      * @param pic
      * @param request
@@ -169,7 +169,66 @@ public class ActicityController {
         return map;
     }
 
+    /**
+     * 批量删除俱乐部
+     *
+     * @param list
+     * @param request
+     * @return
+     */
+    @RequestMapping("/deleteAll")
+    @ResponseBody
+    public Map<String, Object> deleteActivityList(@RequestBody List<Activity> list, HttpServletRequest request) {
 
+        Map<String, Object> map = new HashMap<>();
 
+        Integer code = ResponseCode.SUCCEED;
 
+        //统计删除成功的条数
+        Integer count = 0;
+
+        String uploadPath = request.getSession().getServletContext().getRealPath("/");
+
+        for (int i = 0; i < list.size(); i++) {
+
+            boolean b = activityService.deleteActivity(list.get(i).getaId(), list.get(i).getPic(), uploadPath);
+
+            if (b) {
+                count++;
+            }
+
+        }
+
+        map.put("code", code);
+        map.put("count", count);
+
+        return map;
+    }
+
+    @RequestMapping("/getListForclubAdmin")
+    @ResponseBody
+    public Map<String, Object> getActivityListForclubAdmin(Integer id, Integer page, Integer limit) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        Integer count = 0;
+
+        List<Activity> activities;
+
+        activities = activityService.selectActivityListForclubAdmin((page - 1) * limit, limit, id);
+        if (activities != null) {
+            code = ResponseCode.TABLESUCCEED;
+        }
+
+        count = activityService.selectActivityCountForClubAdmin(id);
+
+        map.put("code", code);
+        map.put("msg", "");
+        map.put("count", count);
+        map.put("data", activities);
+
+        return map;
+    }
 }

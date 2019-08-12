@@ -65,10 +65,10 @@ layui.define(['form', 'upload'], function (exports) {
         return false;
     });
 
-    //设置密码
+    //修改密码
     form.on('submit(setmypass)', function (obj) {
         // layer.msg(JSON.stringify(obj.field));
-        var url = ContextPath + "admin/setpass";
+        var url = ContextPath + "/admin/setpass";
         //提交修改
         admin.req({
             url: url

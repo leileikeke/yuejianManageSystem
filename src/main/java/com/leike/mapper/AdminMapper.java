@@ -21,10 +21,10 @@ public interface AdminMapper {
     List<Admin> selectAdminList();
 
     @Update("UPDATE admin SET password = #{password} where id = #{id}")
-    int updateAdminPass(Integer id, String password);
+    int updateAdminPass(@Param("id") Integer id,@Param("password") String password);
 
     @Delete("DELETE FROM admin WHERE id = #{id}")
-    int deleteAdmin(Integer id);
+    int deleteAdmin(@Param("id") Integer id);
 
     int addAdmin(Admin admin);
 
