@@ -113,7 +113,7 @@
                         </a>
                         <dl class="layui-nav-child">
                             <dd data-name="console" class="layui-this">
-                                <a lay-href="views/home/console.html">控制台</a>
+                                <a lay-href="views/home/consoleclub.html">控制台</a>
                             </dd>
                             <dd data-name="console">
                                 <a lay-href="views/home/homepage1.html">主页一</a>
@@ -123,14 +123,9 @@
                             </dd>
                         </dl>
                     </li>
-
-
-
-
-
-                    <li data-name="user" class="layui-nav-item">
+                    <li data-name="club" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="俱乐部" lay-direction="2">
-                            <i class="layui-icon layui-icon-user"></i>
+                            <i class="layui-icon layui-icon-club"></i>
                             <cite>俱乐部</cite>
                         </a>
                         <dl class="layui-nav-child">
@@ -143,26 +138,22 @@
                         </dl>
                     </li>
 
-
-
-
-
-
-
-                    <li data-name="user" class="layui-nav-item">
-                        <a href="javascript:;" lay-tips="用户" lay-direction="2">
-                            <i class="layui-icon layui-icon-user"></i>
-                            <cite>用户</cite>
+                    <li data-name="clubemp" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="员工" lay-direction="2">
+                            <i class="layui-icon layui-icon-clubemp"></i>
+                            <cite>员工</cite>
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a lay-href="views/user/user/list.html">网站用户</a>
+                                <a lay-href="views/clubemp/coach/list.html">教练</a>
                             </dd>
                             <dd>
-                                <a lay-href="views/user/administrators/list.html">后台管理员</a>
+                                <a lay-href="views/clubemp/administrators/list.html">大师</a>
                             </dd>
                         </dl>
                     </li>
+
+
                     <li data-name="set" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="设置" lay-direction="2">
                             <i class="layui-icon layui-icon-set"></i>
@@ -224,97 +215,7 @@
         base: '${ctx}/static/plugins/layuiadmin/' //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
-    }).use('index',function () {
-        var $ = layui.$;
-        //事件
-        var active = {
-            batchdel: function () {
-                var checkStatus = table.checkStatus('LAY-club-back-manage')
-                    , checkData = checkStatus.data; //得到选中的数据
-
-                if (checkData.length === 0) {
-                    return layer.msg('请选择数据');
-                }
-
-                layer.prompt({
-                    formType: 1
-                    , title: '敏感操作，请验证口令'
-                }, function (value, index) {
-                    layer.close(index);
-                    if (value == layui.setter.Command) {
-                        layer.confirm('确定删除吗？', function (index) {
-                            var url = layui.setter.ContextPath + "/club/deleteAll";
-                            admin.req({
-                                type: 'post'
-                                , url: url
-                                , contentType: "application/json;charset=utf-8"
-                                , data: JSON.stringify(checkData)
-                                , done: function (res) {
-                                    // 删除成功提示
-                                    layer.msg('成功删除: ' + res.count + ' 条', {
-                                        offset: '15px',
-                                        icon: 1,
-                                        time: 1000
-                                    });
-                                    //执行 Ajax 后重载
-                                    table.reload('LAY-club-back-manage');
-                                }
-                            });
-                        });
-                    } else {
-                        layer.msg("验证口令错误,操作失败");
-                    }
-
-                });
-            }
-            , add: function () {
-                layer.open({
-                    type: 2
-                    , title: '添加俱乐部'
-                    , content: 'clubform.html'
-                    , area: ['455px', '500px']
-                    , anim: 4//弹出动画
-                    , maxmin: true//显示最大化最小化按钮
-                    , shadeClose: true//点击遮罩层关闭模态框
-                    , shade: 0.5//阴影
-                    , btn: ['确定', '取消']
-                    , yes: function (index, layero) {
-                        var iframeWindow = window['layui-layer-iframe' + index]
-                            , submitID = 'LAY-club-back-submit'
-                            , submit = layero.find('iframe').contents().find('#' + submitID);
-                        //监听提交
-                        iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
-                            var field = data.field; //获取提交的字段
-                            console.log(field);
-                            var url = layui.setter.ContextPath + '/club/add';
-                            admin.req({
-                                type: 'post'
-                                , url: url
-                                , contentType: "application/json;charset=utf-8"
-                                , data: JSON.stringify(field)
-                                , done: function (res) {
-                                    layer.msg("添加成功", {icon: 6});
-                                    //提交 Ajax 成功后，静态更新表格中的数据
-                                    table.reload('LAY-club-back-manage'); //数据刷新
-                                    layer.close(index); //关闭弹层
-                                }
-                            });
-                        });
-
-                        submit.trigger('click');
-                    }
-                });
-            }
-        }
-
-        $('.layui-btn.layuiadmin-btn-club').on('click', function () {
-            var type = $(this).data('type');
-            active[type] ? active[type].call(this) : '';
-        });
-    // <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i
-    // class="layui-icon layui-icon-edit"></i>编辑</a>
-
-    });
+    }).use('index');
 </script>
 </body>
 </html>

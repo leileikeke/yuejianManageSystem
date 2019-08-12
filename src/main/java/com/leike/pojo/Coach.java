@@ -1,24 +1,17 @@
 package com.leike.pojo;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.util.Date;
-
 /**
- * 用户实体类
+ * 教练/大师实体类
  *
  * @description:
  * @author: leike
- * @date: 2019-08-05 21:12
+ * @date: 2019-08-13 2:25
  */
-public class User {
+public class Coach {
 
-    private Integer uId;
+    private Integer jId;
 
     private String name;
-
-    private String password;
 
     private String pic;
 
@@ -28,30 +21,33 @@ public class User {
 
     private String email;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date jointime;
+    private String intro;
 
-    public User() {
+    private Boolean state;
+
+    private Integer cId;
+
+    public Coach() {
     }
 
-    public User(Integer uId, String name, String password, String pic, String sex, String phone, String email, Date jointime) {
-        this.uId = uId;
+    public Coach(Integer jId, String name, String pic, String sex, String phone, String email, String intro, Boolean state, Integer cId) {
+        this.jId = jId;
         this.name = name;
-        this.password = password;
         this.pic = pic;
         this.sex = sex;
         this.phone = phone;
         this.email = email;
-        this.jointime = jointime;
+        this.intro = intro;
+        this.state = state;
+        this.cId = cId;
     }
 
-    public Integer getuId() {
-        return uId;
+    public Integer getjId() {
+        return jId;
     }
 
-    public void setuId(Integer uId) {
-        this.uId = uId;
+    public void setjId(Integer jId) {
+        this.jId = jId;
     }
 
     public String getName() {
@@ -60,14 +56,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getPic() {
@@ -102,25 +90,42 @@ public class User {
         this.email = email;
     }
 
-    public Date getJointime() {
-        return jointime;
+    public String getIntro() {
+        return intro;
     }
 
-    public void setJointime(Date jointime) {
-        this.jointime = jointime;
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
+
+    public Boolean getState() {
+        return state;
+    }
+
+    public void setState(Boolean state) {
+        this.state = state;
+    }
+
+    public Integer getcId() {
+        return cId;
+    }
+
+    public void setcId(Integer cId) {
+        this.cId = cId;
     }
 
     @Override
     public String toString() {
-        return "User{" +
-                "uId=" + uId +
+        return "Coach{" +
+                "jId=" + jId +
                 ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
                 ", pic='" + pic + '\'' +
                 ", sex='" + sex + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
-                ", jointime=" + jointime +
+                ", intro='" + intro + '\'' +
+                ", state=" + state +
+                ", cId=" + cId +
                 '}';
     }
 }

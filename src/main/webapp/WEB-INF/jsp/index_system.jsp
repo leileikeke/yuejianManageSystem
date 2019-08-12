@@ -123,26 +123,34 @@
                             </dd>
                         </dl>
                     </li>
-
-
-
-
-
-                    <li data-name="user" class="layui-nav-item">
+                    <li data-name="club" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="俱乐部" lay-direction="2">
-                            <i class="layui-icon layui-icon-user"></i>
+                            <i class="layui-icon layui-icon-club"></i>
                             <cite>俱乐部</cite>
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a lay-href="views/club/club/list.html">俱乐部</a>
+                                <a lay-href="views/club/club/list.html">俱乐部列表</a>
                             </dd>
                             <dd>
                                 <a lay-href="views/club/activity/list.html">俱乐部活动</a>
                             </dd>
                         </dl>
                     </li>
-
+                    <li data-name="clubemp" class="layui-nav-item">
+                        <a href="javascript:;" lay-tips="员工" lay-direction="2">
+                            <i class="layui-icon layui-icon-clubemp"></i>
+                            <cite>员工</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a lay-href="views/clubemp/coach/list.html">教练</a>
+                            </dd>
+                            <dd>
+                                <a lay-href="views/clubemp/master/list.html">大师</a>
+                            </dd>
+                        </dl>
+                    </li>
 
 
 

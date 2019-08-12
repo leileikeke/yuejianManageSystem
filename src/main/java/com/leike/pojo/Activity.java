@@ -7,6 +7,7 @@ import java.util.Date;
 
 /**
  * 活动实体类
+ *
  * @description:
  * @author: leike
  * @date: 2019-08-11 16:33
