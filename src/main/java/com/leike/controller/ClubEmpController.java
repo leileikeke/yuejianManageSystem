@@ -1,6 +1,7 @@
 package com.leike.controller;
 
 import com.leike.constant.ResponseCode;
+import com.leike.pojo.Admin;
 import com.leike.pojo.Coach;
 import com.leike.service.ClubEmpService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -79,13 +81,7 @@ public class ClubEmpController {
      */
     @RequestMapping("/updateState")
     @ResponseBody
-    public Map<String, Object> updateState(Integer jId, Boolean state) {
-
-        if (state) {
-            state = false;
-        } else {
-            state = true;
-        }
+    public Map<String, Object> updateState(Integer jId, Boolean state, HttpSession session) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -93,14 +89,33 @@ public class ClubEmpController {
 
         String msg = "修改失败";
 
-        boolean b = clubEmpService.updateState(jId, state);
-        if (b) {
+        Integer role = 1;
+
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+
+        //判断当前用户权限
+        if (admin.getRole().equals("systemAdmin")){
+
+            if (state) {
+                state = false;
+            } else {
+                state = true;
+            }
+
+            boolean b = clubEmpService.updateState(jId, state);
+            if (b) {
+                code = ResponseCode.SUCCEED;
+                msg = "修改成功";
+            }
+        }else {
             code = ResponseCode.SUCCEED;
-            msg = "修改成功";
+            msg = "请联系管理员审核!";
+            role = 0;
         }
 
         map.put("code", code);
         map.put("msg", msg);
+        map.put("role",role);
 
         return map;
     }
@@ -200,7 +215,7 @@ public class ClubEmpController {
         return map;
     }
     /**
-     * 添加User
+     * 添加Coach
      *
      * @param coach
      * @return

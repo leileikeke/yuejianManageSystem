@@ -102,7 +102,7 @@
         <div class="layui-side layui-side-menu">
             <div class="layui-side-scroll">
                 <div class="layui-logo" lay-href="views/home/console.html">
-                    <span>layuiAdmin</span>
+                    <span>yuejian后台(club)</span>
                 </div>
 
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
@@ -125,7 +125,7 @@
                     </li>
                     <li data-name="club" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="俱乐部" lay-direction="2">
-                            <i class="layui-icon layui-icon-club"></i>
+                            <i class="layui-icon layui-icon-group"></i>
                             <cite>俱乐部</cite>
                         </a>
                         <dl class="layui-nav-child">
@@ -140,15 +140,15 @@
 
                     <li data-name="clubemp" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="员工" lay-direction="2">
-                            <i class="layui-icon layui-icon-clubemp"></i>
+                            <i class="layui-icon layui-icon-flag"></i>
                             <cite>员工</cite>
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a lay-href="views/clubemp/coach/list.html">教练</a>
+                                <a lay-href="views/clubemp/coach/list.html">教练列表</a>
                             </dd>
                             <dd>
-                                <a lay-href="views/clubemp/administrators/list.html">大师</a>
+                                <a lay-href="views/clubemp/administrators/list.html">课程列表</a>
                             </dd>
                         </dl>
                     </li>

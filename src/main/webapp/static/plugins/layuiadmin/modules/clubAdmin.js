@@ -43,7 +43,7 @@ layui.define(['table', 'form'], function (exports) {
         ]]
         , page: true
         , limit: 10
-        , height: 700
+        , height: 'full-100'
         , text: {none: '一条数据也没有^_^'}
     });
 
