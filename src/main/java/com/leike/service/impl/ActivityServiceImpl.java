@@ -54,10 +54,7 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public boolean insertActivity(Activity activity) {
-//        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
-//        club.setJointime(date);
-//        club.setHot(0);
-        int i = activityMapper.insertMapper(activity);
+        int i = activityMapper.insertActivity(activity);
         return i == 1 ? true : false;
     }
 
@@ -67,12 +64,6 @@ public class ActivityServiceImpl implements ActivityService {
         FileUtil.deleteFile(uploadPath, pic);
         int i = activityMapper.deleteActivity(aId);
         return i == 1 ? true : false;
-    }
-
-    @Override
-    public String uploadPic(MultipartFile multipartFile, String uploadPath) {
-        String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/club/");
-        return fileName;
     }
 
     @Override

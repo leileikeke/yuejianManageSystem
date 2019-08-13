@@ -24,7 +24,7 @@ public interface UserMapper {
     @Select("SELECT * FROM user WHERE name = #{name}")
     User queryUser(@Param("name") String name);
 
-    @Delete("delete from user where u_id = #{uId}")
+    @Delete("DELETE FROM user WHERE u_id = #{uId}")
     int deleteUser(@Param("uId") Integer uId);
 
     @Update("UPDATE user SET name = #{name},pic = #{pic},sex = #{sex},phone = #{phone},password = #{password},email = #{email} where u_id = #{uId}")

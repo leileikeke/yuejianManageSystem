@@ -104,37 +104,37 @@ public class ActicityController {
         return map;
     }
 
-//    /**
-//     * 添加activity
-//     *
-//     * @param activity
-//     * @return
-//     */
-//    @RequestMapping("/add")
-//    @ResponseBody
-//    public Map<String, Object> addActivity(@RequestBody Activity activity) {
-//
-//        Map<String, Object> map = new HashMap<>();
-//
-//        Integer code = ResponseCode.FAILURE;
-//
-//        String msg = "添加失败";
-//
-//        if (activity != null) {
-//
-//            boolean b = activityService.insertActivity(activity);
-//            if (b) {
-//                code = ResponseCode.SUCCEED;
-//                msg = "";
-//            }
-//
-//        }
-//
-//        map.put("code", code);
-//        map.put("msg", msg);
-//
-//        return map;
-//    }
+    /**
+     * 添加activity
+     *
+     * @param activity
+     * @return
+     */
+    @RequestMapping("/add")
+    @ResponseBody
+    public Map<String, Object> addActivity(@RequestBody Activity activity) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "添加失败";
+
+        if (activity != null) {
+
+            boolean b = activityService.insertActivity(activity);
+            if (b) {
+                code = ResponseCode.SUCCEED;
+                msg = "";
+            }
+
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
 
 
     /**

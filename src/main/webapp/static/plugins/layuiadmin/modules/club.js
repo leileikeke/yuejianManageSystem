@@ -1,6 +1,6 @@
 /**
 
- @Name：layuiAdmin 用户管理 管理员管理 角色管理
+ @Name：layuiAdmin 俱乐部管理   俱乐部活动管理
  @Author：star1029
  @Site：http://www.layui.com/admin/
  @License：LPPL
@@ -22,13 +22,13 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'cId', width: 80, title: 'ID', sort: true, align: 'center'}
             , {field: 'name', width: 120, title: '俱乐部名', align: 'center'}
             , {field: 'pic', title: '宣传图', width: 100, templet: '#imgTpl', align: 'center'}
-            , {field: 'phone', title: '电话', width:140, align: 'center'}
+            , {field: 'phone', title: '电话', width: 140, align: 'center'}
             , {field: 'jointime', title: '加入时间', sort: true, width: 140, align: 'center'}
-            , {field: 'address', width:180, title: '地址', align: 'center'}
-            , {field: 'intro', width:230, id:'intro',title: '简介', align: 'center'}
+            , {field: 'address', title: '地址', align: 'center'}
+            , {field: 'intro', id: 'intro', title: '简介', align: 'center'}
             , {field: 'hot', title: '热度', sort: true, width: 80, align: 'center'}
             , {field: 'aName', width: 120, title: '管理员名', align: 'center'}
-            , {title: '操作', width: 200, align: 'center', fixed: 'right', toolbar: '#table-club-admin'}
+            , {title: '操作', width: 400, align: 'center', fixed: 'right', toolbar: '#table-club-admin'}
         ]]
         , page: true
         , limit: 10
@@ -112,7 +112,7 @@ layui.define(['table', 'form'], function (exports) {
                     body.find("input[name='phone']").val(data.phone);
                     body.find("input[name='address']").val(data.address);
                     body.find("input[name='pic']").val(data.pic);
-                    body.find('#demo1').attr('src', ContextPath+data.pic);
+                    body.find('#demo1').attr('src', ContextPath + data.pic);
                     body.find("textarea[name='intro']").val(data.intro);
                     setTimeout(function () {
                         layui.layer.tips('点击此处返回用户列表', '.layui-layer-close1', {
@@ -121,37 +121,98 @@ layui.define(['table', 'form'], function (exports) {
                     }, 300)
                 }
             })
-        } else if (obj.event === 'audit') {
-            var d = {
-                id: data.id,
-                state: data.state
-            };
-            var url = layui.setter.ContextPath + '/admin/updateState';
-            admin.req({
-                type: 'get'
-                , url: url
-                , data: d
-                , done: function (res) {
+        } else if (obj.event === 'addActivity') {
+            var tr = $(obj.tr);
+
+            layer.open({
+                type: 2
+                , title: '发布俱乐部活动'
+                , content: '../../club/activity/activityform.html'
+                , area: ['570px', '670px']
+                , anim: 4//弹出动画
+                , maxmin: true//显示最大化最小化按钮
+                , shadeClose: true//点击遮罩层关闭模态框
+                , shade: 0.5//阴影
+                , btn: ['确定', '取消']
+                , yes: function (index, layero) {
+                    var iframeWindow = window['layui-layer-iframe' + index]
+                        , submitID = 'LAY-club-activity-submit'
+                        , submit = layero.find('iframe').contents().find('#' + submitID);
+
+                    //监听提交
+                    iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
+                        var field = data.field; //获取提交的字段
+                        var url = layui.setter.ContextPath + '/activity/add';
+                        admin.req({
+                            type: 'post'
+                            , url: url
+                            , contentType: "application/json;charset=utf-8"
+                            , data: JSON.stringify(field)
+                            , done: function (res) {
+                                layer.msg("发布成功", {icon: 6});
+                                layer.close(index); //关闭弹层
+                            }
+                        });
+                    });
+                    submit.trigger('click');
+                }
+                , success: function (layero, index) {
+                    var body = layer.getChildFrame('body', index);
+                    body.find("input[name='cId']").val(data.cId);
                     setTimeout(function () {
-                        layer.tips(res.msg, obj.tr.selector + ' .state', {
-                            tips: [4, '#1aa094']
+                        layui.layer.tips('点击此处返回列表', '.layui-layer-close1', {
+                            tips: 1
                         });
                     }, 300)
-                    if (d.state == false) {
-                        obj.update({
-                            state:true
-                        });
-                    } else {
-                        obj.update({
-                            state:false
-                        });
-                    }
                 }
-            });
+            })
+        } else if (obj.event === 'addCoach') {
+            var tr = $(obj.tr);
+
+            layer.open({
+                type: 2
+                , title: '添加教练'
+                , content: '../../clubemp/coach/clubcoachform.html'
+                , area: ['455px', '545px']
+                , anim: 4//弹出动画
+                , maxmin: true//显示最大化最小化按钮
+                , shadeClose: true//点击遮罩层关闭模态框
+                , shade: 0.5//阴影
+                , btn: ['确定', '取消']
+                , yes: function (index, layero) {
+                    var iframeWindow = window['layui-layer-iframe' + index]
+                        , submitID = 'LAY-clubemp-front-submit'
+                        , submit = layero.find('iframe').contents().find('#' + submitID);
+
+                    //监听提交
+                    iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
+                        var field = data.field; //获取提交的字段
+                        var url = layui.setter.ContextPath + '/clubemp/add';
+                        admin.req({
+                            type: 'post'
+                            , url: url
+                            , contentType: "application/json;charset=utf-8"
+                            , data: JSON.stringify(field)
+                            , done: function (res) {
+                                layer.msg("添加成功", {icon: 6});
+                                layer.close(index); //关闭弹层
+                            }
+                        });
+                    });
+                    submit.trigger('click');
+                }
+                , success: function (layero, index) {
+                    var body = layer.getChildFrame('body', index);
+                    body.find("input[name='cId']").val(data.cId);
+                    setTimeout(function () {
+                        layui.layer.tips('点击此处返回用户列表', '.layui-layer-close1', {
+                            tips: 1
+                        });
+                    }, 300)
+                }
+            })
         }
     });
-
-
 
 
     //俱乐部活动管理
@@ -168,8 +229,8 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'pic', title: '宣传图', width: 80, templet: '#imgTpl', align: 'center'}
             , {field: 'price', width: 80, title: '价格', sort: true, align: 'center'}
             , {field: 'type', width: 80, title: '类型', align: 'center'}
-            , {field: 'detail', id:'detail',title: '活动详情', align: 'center'}
-            , {field: 'cName', id:'cName', width: 120,title: '所属俱乐部', align: 'center'}
+            , {field: 'detail', id: 'detail', title: '活动详情', align: 'center'}
+            , {field: 'cName', id: 'cName', width: 120, title: '所属俱乐部', align: 'center'}
             , {title: '操作', width: 160, align: 'center', fixed: 'right', toolbar: '#table-activity-admin'}
         ]]
         , page: true
@@ -192,7 +253,7 @@ layui.define(['table', 'form'], function (exports) {
                         $.ajax({
                             url: ContextPath + '/activity/delete',
                             type: 'get',
-                            data: {'aId': data.aId,pic:data.pic},//向服务端发送删除的sid
+                            data: {'aId': data.aId, pic: data.pic},//向服务端发送删除的sid
                             success: function (suc) {
                                 if (suc.code == 200) {
                                     obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
@@ -251,7 +312,7 @@ layui.define(['table', 'form'], function (exports) {
                     body.find("input[name='aId']").val(data.aId);
                     body.find("input[name='name']").val(data.name);
                     body.find("input[name='pic']").val(data.pic);
-                    body.find('#demo1').attr('src', ContextPath+data.pic);
+                    body.find('#demo1').attr('src', ContextPath + data.pic);
                     body.find("input[name='price']").val(data.price);
                     body.find("input[name='type']").val(data.type);
                     body.find("textarea[name='address']").val(data.address);

@@ -24,8 +24,6 @@ public interface ActivityService {
 
     boolean deleteActivity(Integer aId, String pic, String uploadPath);
 
-    String uploadPic(MultipartFile multipartFile, String uploadPath);
-
     List<Activity> selectActivityListForclubAdmin(Integer page, Integer limit, Integer id);
 
     Integer selectActivityCountForClubAdmin(Integer id);

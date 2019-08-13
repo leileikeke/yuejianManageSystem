@@ -28,7 +28,7 @@ public interface ActivityMapper {
     @Update("UPDATE activity SET name = #{name},start_time = #{startTime},end_time = #{endTime},address = #{address},pic = #{pic},price = #{price},type = #{type},detail = #{detail} where a_id = #{aId}")
     int updateActivity(Activity activity);
 
-    int insertMapper(Activity activity);
+    int insertActivity(Activity activity);
 
     @Delete("DELETE FROM activity WHERE a_id = #{aId}")
     int deleteActivity(@Param("aId") Integer aId);
@@ -36,4 +36,5 @@ public interface ActivityMapper {
     List<Activity> selectActivityListForclubAdmin(@Param("page") Integer page,@Param("limit") Integer limit,@Param("id") Integer id);
 
     Integer selectActivityCountForClubAdmin(Integer id);
+
 }

@@ -27,10 +27,12 @@ public class Coach {
 
     private Integer cId;
 
+    private String cName;
+
     public Coach() {
     }
 
-    public Coach(Integer jId, String name, String pic, String sex, String phone, String email, String intro, Boolean state, Integer cId) {
+    public Coach(Integer jId, String name, String pic, String sex, String phone, String email, String intro, Boolean state, Integer cId, String cName) {
         this.jId = jId;
         this.name = name;
         this.pic = pic;
@@ -40,6 +42,7 @@ public class Coach {
         this.intro = intro;
         this.state = state;
         this.cId = cId;
+        this.cName = cName;
     }
 
     public Integer getjId() {
@@ -114,6 +117,14 @@ public class Coach {
         this.cId = cId;
     }
 
+    public String getcName() {
+        return cName;
+    }
+
+    public void setcName(String cName) {
+        this.cName = cName;
+    }
+
     @Override
     public String toString() {
         return "Coach{" +
@@ -126,6 +137,7 @@ public class Coach {
                 ", intro='" + intro + '\'' +
                 ", state=" + state +
                 ", cId=" + cId +
+                ", cName='" + cName + '\'' +
                 '}';
     }
 }

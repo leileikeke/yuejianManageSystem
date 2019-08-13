@@ -3,15 +3,10 @@
 
 
 <mapper namespace="com.leike.mapper.ActivityMapper">
-    <insert id="insertMapper">
-        INSERT INTO club (name,start_time,end_time,address,pic,price,type,detail)
-        VALUE (#{name},#{startTime},#{endTime},#{address},#{pic},#{price},#{type},#{detail})
+    <insert id="insertActivity">
+        INSERT INTO activity (name,start_time,end_time,address,pic,price,type,detail,c_id)
+        VALUE (#{name},#{startTime},#{endTime},#{address},#{pic},#{price},#{type},#{detail},#{cId})
     </insert>
-
-    <!--    <insert id="insertClub">-->
-    <!--        INSERT INTO club (name,phone,pic,intro,address,jointime,hot)-->
-    <!--        VALUE (#{name},#{phone},#{pic},#{intro},#{address},#{jointime},#{hot})-->
-    <!--    </insert>-->
 
     <select id="selectActivityListForTerm" resultType="com.leike.pojo.Activity">
         <bind name="_name" value="'%'+name+'%'"/>

@@ -13,7 +13,8 @@
     <title>yuejie 后台管理(system)</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="${ctx}/static/plugins/layuiadmin/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="${ctx}/static/plugins/layuiadmin/style/admin.css" media="all">
 
@@ -44,11 +45,10 @@
                     </a>
                 </li>
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
-                    <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search" layadmin-event="serach" lay-action="views/template/search.html?keywords=">
+                    <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search"
+                           layadmin-event="serach" lay-action="views/template/search.html?keywords=">
                 </li>
             </ul>
-
-
 
 
             <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
@@ -64,7 +64,6 @@
                         <i class="layui-icon layui-icon-theme"></i>
                     </a>
                 </li>
-
 
 
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
@@ -90,7 +89,8 @@
                 </li>
 
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
-                    <a href="javascript:;" layadmin-event="about"><i class="layui-icon layui-icon-more-vertical"></i></a>
+                    <a href="javascript:;" layadmin-event="about"><i
+                            class="layui-icon layui-icon-more-vertical"></i></a>
                 </li>
                 <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-unselect>
                     <a href="javascript:;" layadmin-event="more"><i class="layui-icon layui-icon-more-vertical"></i></a>
@@ -105,7 +105,8 @@
                     <span>layuiAdmin</span>
                 </div>
 
-                <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu"
+                    lay-filter="layadmin-system-side-menu">
                     <li data-name="home" class="layui-nav-item layui-nav-itemed">
                         <a href="javascript:;" lay-tips="主页" lay-direction="2">
                             <i class="layui-icon layui-icon-home"></i>
@@ -125,7 +126,7 @@
                     </li>
                     <li data-name="club" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="俱乐部" lay-direction="2">
-                            <i class="layui-icon layui-icon-club"></i>
+                            <i class="layui-icon layui-icon-group"></i>
                             <cite>俱乐部</cite>
                         </a>
                         <dl class="layui-nav-child">
@@ -139,38 +140,34 @@
                     </li>
                     <li data-name="clubemp" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="员工" lay-direction="2">
-                            <i class="layui-icon layui-icon-clubemp"></i>
+                            <i class="layui-icon layui-icon-flag"></i>
                             <cite>员工</cite>
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a lay-href="views/clubemp/coach/list.html">教练</a>
+                                <a lay-href="views/clubemp/coach/list.html">教练列表</a>
                             </dd>
                             <dd>
-                                <a lay-href="views/clubemp/master/list.html">大师</a>
+                                <a lay-href="views/clubemp/course/list.html">课程列表</a>
                             </dd>
                         </dl>
                     </li>
 
 
-
-
-
-
                     <li data-name="user" class="layui-nav-item">
-                    <a href="javascript:;" lay-tips="用户" lay-direction="2">
-                        <i class="layui-icon layui-icon-user"></i>
-                        <cite>用户</cite>
-                    </a>
-                    <dl class="layui-nav-child">
-                        <dd>
-                            <a lay-href="views/user/user/list.html">网站用户</a>
-                        </dd>
-                        <dd>
-                            <a lay-href="views/user/administrators/list.html">后台管理员</a>
-                        </dd>
-                    </dl>
-                </li>
+                        <a href="javascript:;" lay-tips="用户" lay-direction="2">
+                            <i class="layui-icon layui-icon-user"></i>
+                            <cite>用户</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a lay-href="views/user/user/list.html">网站用户</a>
+                            </dd>
+                            <dd>
+                                <a lay-href="views/user/administrators/list.html">后台管理员</a>
+                            </dd>
+                        </dl>
+                    </li>
                     <li data-name="set" class="layui-nav-item">
                         <a href="javascript:;" lay-tips="设置" lay-direction="2">
                             <i class="layui-icon layui-icon-set"></i>
@@ -180,7 +177,7 @@
                             <dd class="layui-nav-itemed">
                                 <a href="javascript:;">我的设置</a>
                                 <dl class="layui-nav-child">
-                                    <dd><a lay-href="info">基本资料</a></dd>
+                                    <dd><a lay-href="views/set/user/info.html?id=${systemAdmin.id}">基本资料</a></dd>
                                     <dd><a lay-href="views/set/user/password.html">修改密码</a></dd>
                                 </dl>
                             </dd>
@@ -208,7 +205,8 @@
             </div>
             <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
                 <ul class="layui-tab-title" id="LAY_app_tabsheader">
-                    <li lay-id="views/home/console.html" lay-attr="views/home/console.html" class="layui-this"><i class="layui-icon layui-icon-home"></i></li>
+                    <li lay-id="views/home/console.html" lay-attr="views/home/console.html" class="layui-this"><i
+                            class="layui-icon layui-icon-home"></i></li>
                 </ul>
             </div>
         </div>

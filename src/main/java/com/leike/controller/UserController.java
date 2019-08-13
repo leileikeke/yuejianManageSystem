@@ -190,7 +190,7 @@ public class UserController {
 
         Integer code = ResponseCode.FAILURE;
 
-        String msg = "用户添加失败";
+        String msg = "用户更新失败";
 
         String uploadPath = request.getSession().getServletContext().getRealPath("/");
         boolean b = userService.updateUser(user, uploadPath);

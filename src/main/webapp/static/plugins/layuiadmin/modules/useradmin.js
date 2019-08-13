@@ -21,7 +21,7 @@ layui.define(['table', 'form'], function (exports) {
         , url: ContextPath + '/user/getList' //模拟接口
         , cols: [[
             {type: 'checkbox', fixed: 'center'}
-            , {field: 'uId', width: 60, title: 'ID', sort: true, align: 'center'}
+            , {field: 'uId', width: 100, title: 'ID', sort: true, align: 'center'}
             , {field: 'name', title: '用户名', minWidth: 120, align: 'center'}
             , {field: 'password', title: '密码', width: 120, align: 'center'}
             , {field: 'pic', title: '头像', width: 100, templet: '#imgTpl', align: 'center'}
@@ -32,7 +32,7 @@ layui.define(['table', 'form'], function (exports) {
             , {title: '操作', width: 150, align: 'center', fixed: 'right', toolbar: '#table-useradmin-webuser'}
         ]]
         , page: true
-        , limit: 13
+        , limit: 10
         , height: 'full-220'
         , text: {none: '一条数据也没有^_^'}
     });
