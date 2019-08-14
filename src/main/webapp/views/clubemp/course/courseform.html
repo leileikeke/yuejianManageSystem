@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>yuejian 教练课程 iframe 框</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../static/plugins/layuiadmin/layui/css/layui.css" media="all">
+</head>
+<body>
+
+<div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin"
+     style="padding: 20px 0 0 0;">
+    <input type="hidden" name="kId" id="kId">
+    <input type="hidden" name="jId" id="jId">
+    <div class="layui-form-item">
+        <label class="layui-form-label">课程名</label>
+        <div class="layui-input-inline">
+            <input type="text" name="name" lay-verify="required" placeholder="请输入课程名" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">课时</label>
+        <div class="layui-input-inline">
+            <input type="text" name="classHours" lay-verify="required" placeholder="请输入课时" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">价格</label>
+        <div class="layui-input-inline">
+            <input type="text" name="price" lay-verify="required" placeholder="请输入价格" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">宣传图</label>
+        <div class="layui-input-inline" style="width: 80px">
+            <img class="layui-upload-img" style="width: 80px;height: 80px" id="demo1">
+            <input type="hidden" name="pic" id="pic" class="layui-input">
+            <p id="demoText"></p>
+        </div>
+        <button style="float: left;" type="button" class="layui-btn" id="layuiadmin-upload-useradmin">上传图片</button>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">详情</label>
+        <div class="layui-input-block">
+            <textarea name="intro" placeholder="请输入详情" class="layui-textarea" style="width: 300px"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item layui-hide">
+        <input type="button" lay-submit lay-filter="LAY-clubemp-front-submit" id="LAY-clubemp-front-submit" value="确认">
+    </div>
+</div>
+
+<script src="../../../static/plugins/layuiadmin/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../../static/plugins/layuiadmin/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'form', 'upload'], function () {
+        var $ = layui.$
+            , form = layui.form
+            , upload = layui.upload
+            , ContextPath = layui.setter.ContextPath;
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#layuiadmin-upload-useradmin'
+            , url: ContextPath + '/upload/pic?addr=course'
+            , accept: 'images'
+            , acceptMime: 'image/*'
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#demo1').attr('src', result); //图片链接（base64）
+                });
+            }
+            , done: function (res) {
+                //上传成功
+                layer.msg(res.msg);
+                $("#pic").val(res.picName);
+            }
+            , error: function () {
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function () {
+                    uploadInst.upload();
+                });
+            }
+        });
+    })
+</script>
+</body>
+</html>

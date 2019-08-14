@@ -42,12 +42,11 @@ public class ActivityServiceImpl implements ActivityService {
     @Override
     public boolean updateActivity(Activity activity, String uploadPath) {
         //获取用户原头像
-        String pic = activityMapper.selectActivity(activity.getaId());
+        String pic = activityMapper.selectActivityPic(activity.getaId());
         //如果修改了用户头像则删除原头像
         if (!activity.getPic().equals(pic)) {
             FileUtil.deleteFile(uploadPath, pic);
         }
-        System.out.println(activity);
         int i = activityMapper.updateActivity(activity);
         return i == 1 ? true : false;
     }

@@ -54,7 +54,7 @@ public class ClubServiceImpl implements ClubService {
     @Override
     public boolean updateClub(Club club, String uploadPath) {
         //获取用户原头像
-        String pic = clubMapper.selectClub(club.getcId());
+        String pic = clubMapper.selectClubPic(club.getcId());
         //如果修改了用户头像则删除原头像
         if (!club.getPic().equals(pic)){
             FileUtil.deleteFile(uploadPath,pic);

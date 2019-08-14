@@ -23,7 +23,7 @@ public interface ActivityMapper {
     int selectActivityCount();
 
     @Select("select pic from activity where a_id = #{aId}")
-    String selectActivity(@Param("aId") Integer aId);
+    String selectActivityPic(@Param("aId") Integer aId);
 
     @Update("UPDATE activity SET name = #{name},start_time = #{startTime},end_time = #{endTime},address = #{address},pic = #{pic},price = #{price},type = #{type},detail = #{detail} where a_id = #{aId}")
     int updateActivity(Activity activity);

@@ -26,7 +26,7 @@ public interface ClubEmpMapper {
     @Select("SELECT pic FROM coach WHERE j_id = #{jId}")
     String selectCoachForPic(@Param("jId") Integer jId);
 
-    @Update("UPDATE coach SET name = #{name},pic = #{pic},sex = #{sex},phone = #{phone},intro = #{intro} where j_id = #{jId}")
+    @Update("UPDATE coach SET name = #{name},pic = #{pic},sex = #{sex},phone = #{phone},intro = #{intro},email = #{email} where j_id = #{jId}")
     int updateCoach(Coach coach);
 
     @Delete("DELETE FROM coach WHERE j_id = #{jId}")

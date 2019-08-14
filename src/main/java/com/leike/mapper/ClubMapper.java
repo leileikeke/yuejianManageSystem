@@ -27,7 +27,7 @@ public interface ClubMapper {
     int deleteClub(@Param("cId") Integer cId);
 
     @Select("SELECT pic FROM club WHERE c_id = #{cId}")
-    String selectClub(@Param("cId") Integer cId);
+    String selectClubPic(@Param("cId") Integer cId);
 
     @Update("UPDATE club SET name = #{name},phone = #{phone},pic = #{pic},intro = #{intro},address = #{address} where c_id = #{cId}")
     int updateClub(Club club);
