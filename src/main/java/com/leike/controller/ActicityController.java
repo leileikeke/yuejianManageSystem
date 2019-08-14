@@ -51,7 +51,7 @@ public class ActicityController {
         List<Activity> activities;
 
         if ((name != null && !name.equals("")) || (type != null && !type.equals("")) || (cName != null && !cName.equals(""))) {
-            activities = activityService.selectActivityListForTerm((page - 1) * limit, limit, name, type, cName);
+            activities = activityService.selectActivityListForTerm(0, 1000, name, type, cName);
             if (activities != null) {
                 code = ResponseCode.TABLESUCCEED;
             }
