@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.leike.mapper.RecommendMapper">
+
+
+    <select id="selectRecommendList" resultType="com.leike.pojo.Recommend">
+        SELECT
+	    co.j_id,
+	    co.name,
+	    co.pic,
+	    co.sex,
+	    co.phone,
+	    co.email,
+	    co.intro,
+	    co.c_id,
+	    c.name AS cName
+        FROM coach co
+        LEFT JOIN club c  ON co.c_id=c.c_id
+        WHERE
+	    j_id IN(SELECT j_id FROM recommend)
+    </select>
+</mapper>

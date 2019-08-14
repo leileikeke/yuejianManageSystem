@@ -64,4 +64,65 @@
         LEFT JOIN club c ON co.c_id = c.c_id
         limit #{page},#{limit}
     </select>
+    <select id="selectEmpListToClub" resultType="com.leike.pojo.Coach">
+        SELECT
+        co.j_id,
+        co.name,
+        co.pic,
+        co.sex,
+        co.phone,
+        co.email,
+        co.intro,
+        co.state,
+        co.c_id,
+        c.name as cName
+        FROM
+        coach co
+        LEFT JOIN club c ON co.c_id = c.c_id
+        where co.c_id = #{cId}
+        limit #{page},#{limit}
+    </select>
+    <select id="selectEmpListtoClubForTerm" resultType="com.leike.pojo.Coach">
+        <bind name="_jId" value="'%'+jId+'%'"/>
+        <bind name="_name" value="'%'+name+'%'"/>
+        <bind name="_phone" value="'%'+phone+'%'"/>
+        <bind name="_sex" value="'%'+sex+'%'"/>
+        SELECT
+        co.j_id,
+        co.name,
+        co.pic,
+        co.sex,
+        co.phone,
+        co.email,
+        co.intro,
+        co.state,
+        co.c_id,
+        c.name as cName
+        FROM coach co
+        LEFT JOIN club c ON co.c_id = c.c_id
+        <where>
+            co.c_id IN
+            (SELECT coa.c_id
+            FROM (SELECT c_id
+            FROM coach
+            LIMIT #{page},#{limit}) as coa)
+            <if test="cId != null and cId !=''">
+                AND co.c_id = #{cId}
+            </if>
+            <if test="jId != null and jId != ''">
+                AND co.j_id LIKE #{_jId}
+            </if>
+            <if test="name != null and name != ''">
+                AND co.name LIKE #{_name}
+            </if>
+            <if test="phone != null and phone != ''">
+                AND co.phone LIKE #{_phone}
+            </if>
+            <if test="sex != null and sex != ''">
+                AND co.sex LIKE #{_sex}
+            </if>
+        </where>
+
+
+    </select>
 </mapper>

@@ -18,6 +18,7 @@ import java.util.Map;
 
 /**
  * 俱乐部员工控制器
+ *
  * @description:
  * @author: leike
  * @date: 2019-08-13 14:44
@@ -30,7 +31,8 @@ public class ClubEmpController {
     private ClubEmpService clubEmpService;
 
     /**
-     *  获取员工列表(带搜索功能)
+     * 获取员工列表(带搜索功能)
+     *
      * @param page
      * @param limit
      * @param jId
@@ -41,7 +43,12 @@ public class ClubEmpController {
      */
     @RequestMapping("/getList")
     @ResponseBody
-    public Map<String, Object> selectEmpList(Integer page, Integer limit, String jId, String name, String phone, String sex) {
+    public Map<String, Object> selectEmpList(Integer page, Integer limit, String jId, String name, String phone, String sex, HttpSession session) {
+
+        //提取当前管理员信息
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+        String role = admin.getRole();
+        Integer id = admin.getId();
 
         Map<String, Object> map = new HashMap<>();
 
@@ -51,18 +58,35 @@ public class ClubEmpController {
 
         List<Coach> coaches;
 
-        if ((jId != null && !jId.equals("")) || (name != null && !name.equals("")) || (phone != null && !phone.equals("")) || (sex != null && !sex.equals(""))) {
-            coaches = clubEmpService.selectEmpListForTerm((page - 1) * limit, limit, jId, name, phone, sex);
-            if (coaches != null) {
-                code = ResponseCode.TABLESUCCEED;
+        //判断当前用户
+        if (role.equals("systemAdmin")) {
+            if ((jId != null && !jId.equals("")) || (name != null && !name.equals("")) || (phone != null && !phone.equals("")) || (sex != null && !sex.equals(""))) {
+                coaches = clubEmpService.selectEmpListForTerm((page - 1) * limit, limit, jId, name, phone, sex);
+                if (coaches != null) {
+                    code = ResponseCode.TABLESUCCEED;
+                }
+            } else {
+                coaches = clubEmpService.selectEmpList((page - 1) * limit, limit);
+                if (coaches != null) {
+                    code = ResponseCode.TABLESUCCEED;
+                }
             }
+            count = clubEmpService.selectEmpCount();
         } else {
-            coaches = clubEmpService.selectEmpList((page - 1) * limit, limit);
-            if (coaches != null) {
-                code = ResponseCode.TABLESUCCEED;
+            if ((jId != null && !jId.equals("")) || (name != null && !name.equals("")) || (phone != null && !phone.equals("")) || (sex != null && !sex.equals(""))) {
+                coaches = clubEmpService.selectEmpListToClubForTerm((page - 1) * limit, limit, jId, name, phone, sex, id);
+                if (coaches != null) {
+                    code = ResponseCode.TABLESUCCEED;
+                }
+            } else {
+                coaches = clubEmpService.selectEmpListToClub((page - 1) * limit, limit, id);
+                if (coaches != null) {
+                    code = ResponseCode.TABLESUCCEED;
+                }
             }
+            count = clubEmpService.selectEmpCountToClub(id);
         }
-        count = clubEmpService.selectEmpCount();
+
 
         map.put("code", code);
         map.put("msg", "");
@@ -94,7 +118,7 @@ public class ClubEmpController {
         Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
 
         //判断当前用户权限
-        if (admin.getRole().equals("systemAdmin")){
+        if (admin.getRole().equals("systemAdmin")) {
 
             if (state) {
                 state = false;
@@ -107,7 +131,7 @@ public class ClubEmpController {
                 code = ResponseCode.SUCCEED;
                 msg = "修改成功";
             }
-        }else {
+        } else {
             code = ResponseCode.SUCCEED;
             msg = "请联系管理员审核!";
             role = 0;
@@ -115,20 +139,20 @@ public class ClubEmpController {
 
         map.put("code", code);
         map.put("msg", msg);
-        map.put("role",role);
+        map.put("role", role);
 
         return map;
     }
 
     /**
-     * 更新User数据
+     * 更新Coach数据
      *
      * @param coach
      * @return
      */
     @RequestMapping("/update")
     @ResponseBody
-    public Map<String, Object> updateUser(@RequestBody Coach coach, HttpServletRequest request) {
+    public Map<String, Object> updateCoach(@RequestBody Coach coach, HttpServletRequest request) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -158,7 +182,7 @@ public class ClubEmpController {
      */
     @RequestMapping("/delete")
     @ResponseBody
-    public Map<String, Object> deleteUser(Integer jId, String pic, HttpServletRequest request) {
+    public Map<String, Object> deleteCoach(Integer jId, String pic, HttpServletRequest request) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -214,6 +238,7 @@ public class ClubEmpController {
 
         return map;
     }
+
     /**
      * 添加Coach
      *
@@ -222,7 +247,11 @@ public class ClubEmpController {
      */
     @RequestMapping("/add")
     @ResponseBody
-    public Map<String, Object> addCoach(@RequestBody Coach coach) {
+    public Map<String, Object> addCoach(@RequestBody Coach coach,HttpSession session) {
+
+        //提取当前管理员信息
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+        Integer id = admin.getId();
 
         Map<String, Object> map = new HashMap<>();
 
@@ -234,7 +263,7 @@ public class ClubEmpController {
         if (bool) {
             if (coach != null) {
 
-                boolean b = clubEmpService.insertCoach(coach);
+                boolean b = clubEmpService.insertCoach(coach,id);
                 if (b) {
                     code = ResponseCode.SUCCEED;
                     msg = "";
@@ -250,102 +279,6 @@ public class ClubEmpController {
 
         return map;
     }
-//
-//    /**
-//     * 删除User
-//     *
-//     * @param uId
-//     * @return
-//     */
-//    @RequestMapping("/delete")
-//    @ResponseBody
-//    public Map<String, Object> deleteUser(Integer uId, String pic, HttpServletRequest request) {
-//
-//        Map<String, Object> map = new HashMap<>();
-//
-//        Integer code = ResponseCode.FAILURE;
-//
-//        String msg = "删除失败";
-//
-//        String uploadPath = request.getSession().getServletContext().getRealPath("/");
-//
-//        boolean b = clubEmpService.deleteUser(uId, pic, uploadPath);
-//        //如果成功则返回code=200
-//        if (b) {
-//            code = ResponseCode.SUCCEED;
-//            msg = "";
-//        }
-//
-//        map.put("code", code);
-//        map.put("msg", msg);
-//        return map;
-//    }
-//
-//    /**
-//     * 批量删除User
-//     *
-//     * @param list
-//     * @return
-//     */
-//    @RequestMapping("/deleteAll")
-//    @ResponseBody
-//    public Map<String, Object> deleteUserList(@RequestBody List<User> list, HttpServletRequest request) {
-//
-//        Map<String, Object> map = new HashMap<>();
-//
-//        Integer code = ResponseCode.SUCCEED;
-//
-//        //统计删除成功的条数
-//        Integer count = 0;
-//
-//        String uploadPath = request.getSession().getServletContext().getRealPath("/");
-//
-//        for (int i = 0; i < list.size(); i++) {
-//
-//            boolean b = clubEmpService.deleteUser(list.get(i).getuId(), list.get(i).getPic(), uploadPath);
-//
-//            if (b) {
-//                count++;
-//            }
-//
-//        }
-//
-//        map.put("code", code);
-//        map.put("count", count);
-//
-//        return map;
-//    }
-//
-//    /**
-//     * 更新User数据
-//     *
-//     * @param user
-//     * @return
-//     */
-//    @RequestMapping("/update")
-//    @ResponseBody
-//    public Map<String, Object> updateUser(@RequestBody User user, HttpServletRequest request) {
-//
-//        Map<String, Object> map = new HashMap<>();
-//
-//        Integer code = ResponseCode.FAILURE;
-//
-//        String msg = "用户添加失败";
-//
-//        String uploadPath = request.getSession().getServletContext().getRealPath("/");
-//        boolean b = clubEmpService.updateUser(user, uploadPath);
-//
-//        if (b) {
-//            code = ResponseCode.SUCCEED;
-//            msg = "";
-//        }
-//
-//        map.put("code", code);
-//        map.put("msg", msg);
-//
-//        return map;
-//    }
-
 
 
 }

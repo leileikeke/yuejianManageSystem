@@ -2,6 +2,7 @@ package com.leike.service.impl;
 
 import com.leike.mapper.AdminMapper;
 import com.leike.pojo.Admin;
+import com.leike.pojo.Recommend;
 import com.leike.service.AdminService;
 import com.leike.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,6 +69,18 @@ public class AdminServiceImpl implements AdminService {
     public boolean setAdmin(Admin admin) {
         int i = adminMapper.setAdmin(admin);
         return i == 1 ? true : false;
+    }
+
+    @Override
+    public boolean addRecommend(Recommend recommend) {
+        int i = adminMapper.addRecommend(recommend);
+        return i == 1 ? true : false;
+    }
+
+    @Override
+    public boolean selectRecommend(Integer jId) {
+        int i = adminMapper.selectRecommend(jId);
+        return i > 0 ? false : true;
     }
 
     @Override

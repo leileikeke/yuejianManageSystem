@@ -1,6 +1,7 @@
 package com.leike.mapper;
 
 import com.leike.pojo.Admin;
+import com.leike.pojo.Recommend;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -44,4 +45,10 @@ public interface AdminMapper {
 
     @Update("UPDATE admin SET nickname = #{nickname},phone = #{phone},sex = #{sex} WHERE id = #{id} ")
     int setAdmin(Admin admin);
+
+    @Insert("INSERT recommend(j_id,id) VALUE (#{jId},#{id})")
+    int addRecommend(Recommend recommend);
+
+    @Select("select count(*) from recommend where j_id = #{jId}")
+    int selectRecommend(@Param("jId") Integer jId);
 }

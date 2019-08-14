@@ -13,15 +13,15 @@ import java.util.List;
 public interface ClubEmpMapper {
 
 
-    List<Coach> selectEmpListForTerm(@Param("page") Integer page,@Param("limit") Integer limit,@Param("jId") String jId,@Param("name") String name,@Param("phone") String phone,@Param("sex") String sex);
+    List<Coach> selectEmpListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("jId") String jId, @Param("name") String name, @Param("phone") String phone, @Param("sex") String sex);
 
-    List<Coach> selectEmpList(@Param("page") Integer page,@Param("limit") Integer limit);
+    List<Coach> selectEmpList(@Param("page") Integer page, @Param("limit") Integer limit);
 
     @Select("SELECT count(*) FROM coach")
     Integer selectEmpCount();
 
     @Update("UPDATE coach SET state = #{state} WHERE j_id = #{jId}")
-    int updateState(@Param("jId") Integer jId,@Param("state") Boolean state);
+    int updateState(@Param("jId") Integer jId, @Param("state") Boolean state);
 
     @Select("SELECT pic FROM coach WHERE j_id = #{jId}")
     String selectCoachForPic(@Param("jId") Integer jId);
@@ -36,4 +36,14 @@ public interface ClubEmpMapper {
     int queryCoach(@Param("name") String name);
 
     int insertCoach(Coach coach);
+
+    List<Coach> selectEmpListToClub(@Param("page") Integer page, @Param("limit") Integer limit, @Param("cId") Integer cId);
+
+    @Select("SELECT c_id FROM club WHERE id = #{id}")
+    Integer selectClubId(@Param("id") Integer id);
+
+    List<Coach> selectEmpListtoClubForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("jId") String jId, @Param("name") String name, @Param("phone") String phone, @Param("sex") String sex, @Param("cId") Integer cId);
+
+    @Select("SELECT count(*) FROM coach where c_id = #{cId}")
+    Integer selectEmpCountToClub(@Param("cId") Integer cId);
 }

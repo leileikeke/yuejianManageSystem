@@ -2,6 +2,7 @@ package com.leike.controller;
 
 import com.leike.constant.ResponseCode;
 import com.leike.pojo.Admin;
+import com.leike.pojo.Recommend;
 import com.leike.service.AdminService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -376,5 +377,39 @@ public class AdminController {
 
         return map;
     }
+
+    @RequestMapping("/addRecommend")
+    @ResponseBody
+    public Map<String, Object> addRecommend(Recommend recommend, HttpSession session) {
+
+        //提取当前管理员信息
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+        Integer id = admin.getId();
+        recommend.setId(id);
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.SUCCEED;
+
+        String msg = "推荐失败";
+
+        if (adminService.selectRecommend(recommend.getjId())){
+
+            boolean b = adminService.addRecommend(recommend);
+
+            if (b) {
+                msg = "推荐成功";
+            }
+
+        }else {
+            msg = "请勿重复提交";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
+
 
 }

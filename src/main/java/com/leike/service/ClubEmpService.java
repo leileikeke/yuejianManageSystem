@@ -26,5 +26,12 @@ public interface ClubEmpService {
 
     boolean queryCoach(String name);
 
-    boolean insertCoach(Coach coach);
+    List<Coach> selectEmpListToClub(Integer page, Integer limit, Integer id);
+
+    List<Coach> selectEmpListToClubForTerm(Integer page, Integer limit, String jId, String name, String phone, String sex, Integer id);
+
+    Integer selectEmpCountToClub(Integer id);
+
+    boolean insertCoach(Coach coach,Integer id);
+
 }

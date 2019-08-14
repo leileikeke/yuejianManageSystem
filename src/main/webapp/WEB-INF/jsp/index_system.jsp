@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: leike
@@ -53,10 +54,13 @@
 
             <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
                 <li class="layui-nav-item" lay-unselect>
-                    <a lay-href="views/app/message/index.html" layadmin-event="message" lay-text="消息中心">
+                    <a lay-href="views/recommend/list.html" style="width: 20px" layadmin-event="message" lay-text="待审核教练">
                         <i class="layui-icon layui-icon-notice"></i>
                         <!-- 如果有新消息，则显示小圆点 -->
-                        <span class="layui-badge-dot"></span>
+                        <c:if test="${recommendCount > 0}">
+                            <span class="layui-badge">${recommendCount}</span>
+                        </c:if>
+<%--                        <span class="layui-badge-dot"></span>--%>
                     </a>
                 </li>
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>

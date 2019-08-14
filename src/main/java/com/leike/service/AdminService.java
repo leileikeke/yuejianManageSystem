@@ -1,6 +1,7 @@
 package com.leike.service;
 
 import com.leike.pojo.Admin;
+import com.leike.pojo.Recommend;
 
 import java.util.List;
 
@@ -32,4 +33,8 @@ public interface AdminService {
     Admin queryAdminforid(Integer id);
 
     boolean setAdmin(Admin admin);
+
+    boolean addRecommend(Recommend recommend);
+
+    boolean selectRecommend(Integer jId);
 }

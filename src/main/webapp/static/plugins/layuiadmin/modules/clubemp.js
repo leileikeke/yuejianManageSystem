@@ -145,7 +145,7 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'intro', title: '简介', align: 'center'}
             , {field: 'cName', title: '所属俱乐部', sort: true, align: 'center'}
             , {field: 'state', title: '职称', sort: true, templet: '#buttonTpl', width: 100, align: 'center'}
-            , {title: '操作', width: 250, align: 'center', fixed: 'right', toolbar: '#table-clubcoach-webuser'}
+            , {title: '操作', width: 300, align: 'left', fixed: 'right', toolbar: '#table-clubcoach-webuser'}
         ]]
         , page: true
         , limit: 10
@@ -287,6 +287,53 @@ layui.define(['table', 'form'], function (exports) {
                             tips: 1
                         });
                     }, 300)
+                }
+            });
+        } else if (obj.event === 'recommend') {
+            var d = {
+                jId: data.jId,
+            };
+            var url = layui.setter.ContextPath + '/admin/addRecommend';
+            admin.req({
+                type: 'get'
+                , url: url
+                , data: d
+                , done: function (res) {
+                    console.log(obj.tr.selector + ' .recommend');
+                    setTimeout(function () {
+                        layer.tips(res.msg, obj.tr.selector + ' .recommend', {
+                            tips: [4, '#1aa094']
+                        });
+                    }, 300)
+                }
+            });
+        } else if (obj.event === 'audit') {
+            var d = {
+                jId: data.jId,
+                state: data.state
+            };
+            var url = layui.setter.ContextPath + '/clubemp/updateState';
+            admin.req({
+                type: 'get'
+                , url: url
+                , data: d
+                , done: function (res) {
+                    if (res.role == 1) {
+                        setTimeout(function () {
+                            layer.tips(res.msg, obj.tr.selector + ' .state', {
+                                tips: [4, '#1aa094']
+                            });
+                        }, 300)
+                        if (d.state == false) {
+                            obj.update({
+                                state: true
+                            });
+                        } else {
+                            obj.update({
+                                state: false
+                            });
+                        }
+                    }
                 }
             });
         }

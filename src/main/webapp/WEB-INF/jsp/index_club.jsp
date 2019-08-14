@@ -52,13 +52,6 @@
 
 
             <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
-                <li class="layui-nav-item" lay-unselect>
-                    <a lay-href="views/app/message/index.html" layadmin-event="message" lay-text="消息中心">
-                        <i class="layui-icon layui-icon-notice"></i>
-                        <!-- 如果有新消息，则显示小圆点 -->
-                        <span class="layui-badge-dot"></span>
-                    </a>
-                </li>
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
                     <a href="javascript:;" layadmin-event="theme">
                         <i class="layui-icon layui-icon-theme"></i>
@@ -145,7 +138,7 @@
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a lay-href="views/clubemp/coach/list.html">教练列表</a>
+                                <a lay-href="views/clubemp/admin/list.html">教练列表</a>
                             </dd>
                             <dd>
                                 <a lay-href="views/clubemp/administrators/list.html">课程列表</a>

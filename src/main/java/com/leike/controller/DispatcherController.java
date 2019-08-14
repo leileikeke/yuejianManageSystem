@@ -1,6 +1,8 @@
 package com.leike.controller;
 
 import com.leike.pojo.Admin;
+import com.leike.service.RecommendService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +22,17 @@ import java.util.Map;
 @RequestMapping("/")
 public class DispatcherController {
 
+    @Autowired
+    private RecommendService recommendService;
+
     @RequestMapping("/")
     public String index(HttpSession session, Model model) {
 
         Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
 
         if (admin.getRole().equals("systemAdmin")){
+            Integer count = recommendService.selectRecommendCount();
+            model.addAttribute("recommendCount",count);
             model.addAttribute("systemAdmin",admin);
             return "index_system";
         }else if (admin.getRole().equals("clubAdmin")){

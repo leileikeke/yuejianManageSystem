@@ -20,6 +20,8 @@ public class ClubEmpServiceImpl implements ClubEmpService {
     @Autowired
     private ClubEmpMapper clubEmpMapper;
 
+    //----------------系统管理员-----------------
+
     @Override
     public List<Coach> selectEmpListForTerm(Integer page, Integer limit, String jId, String name, String phone, String sex) {
         List<Coach> coaches = clubEmpMapper.selectEmpListForTerm(page, limit, jId, name, phone, sex);
@@ -72,8 +74,40 @@ public class ClubEmpServiceImpl implements ClubEmpService {
         return i == 1 ? false : true;
     }
 
+    //----------------俱乐部管理员--------------------
+
     @Override
-    public boolean insertCoach(Coach coach) {
+    public List<Coach> selectEmpListToClub(Integer page, Integer limit, Integer id) {
+        //查询当前俱乐部管理员管理的俱乐部id
+        Integer cId = clubEmpMapper.selectClubId(id);
+
+        List<Coach> coaches = clubEmpMapper.selectEmpListToClub(page, limit, cId);
+        return coaches;
+    }
+
+    @Override
+    public List<Coach> selectEmpListToClubForTerm(Integer page, Integer limit, String jId, String name, String phone, String sex, Integer id) {
+        //查询当前俱乐部管理员管理的俱乐部id
+        Integer cId = clubEmpMapper.selectClubId(id);
+
+        List<Coach> coaches = clubEmpMapper.selectEmpListtoClubForTerm(page, limit, jId, name, phone, sex, cId);
+        return coaches;
+    }
+
+    @Override
+    public Integer selectEmpCountToClub(Integer id) {
+        //查询当前俱乐部管理员管理的俱乐部id
+        Integer cId = clubEmpMapper.selectClubId(id);
+
+        Integer i = clubEmpMapper.selectEmpCountToClub(cId);
+        return i;
+    }
+
+    @Override
+    public boolean insertCoach(Coach coach, Integer id) {
+        //查询当前俱乐部管理员管理的俱乐部id
+        Integer cId = clubEmpMapper.selectClubId(id);
+        coach.setcId(cId);
         int i = clubEmpMapper.insertCoach(coach);
         return i == 1 ? true : false;
     }
