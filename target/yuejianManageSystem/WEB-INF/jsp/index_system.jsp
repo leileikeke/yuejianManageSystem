@@ -118,7 +118,7 @@
                         </a>
                         <dl class="layui-nav-child">
                             <dd data-name="console" class="layui-this">
-                                <a lay-href="views/home/console.html">控制台</a>
+                                <a lay-href="views/home/console.html?recommendCount=${recommendCount}">控制台</a>
                             </dd>
                             <dd data-name="console">
                                 <a lay-href="views/home/homepage1.html">主页一</a>
@@ -181,7 +181,7 @@
                             <dd class="layui-nav-itemed">
                                 <a href="javascript:;">我的设置</a>
                                 <dl class="layui-nav-child">
-                                    <dd><a lay-href="views/set/user/info.html?id=${systemAdmin.id}">基本资料</a></dd>
+                                    <dd><a lay-href="views/set/user/info.html">基本资料</a></dd>
                                     <dd><a lay-href="views/set/user/password.html">修改密码</a></dd>
                                 </dl>
                             </dd>
@@ -219,7 +219,7 @@
         <!-- 主体内容 -->
         <div class="layui-body" id="LAY_app_body">
             <div class="layadmin-tabsbody-item layui-show">
-                <iframe src="views/home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+                <iframe src="views/home/console.html?recommendCount=${recommendCount}" frameborder="0" class="layadmin-iframe"></iframe>
             </div>
         </div>
 

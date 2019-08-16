@@ -2,6 +2,7 @@ package com.leike.controller;
 
 import com.leike.constant.ResponseCode;
 import com.leike.pojo.Activity;
+import com.leike.pojo.Admin;
 import com.leike.service.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -207,7 +209,11 @@ public class ActicityController {
 
     @RequestMapping("/getListForclubAdmin")
     @ResponseBody
-    public Map<String, Object> getActivityListForclubAdmin(Integer id, Integer page, Integer limit) {
+    public Map<String, Object> getActivityListForclubAdmin(Integer page, Integer limit, HttpSession session) {
+
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+        Integer id = admin.getId();
+
 
         Map<String, Object> map = new HashMap<>();
 

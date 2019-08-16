@@ -20,6 +20,8 @@ public class CourseServiceImpl implements CourseService {
     @Autowired
     private CourseMapper courseMapper;
 
+    //------------系统管理员--------------
+
     @Override
     public List<Course> selectCourseListForTerm(Integer page, Integer limit, String name) {
         List<Course> courses = courseMapper.selectCourseListForTerm(page, limit, name);
@@ -63,5 +65,20 @@ public class CourseServiceImpl implements CourseService {
         int i = courseMapper.updateCourse(course);
         return i == 1 ? true : false;
     }
+
+    //------------俱乐部管理员--------------
+
+    @Override
+    public List<Course> selectCourseToClubList(Integer jId) {
+        List<Course> courses = courseMapper.selectCourseToClubList(jId);
+        return courses;
+    }
+
+    @Override
+    public List<Course> selectCoursetoClubListForTerm(Integer jId, String name) {
+        List<Course> courses = courseMapper.selectCoursetoClubListForTerm(jId, name);
+        return courses;
+    }
+
 
 }

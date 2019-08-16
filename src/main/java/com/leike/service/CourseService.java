@@ -23,4 +23,8 @@ public interface CourseService {
     boolean deleteCourse(Integer kId, String pic, String uploadPath);
 
     boolean updateCourse(Course course, String uploadPath);
+
+    List<Course> selectCourseToClubList(Integer jId);
+
+    List<Course> selectCoursetoClubListForTerm(Integer jId, String name);
 }

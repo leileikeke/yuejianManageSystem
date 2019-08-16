@@ -93,14 +93,13 @@
             , form = layui.form
             , admin = layui.admin;
 
-        var id = getUrlParam("id");
-
         var forminit = function () {
             admin.req({
                 type: 'get'
                 , url: layui.setter.ContextPath + "/admin/query"
-                , data: {id: id}
+                , data: null
                 , done: function (res) {
+                    var id = res.data.id;
                     var name = res.data.name;
                     var nickname = res.data.nickname;
                     var sex = res.data.sex;

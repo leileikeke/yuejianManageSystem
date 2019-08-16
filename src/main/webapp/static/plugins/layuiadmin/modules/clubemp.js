@@ -124,8 +124,6 @@ layui.define(['table', 'form'], function (exports) {
                     }, 300)
                 }
             });
-        } else if (obj.event === 'addCourse') {
-
         }
     });
 
@@ -145,6 +143,7 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'intro', title: '简介', align: 'center'}
             , {field: 'cName', title: '所属俱乐部', sort: true, align: 'center'}
             , {field: 'state', title: '职称', sort: true, templet: '#buttonTpl', width: 100, align: 'center'}
+            , {title: '课程', width: 150, align: 'center', fixed: 'right', toolbar: '#table-clubcourse-webuser'}
             , {title: '操作', width: 300, align: 'left', fixed: 'right', toolbar: '#table-clubcoach-webuser'}
         ]]
         , page: true

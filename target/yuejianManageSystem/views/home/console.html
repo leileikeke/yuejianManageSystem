@@ -25,32 +25,8 @@
                                 <div carousel-item>
                                     <ul class="layui-row layui-col-space10">
                                         <li class="layui-col-xs3">
-                                            <a lay-href="views/home/homepage1.html">
+                                            <a lay-href="views/set/user/info.html">
                                                 <i class="layui-icon layui-icon-console"></i>
-                                                <cite>主页一</cite>
-                                            </a>
-                                        </li>
-                                        <li class="layui-col-xs3">
-                                            <a lay-href="views/home/homepage2.html">
-                                                <i class="layui-icon layui-icon-chart"></i>
-                                                <cite>主页二</cite>
-                                            </a>
-                                        </li>
-                                        <li class="layui-col-xs3">
-                                            <a lay-href="views/user/administrators/list.html">
-                                                <i class="layui-icon layui-icon-user"></i>
-                                                <cite>后台管理员</cite>
-                                            </a>
-                                        </li>
-                                        <li class="layui-col-xs3">
-                                            <a lay-href="views/user/user/list.html">
-                                                <i class="layui-icon layui-icon-user"></i>
-                                                <cite>网站用户</cite>
-                                            </a>
-                                        </li>
-                                        <li class="layui-col-xs3">
-                                            <a lay-href="info">
-                                                <i class="layui-icon layui-icon-chat"></i>
                                                 <cite>基本资料</cite>
                                             </a>
                                         </li>
@@ -72,24 +48,44 @@
                                                 <cite>俱乐部活动</cite>
                                             </a>
                                         </li>
+
                                         <li class="layui-col-xs3">
-                                            <a lay-href="views/set/system/website.html">
-                                                <i class="layui-icon layui-icon-set"></i>
-                                                <cite>设置</cite>
+                                            <a lay-href="views/clubemp/coach/list.html">
+                                                <i class="layui-icon layui-icon-survey"></i>
+                                                <cite>教练列表</cite>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs3">
+                                            <a lay-href="views/clubemp/course/list.html">
+                                                <i class="layui-icon layui-icon-user"></i>
+                                                <cite>课程列表</cite>
+                                            </a>
+                                        </li>
+
+                                        <li class="layui-col-xs3">
+                                            <a lay-href="views/user/administrators/list.html">
+                                                <i class="layui-icon layui-icon-user"></i>
+                                                <cite>后台管理员</cite>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs3">
+                                            <a lay-href="views/user/user/list.html">
+                                                <i class="layui-icon layui-icon-user"></i>
+                                                <cite>网站用户</cite>
                                             </a>
                                         </li>
                                     </ul>
                                     <ul class="layui-row layui-col-space10">
                                         <li class="layui-col-xs3">
-                                            <a lay-href="views/set/user/info.html">
-                                                <i class="layui-icon layui-icon-set"></i>
-                                                <cite>我的资料</cite>
+                                            <a lay-href="views/home/homepage1.html">
+                                                <i class="layui-icon layui-icon-console"></i>
+                                                <cite>主页一</cite>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs3">
-                                            <a lay-href="views/set/user/info.html">
-                                                <i class="layui-icon layui-icon-set"></i>
-                                                <cite>我的资料</cite>
+                                            <a lay-href="views/home/homepage2.html">
+                                                <i class="layui-icon layui-icon-chart"></i>
+                                                <cite>主页二</cite>
                                             </a>
                                         </li>
                                     </ul>
@@ -109,11 +105,13 @@
                                 <div carousel-item>
                                     <ul class="layui-row layui-col-space10">
                                         <li class="layui-col-xs6">
-                                            <a lay-href="app/content/comment.html" class="layadmin-backlog-body">
-                                                <h3>待审评论</h3>
-                                                <p><cite>66</cite></p>
+                                            <a lay-href="views/recommend/list.html" class="layadmin-backlog-body">
+                                                <h3>待审教练</h3>
+                                                <p><cite id="recommendCount">0</cite></p>
                                             </a>
                                         </li>
+                                    </ul>
+                                    <ul class="layui-row layui-col-space10">
                                         <li class="layui-col-xs6">
                                             <a lay-href="app/forum/list.html" class="layadmin-backlog-body">
                                                 <h3>待审帖子</h3>
@@ -133,8 +131,6 @@
                                                 <p><cite>20</cite></p>
                                             </a>
                                         </li>
-                                    </ul>
-                                    <ul class="layui-row layui-col-space10">
                                         <li class="layui-col-xs6">
                                             <a href="javascript:;" class="layadmin-backlog-body">
                                                 <h3>待审友情链接</h3>
@@ -302,7 +298,26 @@
         base: '../../static/plugins/layuiadmin/' //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
-    }).use(['index', 'console']);
+    }).use(['index', 'console'],function () {
+
+        var $ = layui.$;
+
+        var recommendCount = getUrlParam("recommendCount");
+
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+
+        if (recommendCount>0){
+            $("#recommendCount").attr("style","color: #FF5722;");
+            $("#recommendCount").text(recommendCount);
+        }
+
+
+    });
 </script>
 </body>
 </html>

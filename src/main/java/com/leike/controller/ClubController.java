@@ -1,6 +1,7 @@
 package com.leike.controller;
 
 import com.leike.constant.ResponseCode;
+import com.leike.pojo.Admin;
 import com.leike.pojo.Club;
 import com.leike.service.ClubService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -208,13 +210,14 @@ public class ClubController {
 
     /**
      * 通过管理员id查club
-     * @param id
      * @return
      */
     @RequestMapping("/query")
     @ResponseBody
-    public Map<String, Object> queryClubforid(Integer id) {
+    public Map<String, Object> queryClubforid(HttpSession session) {
 
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+        Integer id = admin.getId();
 
         Map<String, Object> map = new HashMap<>();
 

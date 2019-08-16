@@ -1,8 +1,10 @@
 package com.leike.controller;
 
 import com.leike.constant.ResponseCode;
+import com.leike.pojo.Admin;
 import com.leike.pojo.Course;
 import com.leike.service.CourseService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +32,7 @@ public class CourseController {
     private CourseService courseService;
 
     /**
-     * 获取activity列表(带搜索功能)
+     * 获取course列表(带搜索功能)
      *
      * @param page
      * @param limit
@@ -38,7 +41,7 @@ public class CourseController {
      */
     @RequestMapping("/getList")
     @ResponseBody
-    public Map<String, Object> selectCourseList(Integer page, Integer limit, String name) {
+    public Map<String, Object> selectCourseList(Integer page, Integer limit, String name, HttpSession session) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -48,15 +51,19 @@ public class CourseController {
 
         List<Course> courses;
 
+        String msg = "获取失败";
+
         if ((name != null && !name.equals(""))) {
             courses = courseService.selectCourseListForTerm((page - 1) * limit, limit, name);
             if (courses != null) {
                 code = ResponseCode.TABLESUCCEED;
+                msg = "";
             }
         } else {
             courses = courseService.selectCourseList((page - 1) * limit, limit);
             if (courses != null) {
                 code = ResponseCode.TABLESUCCEED;
+                msg = "";
             }
         }
 
@@ -72,7 +79,7 @@ public class CourseController {
 
 
     /**
-     * 添加activity
+     * 添加course
      *
      * @param course
      * @return
@@ -205,4 +212,33 @@ public class CourseController {
         return map;
     }
 
+    //-----------俱乐部管理员------------
+
+    /**
+     * 获取教练的课程列表
+     *
+     * @param jId
+     * @return
+     */
+    @RequestMapping("/list")
+    @ResponseBody
+    public Map<String, Object> selectCourseList(@Param("jId") Integer jId, @Param("name") String name) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.TABLESUCCEED;
+
+        List<Course> courses;
+        if (name != null && !name.equals("")) {
+            courses = courseService.selectCoursetoClubListForTerm(jId, name);
+        } else {
+            courses = courseService.selectCourseToClubList(jId);
+        }
+        map.put("code", code);
+        map.put("msg", "");
+        map.put("count", "");
+        map.put("data", courses);
+
+        return map;
+    }
 }

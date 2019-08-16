@@ -334,16 +334,22 @@ public class AdminController {
         return map;
     }
 
+    /**
+     * 管理员基本信息
+     *
+     * @param session
+     * @return
+     */
     @RequestMapping("/query")
     @ResponseBody
-    public Map<String, Object> queryAdminforid(Integer id) {
+    public Map<String, Object> queryAdminforid(HttpSession session) {
 
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
 
         Map<String, Object> map = new HashMap<>();
 
         Integer code = ResponseCode.FAILURE;
 
-        Admin admin = adminService.queryAdminforid(id);
         if (admin != null) {
             map.put("data", admin);
             code = ResponseCode.SUCCEED;
@@ -393,7 +399,7 @@ public class AdminController {
 
         String msg = "推荐失败";
 
-        if (adminService.selectRecommend(recommend.getjId())){
+        if (adminService.selectRecommend(recommend.getjId())) {
 
             boolean b = adminService.addRecommend(recommend);
 
@@ -401,7 +407,7 @@ public class AdminController {
                 msg = "推荐成功";
             }
 
-        }else {
+        } else {
             msg = "请勿重复提交";
         }
 

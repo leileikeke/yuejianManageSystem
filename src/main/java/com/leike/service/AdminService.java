@@ -30,8 +30,6 @@ public interface AdminService {
 
     boolean updateState(Integer id, Boolean state);
 
-    Admin queryAdminforid(Integer id);
-
     boolean setAdmin(Admin admin);
 
     boolean addRecommend(Recommend recommend);

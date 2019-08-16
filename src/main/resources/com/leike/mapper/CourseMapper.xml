@@ -48,4 +48,36 @@
             </if>
         </where>
     </select>
+    <select id="selectCourseToClubList" resultType="com.leike.pojo.Course">
+        SELECT
+        c.k_id,
+        c.name,
+        c.intro,
+        c.class_hours,
+        c.price,
+        c.pic,
+        c.j_id,
+        co.name as jName
+        FROM
+        course c
+        LEFT JOIN coach co ON c.j_id = co.j_id
+        WHERE c.j_id = #{jId}
+    </select>
+    <select id="selectCoursetoClubListForTerm" resultType="com.leike.pojo.Course">
+        <bind name="_name" value="'%'+name+'%'"/>
+        SELECT
+        c.k_id,
+        c.name,
+        c.intro,
+        c.class_hours,
+        c.price,
+        c.pic,
+        c.j_id,
+        co.name as jName
+        FROM
+        course c
+        LEFT JOIN coach co ON c.j_id = co.j_id
+        WHERE c.j_id = #{jId}
+        AND c.name like #{_name}
+    </select>
 </mapper>

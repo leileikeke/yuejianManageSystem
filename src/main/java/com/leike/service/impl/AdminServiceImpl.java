@@ -59,13 +59,6 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public Admin queryAdminforid(Integer id) {
-        Admin admin = adminMapper.queryAdminforid(id);
-        admin.setPassword(null);
-        return admin;
-    }
-
-    @Override
     public boolean setAdmin(Admin admin) {
         int i = adminMapper.setAdmin(admin);
         return i == 1 ? true : false;
