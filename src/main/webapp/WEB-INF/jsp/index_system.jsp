@@ -140,6 +140,9 @@
                             <dd>
                                 <a lay-href="views/club/activity/list.html">俱乐部活动</a>
                             </dd>
+                            <dd>
+                                <a lay-href="views/club/video/list.html">俱乐部视频</a>
+                            </dd>
                         </dl>
                     </li>
                     <li data-name="clubemp" class="layui-nav-item">
