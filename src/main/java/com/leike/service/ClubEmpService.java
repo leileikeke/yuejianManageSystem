@@ -34,4 +34,5 @@ public interface ClubEmpService {
 
     boolean insertCoach(Coach coach,Integer id);
 
+    List<Coach> selectEmpListToClub1(Integer cId, int page, Integer limit);
 }

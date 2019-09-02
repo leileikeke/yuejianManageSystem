@@ -32,6 +32,15 @@ public interface UserMapper {
 
     List<User> selectUserListForTerm(@Param("page") Integer page, @Param("limit") Integer limit, @Param("uId") String uId, @Param("name") String name, @Param("phone") String phone, @Param("sex") String sex);
 
-    @Select("select * from User where u_id = #{uId}")
-    String selectUser(@Param("uId") Integer uId);
+    @Select("SELECT pic FROM user WHERE u_id = #{uId}")
+    String selectUserPic(@Param("uId") Integer uId);
+
+    @Select("SELECT * FROM user WHERE name = #{name} AND password = #{password}")
+    User login(User user);
+
+    @Select("SELECT * FROM user WHERE u_id = #{uId} AND password = #{oldPassword}")
+    int verifyUser(@Param("uId") Integer uId, @Param("oldPassword") String oldPassword);
+
+    @Select("UPDATE user password = {password} where u_id = #{uId}")
+    int updateUserPass(@Param("uId") Integer uId, @Param("password") String password);
 }

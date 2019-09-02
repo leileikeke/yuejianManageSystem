@@ -55,6 +55,7 @@
             <mvc:exclude-mapping path="/login"/>
             <mvc:exclude-mapping path="/admin/login"/>
             <mvc:exclude-mapping path="/static/**"/>
+            <mvc:exclude-mapping path="/api/**"/>
             <bean class="com.leike.interceptors.SessionInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

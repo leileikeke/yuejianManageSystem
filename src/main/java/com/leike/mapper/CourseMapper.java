@@ -38,4 +38,6 @@ public interface CourseMapper {
     List<Course> selectCourseToClubList(@Param("jId") Integer jId);
 
     List<Course> selectCoursetoClubListForTerm(@Param("jId") Integer jId,@Param("name") String name);
+
+    List<Course> selectCourseList1();
 }

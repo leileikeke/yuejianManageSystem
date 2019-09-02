@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yuejianManageSystem">
+    <output-path>$PROJECT_DIR$/out/artifacts/yuejianManageSystem</output-path>
+    <root id="archive" name="yuejianManageSystem.war">
+      <element id="artifact" artifact-name="yuejianManageSystem:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -80,5 +80,11 @@ public class CourseServiceImpl implements CourseService {
         return courses;
     }
 
+    //---------------客户端api-------------
 
+    @Override
+    public List<Course> selectCourseList1() {
+        List<Course> courses = courseMapper.selectCourseList1();
+        return courses;
+    }
 }

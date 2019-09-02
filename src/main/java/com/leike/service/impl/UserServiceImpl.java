@@ -23,6 +23,26 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+    //---------------客户端api-------------
+    @Override
+    public User login(User user) {
+        User user1 = userMapper.login(user);
+        return user1;
+    }
+
+    @Override
+    public boolean verifyUser(Integer uId, String oldPassword) {
+        int i = userMapper.verifyUser(uId, oldPassword);
+        return i == 1 ? true : false;
+    }
+
+    @Override
+    public boolean updateUserPass(Integer uId, String password) {
+        int i = userMapper.updateUserPass(uId, password);
+        return i == 1 ? true : false;
+    }
+
+    //---------------后台接口----------------
     @Override
     public List<User> selectUserList(Integer page, Integer limit) {
         List<User> users = userMapper.selectUserList(page, limit);
@@ -60,7 +80,7 @@ public class UserServiceImpl implements UserService {
     public boolean deleteUser(Integer uId, String pic, String uploadPath) {
 
         //删除服务器上的用户头像
-        FileUtil.deleteFile(uploadPath,pic);
+        FileUtil.deleteFile(uploadPath, pic);
 
         int i = userMapper.deleteUser(uId);
         return i == 1 ? true : false;
@@ -70,17 +90,16 @@ public class UserServiceImpl implements UserService {
     public boolean updateUser(User user, String uploadPath) {
 
         //获取用户原头像
-        String pic = userMapper.selectUser(user.getuId());
+        String pic = userMapper.selectUserPic(user.getuId());
         //如果修改了用户头像则删除原头像
-        if (!user.getPic().equals(pic)){
-            FileUtil.deleteFile(uploadPath,pic);
+        if (!user.getPic().equals(pic)) {
+            FileUtil.deleteFile(uploadPath, pic);
         }
 
         int i = userMapper.updateUser(user);
         return i == 1 ? true : false;
     }
 
-    //    private static String uploadPath = "D:"+ File.separator;
     @Override
     public String uploadPic(MultipartFile multipartFile, String uploadPath) {
         String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/user/");

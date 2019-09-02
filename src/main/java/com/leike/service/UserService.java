@@ -12,6 +12,12 @@ import java.util.List;
  */
 public interface UserService {
 
+    User login(User user);
+
+    boolean verifyUser(Integer uId, String oldPassword);
+
+    boolean updateUserPass(Integer uId, String password);
+
     List<User> selectUserList(Integer page, Integer limit);
 
     List<User> selectUserListForTerm(Integer page, Integer limit, String uId, String name, String phone, String sex);
@@ -27,4 +33,5 @@ public interface UserService {
     boolean updateUser(User user, String uploadPath);
 
     String uploadPic(MultipartFile multipartFile, String uploadPath);
+
 }

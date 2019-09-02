@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
-                    <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search" layadmin-event="serach" lay-action="views/template/search.html?keywords=">
+                    <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search" layadmin-event="serach" lay-action="https://www.baidu.com/s?ie=UTF-8&wd=">
                 </li>
             </ul>
 

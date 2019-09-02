@@ -46,4 +46,5 @@ public interface ClubEmpMapper {
 
     @Select("SELECT count(*) FROM coach where c_id = #{cId}")
     Integer selectEmpCountToClub(@Param("cId") Integer cId);
+
 }

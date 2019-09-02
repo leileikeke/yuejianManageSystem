@@ -111,4 +111,11 @@ public class ClubEmpServiceImpl implements ClubEmpService {
         int i = clubEmpMapper.insertCoach(coach);
         return i == 1 ? true : false;
     }
+
+    //------------api客户端--------------------------
+    @Override
+    public List<Coach> selectEmpListToClub1(Integer cId, int page, Integer limit) {
+        List<Coach> coaches = clubEmpMapper.selectEmpListToClub(page, limit, cId);
+        return coaches;
+    }
 }

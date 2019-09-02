@@ -27,4 +27,7 @@ public interface CourseService {
     List<Course> selectCourseToClubList(Integer jId);
 
     List<Course> selectCoursetoClubListForTerm(Integer jId, String name);
+
+    List<Course> selectCourseList1();
+
 }

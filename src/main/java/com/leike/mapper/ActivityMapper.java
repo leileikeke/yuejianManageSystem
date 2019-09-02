@@ -37,4 +37,6 @@ public interface ActivityMapper {
 
     Integer selectActivityCountForClubAdmin(Integer id);
 
+    @Select("SELECT * FROM Activity WHERE c_id = #{cId}")
+    Activity selectActivityForCId(@Param("cId") Integer cId);
 }

@@ -76,4 +76,12 @@ public class ActivityServiceImpl implements ActivityService {
         Integer i = activityMapper.selectActivityCountForClubAdmin(id);
         return i;
     }
+
+    //---------------客户端api-------------
+
+    @Override
+    public Activity selectActivityForCId(Integer cId) {
+        Activity activity = activityMapper.selectActivityForCId(cId);
+        return activity;
+    }
 }
