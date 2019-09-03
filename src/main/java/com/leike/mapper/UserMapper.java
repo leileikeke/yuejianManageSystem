@@ -39,8 +39,12 @@ public interface UserMapper {
     User login(User user);
 
     @Select("SELECT * FROM user WHERE u_id = #{uId} AND password = #{oldPassword}")
-    int verifyUser(@Param("uId") Integer uId, @Param("oldPassword") String oldPassword);
+    User verifyUser(@Param("uId") Integer uId, @Param("oldPassword") String oldPassword);
 
-    @Select("UPDATE user password = {password} where u_id = #{uId}")
+    @Update("UPDATE user SET password = #{password} where u_id = #{uId}")
     int updateUserPass(@Param("uId") Integer uId, @Param("password") String password);
+
+    @Select("SELECT * FROM user WHERE u_id = #{uId}")
+    User getUser(@Param("uId") Integer uId);
+
 }

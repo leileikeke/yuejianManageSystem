@@ -30,4 +30,7 @@ public interface CourseService {
 
     List<Course> selectCourseList1();
 
+    List<Course> selectCourseListByJId(Integer jId);
+
+    Course selectCourseListByKId(Integer kId);
 }

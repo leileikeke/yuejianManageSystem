@@ -50,12 +50,51 @@ public class UploadController {
         if (multipartFile != null && !multipartFile.isEmpty()) {
 
             String uploadPath = request.getSession().getServletContext().getRealPath("/");
-            String picName = uploadService.uploadPic(multipartFile, uploadPath,addr);
+            String picName = uploadService.uploadFile(multipartFile, uploadPath,addr);
 
             if (picName != null) {
                 code = ResponseCode.SUCCEED;
                 msg = "上传成功";
+                //返回新名字
                 map.put("picName", picName);
+            }
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
+
+    /**
+     * 上传视频
+     *
+     * @param multipartFile
+     * @param request
+     * @return
+     */
+    @RequestMapping("/video")
+    @ResponseBody
+    public Map<String, Object> uploadVideo(@RequestParam("file") MultipartFile multipartFile, HttpServletRequest request) {
+        String addr = "/static/videos/";
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "上传失败请重试";
+
+
+        // 1.不为空才上传
+        if (multipartFile != null && !multipartFile.isEmpty()) {
+
+            String uploadPath = request.getSession().getServletContext().getRealPath("/");
+            String videoName = uploadService.uploadFile(multipartFile, uploadPath,addr);
+
+            if (videoName != null) {
+                code = ResponseCode.SUCCEED;
+                msg = "上传成功";
+                //返回新名字
+                map.put("videoName",videoName);
             }
         }
 

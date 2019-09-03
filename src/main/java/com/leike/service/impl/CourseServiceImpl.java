@@ -87,4 +87,16 @@ public class CourseServiceImpl implements CourseService {
         List<Course> courses = courseMapper.selectCourseList1();
         return courses;
     }
+
+    @Override
+    public List<Course> selectCourseListByJId(Integer jId) {
+        List<Course> courses = courseMapper.selectCourseListByJId(jId);
+        return courses;
+    }
+
+    @Override
+    public Course selectCourseListByKId(Integer kId) {
+        Course course = courseMapper.selectCourseListByKId(kId);
+        return course;
+    }
 }

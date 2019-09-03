@@ -33,22 +33,22 @@
                 <label class="layadmin-user-login-icon layui-icon layui-icon-username"
                        for="LAY-user-login-username"></label>
                 <input type="text" name="name" id="LAY-user-login-username" lay-verify="required" placeholder="用户名"
-                       class="layui-input" value="leike">
+                       class="layui-input" value="">
             </div>
             <div class="layui-form-item">
                 <label class="layadmin-user-login-icon layui-icon layui-icon-password"
                        for="LAY-user-login-password"></label>
                 <input type="password" name="password" id="LAY-user-login-password" lay-verify="required"
-                       placeholder="密码" class="layui-input" value="11">
+                       placeholder="密码" class="layui-input" value="">
             </div>
             <div class="layui-form-item">
                 <div class="layui-card-body layui-row layui-col-space10">
                     <div class="layui-col-md12">
-                        <input type="radio" name="role" value="clubAdmin" title="俱乐部管理员">
+                        <input type="radio" name="role" value="clubAdmin" title="俱乐部管理员" checked="">
                         <div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i>
                             <div>俱乐部管理员</div>
                         </div>
-                        <input type="radio" name="role" value="systemAdmin" title="系统管理员" checked="">
+                        <input type="radio" name="role" value="systemAdmin" title="系统管理员">
                         <div class="layui-unselect layui-form-radio layui-form-radioed"><i
                                 class="layui-anim layui-icon layui-anim-scaleSpring"></i>
                             <div>系统管理员</div>
@@ -57,8 +57,8 @@
                 </div>
             </div>
             <div class="layui-form-item" style="margin-bottom: 20px;">
-                <a href="reg.html" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">注册账号</a>
-                <a href="forget.html" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>
+                <a href="javascript:void(0);" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">注册账号</a>
+                <a href="javascript:void(0);" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>
             </div>
             <div class="layui-form-item">
                 <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="LAY-user-login-submit">登 入</button>

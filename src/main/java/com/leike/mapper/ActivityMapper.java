@@ -35,8 +35,12 @@ public interface ActivityMapper {
 
     List<Activity> selectActivityListForclubAdmin(@Param("page") Integer page,@Param("limit") Integer limit,@Param("id") Integer id);
 
-    Integer selectActivityCountForClubAdmin(Integer id);
+    Integer selectActivityCountForClubAdmin(@Param("id") Integer id);
 
     @Select("SELECT * FROM Activity WHERE c_id = #{cId}")
-    Activity selectActivityForCId(@Param("cId") Integer cId);
+    List<Activity> selectActivityForCId(@Param("cId") Integer cId);
+
+    @Select("SELECT * FROM activity WHERE a_id = #{aId}")
+    Activity selectActivityByAId(@Param("aId") Integer aId);
+
 }

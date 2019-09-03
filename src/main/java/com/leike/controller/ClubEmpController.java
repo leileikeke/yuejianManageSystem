@@ -178,6 +178,7 @@ public class ClubEmpController {
      * 删除教练
      *
      * @param jId
+     * @param pic
      * @return
      */
     @RequestMapping("/delete")
@@ -212,7 +213,7 @@ public class ClubEmpController {
      */
     @RequestMapping("/deleteAll")
     @ResponseBody
-    public Map<String, Object> deleteUserList(@RequestBody List<Coach> list, HttpServletRequest request) {
+    public Map<String, Object> deleteCoachList(@RequestBody List<Coach> list, HttpServletRequest request) {
 
         Map<String, Object> map = new HashMap<>();
 

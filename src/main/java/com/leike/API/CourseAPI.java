@@ -50,11 +50,77 @@ public class CourseAPI {
         }
 
         map.put("code", code);
-        map.put("msg", "");
+        map.put("msg", msg);
         map.put("data", courses);
 
         return map;
     }
 
+    /**
+     * 获取当前教练的所有课程
+     *
+     * @param jId
+     * @return
+     */
+    @RequestMapping("/getListByJId")
+    @ResponseBody
+    public Map<String, Object> selectCourseListByJId(Integer jId) {
 
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        Integer count = 0;
+
+        List<Course> courses;
+
+        String msg = "获取失败";
+
+        courses = courseService.selectCourseListByJId(jId);
+
+        if (courses != null) {
+            code = ResponseCode.TABLESUCCEED;
+            msg = "";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+        map.put("data", courses);
+
+        return map;
+    }
+
+    /**
+     * 获取当前教练的所有课程
+     *
+     * @param kId
+     * @return
+     */
+    @RequestMapping("/getListBykId")
+    @ResponseBody
+    public Map<String, Object> selectCourseListByKId(Integer kId) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        Integer count = 0;
+
+        Course course;
+
+        String msg = "获取失败";
+
+        course = courseService.selectCourseListByKId(kId);
+
+        if (course != null) {
+            code = ResponseCode.TABLESUCCEED;
+            msg = "";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+        map.put("data", course);
+
+        return map;
+    }
 }

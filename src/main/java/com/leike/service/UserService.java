@@ -32,6 +32,5 @@ public interface UserService {
 
     boolean updateUser(User user, String uploadPath);
 
-    String uploadPic(MultipartFile multipartFile, String uploadPath);
-
+    User getUser(Integer uId);
 }

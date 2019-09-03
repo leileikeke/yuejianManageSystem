@@ -26,7 +26,5 @@ public interface ClubService {
 
     boolean insertClub(Club club);
 
-    String uploadPic(MultipartFile multipartFile, String uploadPath);
-
     Club queryClubforid(Integer id);
 }

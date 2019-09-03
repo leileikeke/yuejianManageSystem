@@ -32,8 +32,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean verifyUser(Integer uId, String oldPassword) {
-        int i = userMapper.verifyUser(uId, oldPassword);
-        return i == 1 ? true : false;
+        User user = userMapper.verifyUser(uId, oldPassword);
+        return user != null ? true : false;
     }
 
     @Override
@@ -101,10 +101,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String uploadPic(MultipartFile multipartFile, String uploadPath) {
-        String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/user/");
-        return fileName;
+    public User getUser(Integer uId) {
+        User user = userMapper.getUser(uId);
+        if (user != null) {
+            user.setPassword("");
+        }
+        return user;
     }
-
-
 }

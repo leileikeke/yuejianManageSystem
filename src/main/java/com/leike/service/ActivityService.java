@@ -28,6 +28,7 @@ public interface ActivityService {
 
     Integer selectActivityCountForClubAdmin(Integer id);
 
-    Activity selectActivityForCId(Integer cId);
+    List<Activity> selectActivityForCId(Integer cId);
 
+    Activity selectActivityByAId(Integer aId);
 }

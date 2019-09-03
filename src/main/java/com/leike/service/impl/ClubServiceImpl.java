@@ -87,12 +87,6 @@ public class ClubServiceImpl implements ClubService {
     }
 
     @Override
-    public String uploadPic(MultipartFile multipartFile, String uploadPath) {
-        String fileName = FileUtil.uploadPic(multipartFile, uploadPath, "/static/imgs/club/");
-        return fileName;
-    }
-
-    @Override
     public Club queryClubforid(Integer id) {
         Club club = clubMapper.queryClubforid(id);
         String aName = clubMapper.queryAdminName(id);

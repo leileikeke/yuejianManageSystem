@@ -9,6 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
  */
 public interface UploadService {
 
-    String uploadPic(MultipartFile multipartFile, String uploadPath, String addr);
+    String uploadFile(MultipartFile multipartFile, String uploadPath, String addr);
 
 }

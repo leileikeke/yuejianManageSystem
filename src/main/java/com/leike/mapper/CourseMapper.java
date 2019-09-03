@@ -40,4 +40,10 @@ public interface CourseMapper {
     List<Course> selectCoursetoClubListForTerm(@Param("jId") Integer jId,@Param("name") String name);
 
     List<Course> selectCourseList1();
+
+    @Select("SELECT * FROM course WHERE j_id = #{jId}")
+    List<Course> selectCourseListByJId(@Param("jId") Integer jId);
+
+    @Select("SELECT * FROM course WHERE k_id = #{kId}")
+    Course selectCourseListByKId(Integer kId);
 }

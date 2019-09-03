@@ -14,8 +14,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class UploadServiceImpl implements UploadService {
 
     @Override
-    public String uploadPic(MultipartFile multipartFile, String uploadPath, String addr) {
-        String fileName = FileUtil.uploadPic(multipartFile, uploadPath, addr);
+    public String uploadFile(MultipartFile multipartFile, String uploadPath, String addr) {
+        String fileName = FileUtil.uploadFile(multipartFile, uploadPath, addr);
         return fileName;
     }
 

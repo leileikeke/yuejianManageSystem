@@ -329,17 +329,17 @@ layui.define(['table', 'form'], function (exports) {
         }
     });
 
-    //俱乐部活动管理
+    //俱乐部视频管理
     table.render({
         elem: '#LAY-club-video-manage'
         , url: ContextPath + '/video/getList' //模拟接口
         , cols: [[
             {type: 'checkbox', fixed: 'left'}
-            , {field: 'a_id', width: 120, title: 'ID', sort: true, align: 'center'}
+            , {field: 'vId', width: 120, title: 'ID', sort: true, align: 'center'}
             , {field: 'name', width: 200, title: '视频名', align: 'center'}
-            , {field: 'pic', title: '视频', templet: '#imgTpl', align: 'center'}
+            , {field: 'video', title: '视频', templet: '#imgTpl', align: 'center'}
             , {field: 'cName', id: 'cName', width: 200, title: '所属俱乐部', align: 'center'}
-            , {title: '操作', width: 160, align: 'center', fixed: 'right', toolbar: '#table-video-admin'}
+            , {title: '操作', width: 200, align: 'center', fixed: 'right', toolbar: '#table-video-admin'}
         ]]
         , page: false
         , height: 'full-220'
@@ -358,9 +358,9 @@ layui.define(['table', 'form'], function (exports) {
                 if (value == layui.setter.Command) {
                     layer.confirm('确定删除此活动吗？', function (index) {
                         $.ajax({
-                            url: ContextPath + '/activity/delete',
+                            url: ContextPath + '/video/delete',
                             type: 'get',
-                            data: {'aId': data.aId, pic: data.pic},//向服务端发送删除的sid
+                            data: {vId: data.vId, video: data.video},//向服务端发送删除的sid
                             success: function (suc) {
                                 if (suc.code == 200) {
                                     obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
@@ -382,9 +382,9 @@ layui.define(['table', 'form'], function (exports) {
 
             layer.open({
                 type: 2
-                , title: '编辑俱乐部活动'
-                , content: 'activityform.html'
-                , area: ['570px', '670px']
+                , title: '编辑俱乐部视频'
+                , content: 'videoform.html'
+                , area: ['455px', '400px']
                 , anim: 4//弹出动画
                 , maxmin: true//显示最大化最小化按钮
                 , shadeClose: true//点击遮罩层关闭模态框
@@ -392,40 +392,33 @@ layui.define(['table', 'form'], function (exports) {
                 , btn: ['确定', '取消']
                 , yes: function (index, layero) {
                     var iframeWindow = window['layui-layer-iframe' + index]
-                        , submitID = 'LAY-club-activity-submit'
+                        , submitID = 'LAY-club-video-submit'
                         , submit = layero.find('iframe').contents().find('#' + submitID);
 
                     //监听提交
                     iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
-                        var field = data.field; //获取提交的字段
-                        var url = layui.setter.ContextPath + '/activity/update';
-                        admin.req({
-                            type: 'post'
-                            , url: url
-                            , contentType: "application/json;charset=utf-8"
-                            , data: JSON.stringify(field)
-                            , done: function (res) {
-                                layer.msg("更新成功", {icon: 6});
-                                //提交 Ajax 成功后，静态更新表格中的数据
-                                table.reload('LAY-club-activity-manage'); //数据刷新
-                                layer.close(index); //关闭弹层
-                            }
-                        });
+                        // var field = data.field; //获取提交的字段
+                        // var url = layui.setter.ContextPath + '/video/update';
+                        // admin.req({
+                        //     type: 'post'
+                        //     , url: url
+                        //     , contentType: "application/json;charset=utf-8"
+                        //     , data: JSON.stringify(field)
+                        //     , done: function (res) {
+                        //         layer.msg("更新成功", {icon: 6});
+                        //         //提交 Ajax 成功后，静态更新表格中的数据
+                        //         table.reload('LAY-club-video-manage'); //数据刷新
+                        //         layer.close(index); //关闭弹层
+                        //     }
+                        // });
                     });
                     submit.trigger('click');
                 }
                 , success: function (layero, index) {
                     var body = layer.getChildFrame('body', index);
-                    body.find("input[name='aId']").val(data.aId);
-                    body.find("input[name='name']").val(data.name);
-                    body.find("input[name='pic']").val(data.pic);
-                    body.find('#demo1').attr('src', ContextPath + data.pic);
-                    body.find("input[name='price']").val(data.price);
-                    body.find("input[name='type']").val(data.type);
-                    body.find("textarea[name='address']").val(data.address);
-                    body.find("textarea[name='detail']").val(data.detail);
-                    body.find("input[name='startTime']").val(data.startTime);
-                    body.find("input[name='endTime']").val(data.endTime);
+                    body.find("input[name='vId']").val(data.vId);
+                    // body.find("input[name='name']").val(data.name);
+                    // body.find("input[name='pic']").val(data.pic);
                     setTimeout(function () {
                         layui.layer.tips('点击此处返回用户列表', '.layui-layer-close1', {
                             tips: 1

@@ -80,8 +80,14 @@ public class ActivityServiceImpl implements ActivityService {
     //---------------客户端api-------------
 
     @Override
-    public Activity selectActivityForCId(Integer cId) {
-        Activity activity = activityMapper.selectActivityForCId(cId);
+    public List<Activity> selectActivityForCId(Integer cId) {
+        List<Activity> activities = activityMapper.selectActivityForCId(cId);
+        return activities;
+    }
+
+    @Override
+    public Activity selectActivityByAId(Integer aId) {
+        Activity activity = activityMapper.selectActivityByAId(aId);
         return activity;
     }
 }

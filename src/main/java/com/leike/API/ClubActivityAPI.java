@@ -69,7 +69,7 @@ public class ClubActivityAPI {
     }
 
     /**
-     * 获取activity列表(带搜索功能)
+     * 获取具体俱乐部activity列表
      *
      * @param cId
      * @return
@@ -84,11 +84,37 @@ public class ClubActivityAPI {
 
         Integer count = 0;
 
-        Activity activity;
-
-        activity = activityService.selectActivityForCId(cId);
+        List<Activity> activities = activityService.selectActivityForCId(cId);
 
         count = activityService.selectActivityCount();
+
+        map.put("code", code);
+        map.put("msg", "");
+        map.put("count", count);
+        map.put("data", activities);
+
+        return map;
+    }
+
+    /**
+     * 获取具体俱乐部activity列表
+     *
+     * @param aId
+     * @return
+     */
+    @RequestMapping("/getByAId")
+    @ResponseBody
+    public Map<String, Object> selectActivityByAId(Integer aId) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.SUCCEED;
+
+        Integer count = 0;
+
+        Activity activity;
+
+        activity = activityService.selectActivityByAId(aId);
 
         map.put("code", code);
         map.put("msg", "");

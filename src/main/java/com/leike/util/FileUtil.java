@@ -23,7 +23,7 @@ public class FileUtil {
      * @param uploadPath
      * @return
      */
-    public static String uploadPic(MultipartFile multipartFile, String uploadPath, String addr) {
+    public static String uploadFile(MultipartFile multipartFile, String uploadPath, String addr) {
         //1.获取原始的文件名
         String originalFilename1 = multipartFile.getOriginalFilename();
         //2. 先截取源文件的文件名前缀 , 不带后缀
@@ -51,12 +51,11 @@ public class FileUtil {
      * 删除文件
      *
      * @param uploadPath
-     * @param pic
+     * @param addr
      */
-    public static void deleteFile(String uploadPath, String pic) {
+    public static void deleteFile(String uploadPath, String addr) {
 
-        File file = new File(uploadPath + pic);
-        System.out.println(file.getPath());
+        File file = new File(uploadPath + addr);
         if (file.isFile() && file.exists()) {
             file.delete();
         }

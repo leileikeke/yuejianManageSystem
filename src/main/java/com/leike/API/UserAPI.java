@@ -20,7 +20,7 @@ import java.util.Map;
  * @date: 2019-08-27 20:49
  */
 @Controller
-@RequestMapping("/apiUser")
+@RequestMapping("/api/user")
 public class UserAPI {
 
     @Autowired
@@ -30,12 +30,11 @@ public class UserAPI {
      * 登录
      *
      * @param user
-     * @param session
      * @return
      */
     @RequestMapping("/login")
     @ResponseBody
-    public Map<String, Object> login(User user, HttpSession session) {
+    public Map<String, Object> login(User user) {
 
         Map<String, Object> map = new HashMap<>();
         Integer code = ResponseCode.FAILURE;
@@ -43,14 +42,17 @@ public class UserAPI {
 
         user = userService.login(user);
 
+        Integer id = 0;
+
         if (user != null) {
             code = ResponseCode.SUCCEED;
+            id = user.getuId();
             msg = "验证成功";
         }
 
         map.put("code", code);
         map.put("msg", msg);
-        map.put("uId", user.getuId());
+        map.put("uId", id);
         return map;
     }
 
@@ -78,7 +80,7 @@ public class UserAPI {
             boolean b1 = userService.updateUserPass(uId, password);
             if (b1) {
                 code = ResponseCode.SUCCEED;
-                msg = "";
+                msg = "密码修改成功";
             } else {
                 code = ResponseCode.ERROR;
             }
@@ -154,6 +156,35 @@ public class UserAPI {
         map.put("code", code);
         map.put("msg", msg);
 
+        return map;
+    }
+
+    /**
+     * 获取Use信息
+     *
+     * @param uId
+     * @return
+     */
+    @RequestMapping("/get")
+    @ResponseBody
+    public Map<String, Object> getUser(Integer uId) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "获取失败";
+
+        User user = userService.getUser(uId);
+
+        if (user != null) {
+            code = ResponseCode.SUCCEED;
+            msg = "成功";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+        map.put("data",user);
         return map;
     }
 

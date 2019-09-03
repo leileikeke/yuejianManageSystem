@@ -9,10 +9,11 @@ import java.util.List;
  * @author: leike
  * @date: 2019-08-16 16:12
  */
-public interface VideoService {
+public interface ClubVideoService {
 
     List<Video> selectVideoListForTerm(String name);
 
     List<Video> selectVideoList();
 
+    boolean deleteVideo(Integer vId, String video, String uploadPath);
 }
