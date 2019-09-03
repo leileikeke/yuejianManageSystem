@@ -6,49 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b3ad1b4-7668-45ec-bbac-4d15534a55d4" name="Default Changelist" comment="...">
+    <list default="true" id="1b3ad1b4-7668-45ec-bbac-4d15534a55d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/API/ClubActivityAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/API/ClubActivityAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/API/CourseAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/API/CourseAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/API/UserAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/API/UserAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/ClubEmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/ClubEmpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/ClubVideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/mapper/ActivityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/ActivityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/CourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/mapper/VideoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/ClubVideoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/ActivityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/ClubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/ClubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/UploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/ClubVideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ActivityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ActivityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/UploadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubVideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ActivityMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ActivityMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/VideoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ClubVideoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/club/activity/activityform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/club/activity/activityform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/club/admin/activityform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/club/admin/activityform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/club/video/activityform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/club/video/videoform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/club/video/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/club/video/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/clubemp/coach/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/clubemp/coach/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/administrators/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/spring-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/spring/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/spring/spring-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index_system.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/index_system.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/views/user/administrators/list.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -123,7 +82,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/club/video/videoform.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
+            <state relative-caret-position="355">
               <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -897,7 +856,7 @@
       <workItem from="1567383148820" duration="8671000" />
       <workItem from="1567418575126" duration="5267000" />
       <workItem from="1567435062916" duration="3980000" />
-      <workItem from="1567501204218" duration="15683000" />
+      <workItem from="1567501204218" duration="15978000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1564143073495</created>
@@ -1200,7 +1159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567383418334</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="...">
+      <created>1567525879661</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1567525879661</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1218,7 +1184,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="586557000" />
+    <option name="totallyTimeSpent" value="586852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1695,7 +1661,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/club/video/videoform.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
+        <state relative-caret-position="355">
           <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
