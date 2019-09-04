@@ -7,21 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b3ad1b4-7668-45ec-bbac-4d15534a55d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/video.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/club/admin/video/video.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/controller/ClubVideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/controller/ClubVideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/mapper/ClubVideoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/mapper/ClubVideoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/ClubVideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/ClubVideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubVideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leike/service/impl/ClubVideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ClubVideoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/leike/mapper/ClubVideoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_club.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/plugins/layuiadmin/modules/club.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/club/video/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/club/video/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/club/video/videoform.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/club/video/videoform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/leike/constant/ResponseCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/leike/constant/ResponseCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/constant/ResponseCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/classes/com/leike/constant/ResponseCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/yuejianManageSystem/WEB-INF/jsp/login.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -131,19 +118,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index_system.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/ClubVideoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-549">
-              <caret line="143" column="78" selection-start-line="143" selection-start-column="73" selection-end-line="143" selection-end-column="78" />
+            <state relative-caret-position="351">
+              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/controller/ClubVideoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -410,13 +398,6 @@
             <path>
               <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -448,6 +429,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="leike" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yuejianManageSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="yuejianManageSystem" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -806,7 +798,7 @@
       <workItem from="1567418575126" duration="5267000" />
       <workItem from="1567435062916" duration="3980000" />
       <workItem from="1567501204218" duration="17084000" />
-      <workItem from="1567554902398" duration="16925000" />
+      <workItem from="1567554902398" duration="17176000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1564143073495</created>
@@ -1123,7 +1115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567526304288</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="...">
+      <created>1567587799325</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1567587799325</updated>
+    </task>
+    <task id="LOCAL-00047" summary="...">
+      <created>1567588006765</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1567588006765</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1141,7 +1147,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="604883000" />
+    <option name="totallyTimeSpent" value="605134000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1154,9 +1160,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.17110874" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.17110874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -1253,13 +1258,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/leike/pojo/Video.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1620,6 +1618,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
