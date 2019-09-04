@@ -68,7 +68,7 @@
 
     <div class="layui-trans layadmin-user-login-footer">
 
-        <p>© 2019-2020 <a href="http://www.baidu.com/" target="_blank">baidu.com</a></p>
+        <p>© 2019-2020 <a href="http://www.52lk.xyz/" target="_blank">baidu.com</a></p>
     </div>
 </div>
 
