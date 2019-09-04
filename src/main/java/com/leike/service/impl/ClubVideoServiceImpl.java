@@ -22,8 +22,8 @@ public class ClubVideoServiceImpl implements ClubVideoService {
 
     @Override
     public List<Video> selectVideoListForTerm(String name) {
-        clubVideoMapper.selectVideoListForTerm(name);
-        return null;
+        List<Video> videos = clubVideoMapper.selectVideoListForTerm(name);
+        return videos;
     }
 
     @Override
@@ -34,11 +34,30 @@ public class ClubVideoServiceImpl implements ClubVideoService {
 
     @Override
     public boolean deleteVideo(Integer vId, String video, String uploadPath) {
-        //删除服务器上的用户头像
-//        FileUtil.deleteFile(uploadPath, video);
+        //删除服务器上的视频
+        FileUtil.deleteFile(uploadPath, video);
 
         int i = clubVideoMapper.deleteVideo(vId);
         return i == 1 ? true : false;
     }
 
+    @Override
+    public boolean updateVideo(Video video, String uploadPath) {
+        //获取原视频
+        String videoName = clubVideoMapper.selectVideoForVideo(video.getvId());
+        //如果修改了视频则删除原视频
+        if (!video.getVideo().equals(videoName)) {
+            FileUtil.deleteFile(uploadPath, videoName);
+        }
+
+        int i = clubVideoMapper.updateVideo(video);
+        return i == 1 ? true : false;
+    }
+
+    @Override
+    public Video queryVideoForId(Integer id) {
+        Integer cId = clubVideoMapper.queryCIdForId(id);
+        Video video = clubVideoMapper.queryVideoForCId(cId);
+        return video;
+    }
 }

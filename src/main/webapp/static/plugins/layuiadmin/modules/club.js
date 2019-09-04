@@ -397,28 +397,29 @@ layui.define(['table', 'form'], function (exports) {
 
                     //监听提交
                     iframeWindow.layui.form.on('submit(' + submitID + ')', function (data) {
-                        // var field = data.field; //获取提交的字段
-                        // var url = layui.setter.ContextPath + '/video/update';
-                        // admin.req({
-                        //     type: 'post'
-                        //     , url: url
-                        //     , contentType: "application/json;charset=utf-8"
-                        //     , data: JSON.stringify(field)
-                        //     , done: function (res) {
-                        //         layer.msg("更新成功", {icon: 6});
-                        //         //提交 Ajax 成功后，静态更新表格中的数据
-                        //         table.reload('LAY-club-video-manage'); //数据刷新
-                        //         layer.close(index); //关闭弹层
-                        //     }
-                        // });
+                        var field = data.field; //获取提交的字段
+                        var url = layui.setter.ContextPath + '/video/update';
+                        console.log(field)
+                        admin.req({
+                            type: 'post'
+                            , url: url
+                            , contentType: "application/json;charset=utf-8"
+                            , data: JSON.stringify(field)
+                            , done: function (res) {
+                                layer.msg("更新成功", {icon: 6});
+                                //提交 Ajax 成功后，静态更新表格中的数据
+                                table.reload('LAY-club-video-manage'); //数据刷新
+                                layer.close(index); //关闭弹层
+                            }
+                        });
                     });
                     submit.trigger('click');
                 }
                 , success: function (layero, index) {
                     var body = layer.getChildFrame('body', index);
                     body.find("input[name='vId']").val(data.vId);
-                    // body.find("input[name='name']").val(data.name);
-                    // body.find("input[name='pic']").val(data.pic);
+                    body.find("input[name='name']").val(data.name);
+                    body.find("input[name='video']").val(data.video);
                     setTimeout(function () {
                         layui.layer.tips('点击此处返回用户列表', '.layui-layer-close1', {
                             tips: 1

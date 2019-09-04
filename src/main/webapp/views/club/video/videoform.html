@@ -30,14 +30,8 @@
                 <p>点击上传，或将文件拖拽到此处</p>
             </div>
         </div>
-        <span class="layui-inline layui-upload-choose" id="vName">夜景.jpg</span>
+        <span class="layui-inline layui-upload-choose" id="vName"></span>
     </div>
-
-    <!--    <div class="layui-upload-drag" id="test10">-->
-    <!--        <i class="layui-icon"></i>-->
-    <!--        <p>点击上传，或将文件拖拽到此处</p>-->
-    <!--    </div>-->
-
 
     <div class="layui-form-item layui-hide">
         <input type="button" lay-submit lay-filter="LAY-club-video-submit" id="LAY-club-video-submit" value="确认">
@@ -50,37 +44,23 @@
         base: '../../../static/plugins/layuiadmin/' //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
-    }).use(['index', 'form', 'upload', 'laydate'], function () {
+    }).use(['index', 'form', 'upload'], function () {
         var $ = layui.$
             , form = layui.form
             , upload = layui.upload
             , laydate = layui.laydate
             , ContextPath = layui.setter.ContextPath;
 
-        // //拖拽上传
-        // upload.render({
-        //     elem: '#test10'
-        //     ,url: '/upload/'
-        //     ,done: function(res){
-        //         //上传完毕回调
-        //     }
-        //     ,error: function(){
-        //         //请求异常回调
-        //
-        //     }
-        //     ,accept: 'video' //允许上传的文件类型
-        //     ,size: 31024 //最大允许上传的文件大小.单位kb
-        // });
 
-        //多文件列表示例
+        //拖拽上传
         var uploadIns = upload.render({
             elem: '#test10'
             , url: ContextPath+'/upload/video'
             , accept: 'video' //允许上传的文件类型
             , exts: 'mp4'
             , size: 31024 //最大允许上传的文件大小.单位kb
-            , auto: false
-            , bindAction: '#LAY-club-video-submit'
+            // , auto: false
+            // , bindAction: '#LAY-club-video-submit'
             , choose: function (obj) {
                 // 读取本地文件
                 obj.preview(function (index, file, result) {
@@ -88,9 +68,6 @@
                 });
             }
             , done: function (res, index, upload) {
-                console.log(res)
-                console.log(index)
-                console.log(upload)
                 //上传成功
                 layer.msg(res.msg);
                 $("#video").val(res.videoName);
@@ -101,34 +78,6 @@
             }
         });
 
-
-        // //普通图片上传
-        // var uploadInst = upload.render({
-        //     elem: '#layuiadmin-upload-club'
-        //     , url: ContextPath + '/upload/pic?addr=video'
-        //     , accept: 'images'
-        //     , acceptMime: 'image/*'
-        //     , before: function (obj) {
-        //         //预读本地文件示例，不支持ie8
-        //         obj.preview(function (index, file, result) {
-        //             $('#demo1').attr('src', result); //图片链接（base64）
-        //         });
-        //     }
-        //     , done: function (res) {
-        //         //上传成功
-        //         layer.msg(res.msg);
-        //         $("#pic").val(res.picName);
-        //     }
-        //     , error: function () {
-        //         //演示失败状态，并实现重传
-        //         var demoText = $('#demoText');
-        //         demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
-        //         demoText.find('.demo-reload').on('click', function () {
-        //             uploadInst.upload();
-        //         });
-        //     }
-        // });
-        //
     })
 </script>
 </body>

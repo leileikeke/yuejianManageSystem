@@ -1,6 +1,7 @@
 package com.leike.controller;
 
 import com.leike.constant.ResponseCode;
+import com.leike.pojo.Admin;
 import com.leike.pojo.Video;
 import com.leike.service.ClubVideoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -129,6 +131,63 @@ public class ClubVideoController {
         map.put("count", count);
 
         return map;
+    }
+
+    /**
+     * 更新Coach数据
+     *
+     * @param video
+     * @return
+     */
+    @RequestMapping("/update")
+    @ResponseBody
+    public Map<String, Object> updateVideo(@RequestBody Video video, HttpServletRequest request) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "教练信息失败";
+
+        String uploadPath = request.getSession().getServletContext().getRealPath("/");
+        boolean b = clubVideoService.updateVideo(video, uploadPath);
+
+        if (b) {
+            code = ResponseCode.SUCCEED;
+            msg = "";
+        }
+
+        map.put("code", code);
+        map.put("msg", msg);
+
+        return map;
+    }
+
+    /**
+     * 通过管理员id查club
+     * @return
+     */
+    @RequestMapping("/query")
+    @ResponseBody
+    public Map<String, Object> queryClubforid(HttpSession session) {
+
+        Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
+        Integer id = admin.getId();
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        Video video = clubVideoService.queryVideoForId(id);
+        if (video != null) {
+            code = ResponseCode.SUCCEED;
+        }
+
+        map.put("code", code);
+        map.put("data", video);
+
+        return map;
+
     }
 
 }

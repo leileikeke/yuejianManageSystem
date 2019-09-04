@@ -16,4 +16,8 @@ public interface ClubVideoService {
     List<Video> selectVideoList();
 
     boolean deleteVideo(Integer vId, String video, String uploadPath);
+
+    boolean updateVideo(Video video, String uploadPath);
+
+    Video queryVideoForId(Integer id);
 }

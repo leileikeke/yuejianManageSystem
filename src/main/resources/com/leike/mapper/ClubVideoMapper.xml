@@ -18,7 +18,7 @@
     <select id="selectVideoListForTerm" resultType="com.leike.pojo.Video">
         <bind name="_name" value="'%'+name+'%'"/>
         SELECT
-        v.id,
+        v.v_id,
         v.video,
         v.name,
         v.c_id,

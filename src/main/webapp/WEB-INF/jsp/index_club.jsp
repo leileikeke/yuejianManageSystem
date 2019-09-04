@@ -123,10 +123,13 @@
                         </a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a lay-href="views/club/clubinfo.html">俱乐部</a>
+                                <a lay-href="views/club/clubinfo.html">我的俱乐部</a>
                             </dd>
                             <dd>
                                 <a lay-href="views/club/admin/list.html">俱乐部活动</a>
+                            </dd>
+                            <dd>
+                                <a lay-href="views/club/admin/video/video.html">俱乐部视频</a>
                             </dd>
                         </dl>
                     </li>
