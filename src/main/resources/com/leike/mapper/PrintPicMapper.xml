@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.leike.mapper.PrintPicMapper">
+
+    <select id="selectPrintPicList" resultType="com.leike.pojo.PrintPic">
+        SELECT
+        p.u_id,
+        p.pic_name,
+        p.upload_time,
+        p.desc,
+        u.name,
+        u.pic,
+        u.sex
+        FROM
+        printpic p
+        LEFT JOIN user u ON p.u_id = u.u_id
+        limit #{page},#{limit}
+    </select>
+</mapper>

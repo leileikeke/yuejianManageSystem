@@ -1,6 +1,7 @@
 package com.leike.controller;
 
 import com.leike.pojo.Admin;
+import com.leike.service.NotifyService;
 import com.leike.service.RecommendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,8 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 页面控制器
- * @description:
+ * @description:页面控制器
  * @author: leike
  * @date: 2019-08-04 16:31
  */
@@ -25,18 +25,25 @@ public class DispatcherController {
     @Autowired
     private RecommendService recommendService;
 
+    @Autowired
+    private NotifyService notifyService;
+
+
     @RequestMapping("/")
     public String index(HttpSession session, Model model) {
 
         Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
 
-        if (admin.getRole().equals("systemAdmin")){
+        if (admin.getRole().equals("systemAdmin")) {
             Integer count = recommendService.selectRecommendCount();
-            model.addAttribute("recommendCount",count);
-            model.addAttribute("systemAdmin",admin);
+            model.addAttribute("recommendCount", count);
+            model.addAttribute("systemAdmin", admin);
             return "index_system";
-        }else if (admin.getRole().equals("clubAdmin")){
-            model.addAttribute("clubAdmin",admin);
+        } else if (admin.getRole().equals("clubAdmin")) {
+            Integer cId = notifyService.selectCIdById(admin.getId());
+            Integer count = notifyService.selectNotifyCount(cId);
+            model.addAttribute("notifyCount", count);
+            model.addAttribute("clubAdmin", admin);
             return "index_club";
         }
         return "redirect:/error/error.html";

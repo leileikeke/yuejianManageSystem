@@ -17,9 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 视频控制器
- *
- * @description:
+ * @description:视频控制器
  * @author: leike
  * @date: 2019-08-16 16:10
  */
@@ -165,6 +163,7 @@ public class ClubVideoController {
 
     /**
      * 通过管理员id查club
+     *
      * @return
      */
     @RequestMapping("/query")

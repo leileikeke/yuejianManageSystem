@@ -46,9 +46,12 @@ public interface AdminMapper {
     @Update("UPDATE admin SET nickname = #{nickname},phone = #{phone},sex = #{sex} WHERE id = #{id} ")
     int setAdmin(Admin admin);
 
-    @Insert("INSERT recommend(j_id,id) VALUE (#{jId},#{id})")
+    @Insert("INSERT recommend(j_id,id,checktime) VALUE (#{jId},#{id},#{checktime})")
     int addRecommend(Recommend recommend);
 
     @Select("select count(*) from recommend where j_id = #{jId}")
     int selectRecommend(@Param("jId") Integer jId);
+
+    @Delete("DELETE FROM recommend WHERE j_id = #{jId}")
+    int deleteRecommend(Integer jId);
 }

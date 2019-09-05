@@ -13,7 +13,8 @@
     <title>yuejie 后台管理(club)</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="${ctx}/static/plugins/layuiadmin/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="${ctx}/static/plugins/layuiadmin/style/admin.css" media="all">
 
@@ -44,20 +45,29 @@
                     </a>
                 </li>
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
-                    <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search" layadmin-event="serach" lay-action="https://www.baidu.com/s?ie=UTF-8&wd=">
+                    <input type="text" placeholder="搜索..." autocomplete="off" class="layui-input layui-input-search"
+                           layadmin-event="serach" lay-action="https://www.baidu.com/s?ie=UTF-8&wd=">
                 </li>
             </ul>
 
 
-
-
             <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+                <li class="layui-nav-item" lay-unselect>
+                    <a lay-href="views/notify/list.html" style="width: 20px" layadmin-event="message"
+                       lay-text="通知">
+                        <i class="layui-icon layui-icon-notice"></i>
+                        <!-- 如果有新消息，则显示小圆点 -->
+                        <c:if test="${notifyCount > 0}">
+                            <span class="layui-badge">${notifyCount}</span>
+                        </c:if>
+                        <%--                        <span class="layui-badge-dot"></span>--%>
+                    </a>
+                </li>
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
                     <a href="javascript:;" layadmin-event="theme">
                         <i class="layui-icon layui-icon-theme"></i>
                     </a>
                 </li>
-
 
 
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
@@ -83,7 +93,8 @@
                 </li>
 
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
-                    <a href="javascript:;" layadmin-event="about"><i class="layui-icon layui-icon-more-vertical"></i></a>
+                    <a href="javascript:;" layadmin-event="about"><i
+                            class="layui-icon layui-icon-more-vertical"></i></a>
                 </li>
                 <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-unselect>
                     <a href="javascript:;" layadmin-event="more"><i class="layui-icon layui-icon-more-vertical"></i></a>
@@ -98,7 +109,8 @@
                     <span>yuejian后台(club)</span>
                 </div>
 
-                <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu"
+                    lay-filter="layadmin-system-side-menu">
                     <li data-name="home" class="layui-nav-item layui-nav-itemed">
                         <a href="javascript:;" lay-tips="主页" lay-direction="2">
                             <i class="layui-icon layui-icon-home"></i>
@@ -108,12 +120,12 @@
                             <dd data-name="console" class="layui-this">
                                 <a lay-href="views/home/consoleclub.html">控制台</a>
                             </dd>
-<%--                            <dd data-name="console">--%>
-<%--                                <a lay-href="views/home/homepage1.html">主页一</a>--%>
-<%--                            </dd>--%>
-<%--                            <dd data-name="console">--%>
-<%--                                <a lay-href="views/home/homepage2.html">主页二</a>--%>
-<%--                            </dd>--%>
+                            <%--                            <dd data-name="console">--%>
+                            <%--                                <a lay-href="views/home/homepage1.html">主页一</a>--%>
+                            <%--                            </dd>--%>
+                            <%--                            <dd data-name="console">--%>
+                            <%--                                <a lay-href="views/home/homepage2.html">主页二</a>--%>
+                            <%--                            </dd>--%>
                         </dl>
                     </li>
                     <li data-name="club" class="layui-nav-item">
@@ -184,7 +196,8 @@
             </div>
             <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
                 <ul class="layui-tab-title" id="LAY_app_tabsheader">
-                    <li lay-id="views/home/console.html" lay-attr="views/home/console.html" class="layui-this"><i class="layui-icon layui-icon-home"></i></li>
+                    <li lay-id="views/home/console.html" lay-attr="views/home/console.html" class="layui-this"><i
+                            class="layui-icon layui-icon-home"></i></li>
                 </ul>
             </div>
         </div>

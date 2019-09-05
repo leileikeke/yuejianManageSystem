@@ -120,12 +120,12 @@
                             <dd data-name="console" class="layui-this">
                                 <a lay-href="views/home/console.html?recommendCount=${recommendCount}">控制台</a>
                             </dd>
-                            <dd data-name="console">
-                                <a lay-href="views/home/homepage1.html">主页一</a>
-                            </dd>
-                            <dd data-name="console">
-                                <a lay-href="views/home/homepage2.html">主页二</a>
-                            </dd>
+<%--                            <dd data-name="console">--%>
+<%--                                <a lay-href="views/home/homepage1.html">主页一</a>--%>
+<%--                            </dd>--%>
+<%--                            <dd data-name="console">--%>
+<%--                                <a lay-href="views/home/homepage2.html">主页二</a>--%>
+<%--                            </dd>--%>
                         </dl>
                     </li>
                     <li data-name="club" class="layui-nav-item">
@@ -172,6 +172,9 @@
                             </dd>
                             <dd>
                                 <a lay-href="views/user/administrators/list.html">后台管理员</a>
+                            </dd>
+                            <dd>
+                                <a lay-href="views/user/printPic/list.html">用户晒图</a>
                             </dd>
                         </dl>
                     </li>

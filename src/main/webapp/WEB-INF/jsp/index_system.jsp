@@ -173,6 +173,9 @@
                             <dd>
                                 <a lay-href="views/user/administrators/list.html">后台管理员</a>
                             </dd>
+                            <dd>
+                                <a lay-href="views/user/printPic/list.html">用户晒图</a>
+                            </dd>
                         </dl>
                     </li>
                     <li data-name="set" class="layui-nav-item">

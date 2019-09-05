@@ -144,7 +144,7 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'cName', title: '所属俱乐部', sort: true, align: 'center'}
             , {field: 'state', title: '职称', sort: true, templet: '#buttonTpl', width: 100, align: 'center'}
             , {title: '课程', width: 150, align: 'center', fixed: 'right', toolbar: '#table-clubcourse-webuser'}
-            , {title: '操作', width: 300, align: 'left', fixed: 'right', toolbar: '#table-clubcoach-webuser'}
+            , {title: '操作', width: 330, align: 'left', fixed: 'right', toolbar: '#table-clubcoach-webuser'}
         ]]
         , page: true
         , limit: 10
@@ -298,7 +298,11 @@ layui.define(['table', 'form'], function (exports) {
                 , url: url
                 , data: d
                 , done: function (res) {
-                    console.log(obj.tr.selector + ' .recommend');
+                    if (res.action == "add"){
+                        $(obj.tr.selector + ' .recommend').html("<i class=\"layui-icon layui-icon-close\"></i>取消推荐");
+                    }else {
+                        $(obj.tr.selector + ' .recommend').html("<i class=\"layui-icon layui-icon-add-1\"></i>推荐");
+                    }
                     setTimeout(function () {
                         layer.tips(res.msg, obj.tr.selector + ' .recommend', {
                             tips: [4, '#1aa094']

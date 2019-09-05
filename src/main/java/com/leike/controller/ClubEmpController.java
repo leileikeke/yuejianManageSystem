@@ -17,9 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 俱乐部员工控制器
- *
- * @description:
+ * @description:俱乐部员工控制器
  * @author: leike
  * @date: 2019-08-13 14:44
  */
@@ -248,7 +246,7 @@ public class ClubEmpController {
      */
     @RequestMapping("/add")
     @ResponseBody
-    public Map<String, Object> addCoach(@RequestBody Coach coach,HttpSession session) {
+    public Map<String, Object> addCoach(@RequestBody Coach coach, HttpSession session) {
 
         //提取当前管理员信息
         Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
@@ -264,7 +262,7 @@ public class ClubEmpController {
         if (bool) {
             if (coach != null) {
 
-                boolean b = clubEmpService.insertCoach(coach,id);
+                boolean b = clubEmpService.insertCoach(coach, id);
                 if (b) {
                     code = ResponseCode.SUCCEED;
                     msg = "";

@@ -29,6 +29,7 @@ layui.define(['table', 'form'], function (exports) {
             , {field: 'email', title: '邮箱', width: 200, align: 'center'}
             , {field: 'intro', title: '简介', align: 'center'}
             , {field: 'cName', title: '所属俱乐部', width: 150, sort: true, align: 'center'}
+            , {field: 'checktime', title: '提交时间', sort: true, align: 'center'}
             , {title: '审核', width: 200, align: 'center', fixed: 'right', toolbar: '#table-recommend-webuser'}
         ]]
         , page: false
@@ -41,7 +42,25 @@ layui.define(['table', 'form'], function (exports) {
         var data = obj.data;
         if (obj.event === 'recommend') {
             var d = {
-                jId: data.jId
+                jId: data.jId,
+                state:true,
+                cId:data.cId
+            };
+            var url = layui.setter.ContextPath + '/recommend/updateState';
+            admin.req({
+                type: 'get'
+                , url: url
+                , data: d
+                , done: function (res) {
+                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                    layer.msg("审核成功", {icon: 1});
+                }
+            });
+        }else if (obj.event === 'noRecommend') {
+            var d = {
+                jId: data.jId,
+                state:false,
+                cId:data.cId
             };
             var url = layui.setter.ContextPath + '/recommend/updateState';
             admin.req({

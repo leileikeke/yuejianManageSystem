@@ -18,9 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 课程控制器
- *
- * @description:
+ * @description:课程控制器
  * @author: leike
  * @date: 2019-08-14 14:50
  */

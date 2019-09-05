@@ -35,4 +35,6 @@ public interface AdminService {
     boolean addRecommend(Recommend recommend);
 
     boolean selectRecommend(Integer jId);
+
+    boolean deleteRecommend(Integer jId);
 }

@@ -17,9 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 管理员控制器
- *
- * @description:
+ * @description:管理员控制器
  * @author: leike
  * @date: 2019-08-03 16:54
  */
@@ -404,11 +402,18 @@ public class AdminController {
             boolean b = adminService.addRecommend(recommend);
 
             if (b) {
+                map.put("action", "add");
                 msg = "推荐成功";
             }
 
         } else {
-            msg = "请勿重复提交";
+
+            boolean b = adminService.deleteRecommend(recommend.getjId());
+
+            if (b) {
+                map.put("action", "del");
+                msg = "取消推荐成功";
+            }
         }
 
         map.put("code", code);

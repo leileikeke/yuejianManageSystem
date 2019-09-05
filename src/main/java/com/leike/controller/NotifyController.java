@@ -2,9 +2,9 @@ package com.leike.controller;
 
 import com.leike.constant.ResponseCode;
 import com.leike.pojo.Admin;
-import com.leike.pojo.Coach;
+import com.leike.pojo.Notify;
 import com.leike.pojo.Recommend;
-import com.leike.service.RecommendService;
+import com.leike.service.NotifyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,56 +16,25 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @description:推荐教练控制器
+ * @description:通知控制器
  * @author: leike
- * @date: 2019-08-15 1:34
+ * @date: 2019-09-05 17:19
  */
 @Controller
-@RequestMapping("/recommend")
-public class RecommendController {
+@RequestMapping("/notify")
+public class NotifyController {
 
     @Autowired
-    private RecommendService recommendService;
+    private NotifyService notifyService;
 
     /**
-     * 获取user列表(带搜索功能)
+     * 获取Notify列表
      *
      * @return
      */
     @RequestMapping("/getList")
     @ResponseBody
-    public Map<String, Object> selectCoacheList() {
-
-        Map<String, Object> map = new HashMap<>();
-
-        Integer code = ResponseCode.FAILURE;
-
-        Integer count = 0;
-
-        List<Recommend> recommends;
-
-        recommends = recommendService.selectRecommendList();
-        if (recommends != null) {
-            code = ResponseCode.TABLESUCCEED;
-        }
-
-        map.put("code", code);
-        map.put("msg", "");
-        map.put("count", count);
-        map.put("data", recommends);
-
-        return map;
-    }
-
-    /**
-     * 更新审核状态
-     *
-     * @param jId
-     * @return
-     */
-    @RequestMapping("/updateState")
-    @ResponseBody
-    public Map<String, Object> updateState(Integer jId, Boolean state, Integer cId, HttpSession session) {
+    public Map<String, Object> selectNotifyList(HttpSession session) {
 
         Admin admin = (Admin) session.getAttribute("SESSION_ADMIN");
         Integer id = admin.getId();
@@ -74,18 +43,50 @@ public class RecommendController {
 
         Integer code = ResponseCode.FAILURE;
 
-        String msg = "审核失败";
+        Integer count = 0;
 
-        boolean b = recommendService.updateState(jId, state, cId, id);
-        if (b) {
-            code = ResponseCode.SUCCEED;
-            msg = "审核成功";
+        List<Notify> notifies;
+
+        Integer cId = notifyService.selectCIdById(id);
+
+        notifies = notifyService.selectNotifyList(cId);
+        if (notifies != null) {
+            code = ResponseCode.TABLESUCCEED;
         }
 
+        map.put("code", code);
+        map.put("msg", "");
+        map.put("count", count);
+        map.put("data", notifies);
+
+        return map;
+    }
+
+    /**
+     * 删除User
+     *
+     * @param jId
+     * @return
+     */
+    @RequestMapping("/delete")
+    @ResponseBody
+    public Map<String, Object> deleteNotify(Integer jId) {
+
+        Map<String, Object> map = new HashMap<>();
+
+        Integer code = ResponseCode.FAILURE;
+
+        String msg = "删除失败";
+
+        boolean b = notifyService.deleteNotify(jId);
+        //如果成功则返回code=200
+        if (b) {
+            code = ResponseCode.SUCCEED;
+            msg = "";
+        }
 
         map.put("code", code);
         map.put("msg", msg);
-
         return map;
     }
 

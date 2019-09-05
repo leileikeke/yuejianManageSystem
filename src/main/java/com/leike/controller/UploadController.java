@@ -14,9 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 上传通用控制器
- *
- * @description:
+ * @description:上传通用控制器
  * @author: leike
  * @date: 2019-08-11 18:17
  */
@@ -50,7 +48,7 @@ public class UploadController {
         if (multipartFile != null && !multipartFile.isEmpty()) {
 
             String uploadPath = request.getSession().getServletContext().getRealPath("/");
-            String picName = uploadService.uploadFile(multipartFile, uploadPath,addr);
+            String picName = uploadService.uploadFile(multipartFile, uploadPath, addr);
 
             if (picName != null) {
                 code = ResponseCode.SUCCEED;
@@ -88,13 +86,13 @@ public class UploadController {
         if (multipartFile != null && !multipartFile.isEmpty()) {
 
             String uploadPath = request.getSession().getServletContext().getRealPath("/");
-            String videoName = uploadService.uploadFile(multipartFile, uploadPath,addr);
+            String videoName = uploadService.uploadFile(multipartFile, uploadPath, addr);
 
             if (videoName != null) {
                 code = ResponseCode.SUCCEED;
                 msg = "上传成功";
                 //返回新名字
-                map.put("videoName",videoName);
+                map.put("videoName", videoName);
             }
         }
 

@@ -19,8 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 俱乐部控制器
- * @description:
+ * @description:俱乐部控制器
  * @author: leike
  * @date: 2019-08-09 21:52
  */
@@ -33,6 +32,7 @@ public class ClubController {
 
     /**
      * 获取club列表(带搜索功能)
+     *
      * @param page
      * @param limit
      * @param cId
@@ -77,6 +77,7 @@ public class ClubController {
 
     /**
      * 修改俱乐部信息
+     *
      * @param club
      * @param request
      * @return
@@ -107,6 +108,7 @@ public class ClubController {
 
     /**
      * 添加俱乐部
+     *
      * @param club
      * @return
      */
@@ -144,6 +146,7 @@ public class ClubController {
 
     /**
      * 删除俱乐部
+     *
      * @param cId
      * @param pic
      * @param request
@@ -175,6 +178,7 @@ public class ClubController {
 
     /**
      * 批量删除俱乐部
+     *
      * @param list
      * @param request
      * @return
@@ -210,6 +214,7 @@ public class ClubController {
 
     /**
      * 通过管理员id查club
+     *
      * @return
      */
     @RequestMapping("/query")

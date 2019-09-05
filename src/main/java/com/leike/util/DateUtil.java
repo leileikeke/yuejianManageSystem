@@ -29,7 +29,7 @@ public class DateUtil {
      * @return 日期字符串
      */
     public static String getCurrentDateString(){
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return sdf.format(new Date());
     }
 

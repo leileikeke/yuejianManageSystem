@@ -64,7 +64,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean insertUser(User user) {
 
-        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
+        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd HH:mm:ss");
+        System.out.println(date.toString());
         user.setJointime(date);
         int i = userMapper.insertUser(user);
         return i == 1 ? true : false;

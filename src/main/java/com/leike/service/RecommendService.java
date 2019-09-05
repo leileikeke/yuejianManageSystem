@@ -1,6 +1,5 @@
 package com.leike.service;
 
-import com.leike.pojo.Coach;
 import com.leike.pojo.Recommend;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public interface RecommendService {
 
     List<Recommend> selectRecommendList();
 
-    boolean updateState(Integer jId);
+    boolean updateState(Integer jId, Boolean state, Integer cId, Integer id);
 
     Integer selectRecommendCount();
 }

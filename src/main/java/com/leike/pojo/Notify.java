@@ -6,13 +6,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 /**
- * 推荐实体类
+ * 通知实体类
  *
  * @description:
  * @author: leike
  * @date: 2019-08-15 0:37
  */
-public class Recommend {
+public class Notify {
 
     private Integer jId;
 
@@ -20,41 +20,29 @@ public class Recommend {
 
     private String name;
 
-    private String pic;
-
     private String sex;
 
     private String phone;
 
     private String email;
 
-    private String intro;
-
-    private Boolean state;
-
-    private Integer cId;
-
-    private String cName;
+    private String aName;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date checktime;
 
-    public Recommend() {
+    public Notify() {
     }
 
-    public Recommend(Integer jId, Integer id, String name, String pic, String sex, String phone, String email, String intro, Boolean state, Integer cId, String cName, Date checktime) {
+    public Notify(Integer jId, Integer id, String name, String sex, String phone, String email, String aName, Date checktime) {
         this.jId = jId;
         this.id = id;
         this.name = name;
-        this.pic = pic;
         this.sex = sex;
         this.phone = phone;
         this.email = email;
-        this.intro = intro;
-        this.state = state;
-        this.cId = cId;
-        this.cName = cName;
+        this.aName = aName;
         this.checktime = checktime;
     }
 
@@ -82,14 +70,6 @@ public class Recommend {
         this.name = name;
     }
 
-    public String getPic() {
-        return pic;
-    }
-
-    public void setPic(String pic) {
-        this.pic = pic;
-    }
-
     public String getSex() {
         return sex;
     }
@@ -114,36 +94,12 @@ public class Recommend {
         this.email = email;
     }
 
-    public String getIntro() {
-        return intro;
+    public String getaName() {
+        return aName;
     }
 
-    public void setIntro(String intro) {
-        this.intro = intro;
-    }
-
-    public Boolean getState() {
-        return state;
-    }
-
-    public void setState(Boolean state) {
-        this.state = state;
-    }
-
-    public Integer getcId() {
-        return cId;
-    }
-
-    public void setcId(Integer cId) {
-        this.cId = cId;
-    }
-
-    public String getcName() {
-        return cName;
-    }
-
-    public void setcName(String cName) {
-        this.cName = cName;
+    public void setaName(String aName) {
+        this.aName = aName;
     }
 
     public Date getChecktime() {

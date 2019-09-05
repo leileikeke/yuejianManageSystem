@@ -29,10 +29,12 @@ public class Coach {
 
     private String cName;
 
+    private Boolean action;
+
     public Coach() {
     }
 
-    public Coach(Integer jId, String name, String pic, String sex, String phone, String email, String intro, Boolean state, Integer cId, String cName) {
+    public Coach(Integer jId, String name, String pic, String sex, String phone, String email, String intro, Boolean state, Integer cId, String cName, Boolean action) {
         this.jId = jId;
         this.name = name;
         this.pic = pic;
@@ -43,6 +45,7 @@ public class Coach {
         this.state = state;
         this.cId = cId;
         this.cName = cName;
+        this.action = action;
     }
 
     public Integer getjId() {
@@ -125,6 +128,14 @@ public class Coach {
         this.cName = cName;
     }
 
+    public Boolean getAction() {
+        return action;
+    }
+
+    public void setAction(Boolean action) {
+        this.action = action;
+    }
+
     @Override
     public String toString() {
         return "Coach{" +
@@ -138,6 +149,7 @@ public class Coach {
                 ", state=" + state +
                 ", cId=" + cId +
                 ", cName='" + cName + '\'' +
+                ", action=" + action +
                 '}';
     }
 }

@@ -2,6 +2,7 @@ package com.leike.service.impl;
 
 import com.leike.mapper.ClubEmpMapper;
 import com.leike.pojo.Coach;
+import com.leike.pojo.Recommend;
 import com.leike.service.ClubEmpService;
 import com.leike.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,6 +83,16 @@ public class ClubEmpServiceImpl implements ClubEmpService {
         Integer cId = clubEmpMapper.selectClubId(id);
 
         List<Coach> coaches = clubEmpMapper.selectEmpListToClub(page, limit, cId);
+
+        for (Coach coach : coaches) {
+            if (!coach.getState()){
+                Recommend recommend = clubEmpMapper.selectRecommend(coach.getjId());
+                if (recommend!=null){
+                    coach.setAction(true);
+                }
+            }
+        }
+
         return coaches;
     }
 

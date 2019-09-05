@@ -1,6 +1,7 @@
 package com.leike.mapper;
 
 import com.leike.pojo.Coach;
+import com.leike.pojo.Recommend;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -47,4 +48,6 @@ public interface ClubEmpMapper {
     @Select("SELECT count(*) FROM coach where c_id = #{cId}")
     Integer selectEmpCountToClub(@Param("cId") Integer cId);
 
+    @Select("select * from recommend where j_id = #{jId}")
+    Recommend selectRecommend(@Param("jId") Integer jId);
 }

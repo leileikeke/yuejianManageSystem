@@ -75,7 +75,7 @@ public class ClubServiceImpl implements ClubService {
 
     @Override
     public boolean insertClub(Club club) {
-        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
+        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd HH:mm:ss");
         club.setJointime(date);
         club.setHot(0);
 

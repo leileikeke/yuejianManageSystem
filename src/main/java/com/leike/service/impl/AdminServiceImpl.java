@@ -66,6 +66,8 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean addRecommend(Recommend recommend) {
+        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd HH:mm:ss");
+        recommend.setChecktime(date);
         int i = adminMapper.addRecommend(recommend);
         return i == 1 ? true : false;
     }
@@ -95,10 +97,16 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean addAdmin(Admin admin) {
         //获取当前系统时间
-        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd hh:mm:ss");
+        Date date = DateUtil.getCurrentTime(new Date(), "yyyy-MM-dd HH:mm:ss");
         admin.setJointime(date);
         int i = adminMapper.addAdmin(admin);
 
+        return i == 1 ? true : false;
+    }
+
+    @Override
+    public boolean deleteRecommend(Integer jId) {
+        int i = adminMapper.deleteRecommend(jId);
         return i == 1 ? true : false;
     }
 }
