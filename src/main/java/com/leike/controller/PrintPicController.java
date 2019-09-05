@@ -118,7 +118,6 @@ public class PrintPicController {
         for (int i = 0; i < list.size(); i++) {
 
             boolean b = printPicService.deletePrintPic(list.get(i).getuId(), list.get(i).getPicName(), uploadPath);
-
             if (b) {
                 count++;
             }
