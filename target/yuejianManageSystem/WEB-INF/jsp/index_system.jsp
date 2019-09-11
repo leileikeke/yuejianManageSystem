@@ -54,13 +54,14 @@
 
             <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
                 <li class="layui-nav-item" lay-unselect>
-                    <a lay-href="views/recommend/list.html" style="width: 20px" layadmin-event="message" lay-text="待审核教练">
+                    <a lay-href="views/recommend/list.html" style="width: 20px" layadmin-event="message"
+                       lay-text="待审核教练">
                         <i class="layui-icon layui-icon-notice"></i>
                         <!-- 如果有新消息，则显示小圆点 -->
                         <c:if test="${recommendCount > 0}">
                             <span class="layui-badge">${recommendCount}</span>
                         </c:if>
-<%--                        <span class="layui-badge-dot"></span>--%>
+                        <%--                        <span class="layui-badge-dot"></span>--%>
                     </a>
                 </li>
                 <li class="layui-nav-item layui-hide-xs" lay-unselect>
@@ -120,12 +121,12 @@
                             <dd data-name="console" class="layui-this">
                                 <a lay-href="views/home/console.html?recommendCount=${recommendCount}">控制台</a>
                             </dd>
-<%--                            <dd data-name="console">--%>
-<%--                                <a lay-href="views/home/homepage1.html">主页一</a>--%>
-<%--                            </dd>--%>
-<%--                            <dd data-name="console">--%>
-<%--                                <a lay-href="views/home/homepage2.html">主页二</a>--%>
-<%--                            </dd>--%>
+                            <dd data-name="console">
+                                <a lay-href="views/home/homepage1.html">主页一</a>
+                            </dd>
+                            <dd data-name="console">
+                                <a lay-href="views/home/homepage2.html">主页二</a>
+                            </dd>
                         </dl>
                     </li>
                     <li data-name="club" class="layui-nav-item">
@@ -225,7 +226,8 @@
         <!-- 主体内容 -->
         <div class="layui-body" id="LAY_app_body">
             <div class="layadmin-tabsbody-item layui-show">
-                <iframe src="views/home/console.html?recommendCount=${recommendCount}" frameborder="0" class="layadmin-iframe"></iframe>
+                <iframe src="views/home/console.html?recommendCount=${recommendCount}" frameborder="0"
+                        class="layadmin-iframe"></iframe>
             </div>
         </div>
 
