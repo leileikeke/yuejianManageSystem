@@ -20,7 +20,7 @@ public interface NotifyMapper {
 
     List<Notify> selectNotifyList(@Param("cId") Integer cId);
 
-    @Select("SELECT c_id FROM Club WHERE id = #{id}")
+    @Select("SELECT c_id FROM club WHERE id = #{id}")
     int selectCIdById(@Param("id") Integer id);
 
     @Select("SELECT nickname FROM Admin WHERE id=#{id}")
