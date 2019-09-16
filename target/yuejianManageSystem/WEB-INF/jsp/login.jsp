@@ -25,7 +25,7 @@
 
     <div class="layadmin-user-login-main">
         <div class="layadmin-user-login-box layadmin-user-login-header">
-            <h2>约健后台管理系统2</h2>
+            <h2>约健后台管理系统</h2>
             <p>一个关于健身的App后台管理系统</p>
         </div>
         <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
