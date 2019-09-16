@@ -23,7 +23,7 @@ public interface NotifyMapper {
     @Select("SELECT c_id FROM club WHERE id = #{id}")
     int selectCIdById(@Param("id") Integer id);
 
-    @Select("SELECT nickname FROM Admin WHERE id=#{id}")
+    @Select("SELECT nickname FROM admin WHERE id=#{id}")
     String queryAdminNameById(@Param("id") Integer id);
 
     @Delete("DELETE FROM notify WHERE j_id=#{jId}")
