@@ -4,6 +4,7 @@ import com.leike.constant.ResponseCode;
 import com.leike.service.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,6 +35,7 @@ public class UploadController {
      * @return
      */
     @RequestMapping("/pic")
+    @PostMapping
     @ResponseBody
     public Map<String, Object> uploadPic(@RequestParam("file") MultipartFile multipartFile, String addr, HttpServletRequest request) {
         addr = "/static/imgs/" + addr + "/";
@@ -42,7 +44,6 @@ public class UploadController {
         Integer code = ResponseCode.FAILURE;
 
         String msg = "上传失败";
-
 
         // 1.不为空才上传
         if (multipartFile != null && !multipartFile.isEmpty()) {

@@ -73,6 +73,7 @@
             <param-value>classpath:spring/applicationContext.xml</param-value>
         </init-param>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>yuejianManageSystem</servlet-name>
         <!--这里统一写斜杠-->

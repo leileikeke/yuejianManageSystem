@@ -10,10 +10,10 @@
 
 
     <select id="selectEmpListForTerm" resultType="com.leike.pojo.Coach">
-        <bind name="_jId" value="'%'+jId+'%'"/>
-        <bind name="_name" value="'%'+name+'%'"/>
-        <bind name="_phone" value="'%'+phone+'%'"/>
-        <bind name="_sex" value="'%'+sex+'%'"/>
+            <bind name="_jId" value="'%'+jId+'%'"/>
+            <bind name="_name" value="'%'+name+'%'"/>
+            <bind name="_phone" value="'%'+phone+'%'"/>
+            <bind name="_sex" value="'%'+sex+'%'"/>
         SELECT
         co.j_id,
         co.name,
